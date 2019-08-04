@@ -6,19 +6,36 @@
 	"author": "Dean <dean@deansantillan.com>",
 	"license": "MIT",
 	"scripts": {
-		"dev": "gulp dev"
+		"dev": "gulp dev",
+		"build": "gulp build && NODE_ENV=production",
+		"web": "node_modules/.bin/webpack"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.5.5",
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/plugin-proposal-object-rest-spread": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/register": "^7.5.5",
 		"autoprefixer": "^9.6.1",
 		"browser-sync": "^2.26.7",
+		"del": "^5.0.0",
 		"gulp": "^4.0.2",
 		"gulp-cli": "^2.2.0",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-imagemin": "^6.0.0",
+		"gulp-modernizr": "^3.3.0",
 		"gulp-postcss": "^8.0.0",
+		"gulp-rev": "^9.0.0",
+		"gulp-uglify": "^3.0.2",
+		"gulp-usemin": "^0.3.29",
 		"postcss-hexrgba": "^1.0.2",
 		"postcss-import": "^12.0.1",
 		"postcss-mixins": "^6.2.2",
 		"postcss-nested": "^4.1.2",
-		"postcss-simple-vars": "^5.0.2"
+		"postcss-simple-vars": "^5.0.2",
+		"webpack": "^4.39.0",
+		"webpack-cli": "^3.3.6"
 	},
 	"dependencies": {
 		"jquery": "^3.4.1",

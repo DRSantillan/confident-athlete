@@ -1,6 +1,6 @@
-const displayConsoleLog = type => {
+const logger = type => {
 	const currentDate = new Date();
 	console.log(`A ${type} Task was initiated on the ${currentDate.toString()}`);
 };
 
-exports.logger = displayConsoleLog;
+export default logger;

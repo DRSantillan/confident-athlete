@@ -1,0 +1,56 @@
+import { src, dest, series, parallel } from 'gulp';
+import imagemin from 'gulp-imagemin';
+import del from 'del';
+import usemin from 'gulp-usemin';
+
+import nano from 'gulp-cssnano';
+import uglify from 'gulp-uglify';
+import rev from 'gulp-rev';
+
+const optimizeImages = () => {
+	return src(['./app/assets/media/images/**/*'])
+		.pipe(
+			imagemin({
+				progressive: true,
+				interlaced: true,
+				multipass: true
+			})
+		)
+		.pipe(dest('./dist/assets/media/images'));
+};
+const deleteDistFolder = async () => {
+	const deletePath = await del('./dist');
+
+	console.log(deletePath);
+};
+
+const useMin = () => {
+	return src('./app/index.html')
+		.pipe(
+			usemin({
+				css: [rev(), nano()],
+				js: [rev(), uglify()]
+			})
+		)
+		.pipe(dest('./dist'));
+};
+
+const copyFiles = () => {
+	const paths = [
+		'./app/**/*',
+		'!./app/index.html',
+		'!./app/assets/css/**',
+		'!./app/assets/media/**/*',
+		//'!./app/assets/media/icons/**',
+		'!./app/assets/media/images/**',
+		//'!./app/assets/media/videos/**',
+
+		'!./app/assets/js/**',
+		'!./app/dev',
+		'!./app/dev/**'
+	];
+
+	return src(paths).pipe(dest('./dist'));
+};
+
+export default series(deleteDistFolder, useMin, optimizeImages, copyFiles);
