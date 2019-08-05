@@ -1,1 +1,1 @@
-console.log('Javascrpt main file writing to console.');
+console.log('Javascript main file writing to console.');

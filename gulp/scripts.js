@@ -9,11 +9,11 @@ const errors = (err, stats) => {
 	console.log(stats.toString());
 };
 
-const scripts = cb => {
+const scripts = done => {
 	webpack(require('../webpack.config'), (err, stats) => {
 		logger('Javascript');
 		errors(err, stats);
-		cb();
+		done();
 	});
 };
 

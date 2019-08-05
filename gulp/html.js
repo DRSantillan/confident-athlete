@@ -1,9 +1,10 @@
 import { src, dest } from 'gulp';
 import logger from './logger';
 
-const html = () => {
+const html = done => {
 	logger('HTML');
-	return src('./app/index.html').pipe(dest('./app/dev/'));
+	src('./app/index.html').pipe(dest('./app/dev/'));
+	done();
 };
 
 export default html;

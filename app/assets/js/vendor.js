@@ -1,1 +1,1 @@
-console.log('Javascrpt Vendor file writing to console.');
+console.log('Javascript Vendor file writing to console.');

@@ -6,15 +6,15 @@ import logger from './logger';
 import browsersync from 'browser-sync';
 const browserSync = browsersync.create();
 
-const injectStyles = cb => {
+const injectStyles = done => {
 	logger('Styles Injection');
 	src('./app/dev/assets/css/').pipe(browserSync.stream());
-	cb();
+	done();
 };
 
-const reload = cb => {
+const reload = done => {
 	browserSync.reload();
-	cb();
+	done();
 };
 
 const watchTasks = () => {

@@ -56,19 +56,20 @@ const copyFiles = () => {
 	return src(paths).pipe(dest('./dist'));
 };
 
-const preview = () => {
+const preview = cb => {
 	browserSync.init({
 		notify: false,
 		server: {
 			baseDir: 'dist'
 		}
 	});
+	cb();
 };
 
 export default series(
 	deleteDistFolder,
-	useMin,
 	optimizeImages,
 	copyFiles,
+	useMin,
 	preview
 );

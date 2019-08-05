@@ -2,13 +2,11 @@ import { src, dest } from 'gulp';
 import ftp from 'vinyl-ftp';
 import gutil from 'gulp-util';
 
-const serverPath = '/home2/deansant/public_html/';
-const user = process.env.FTP_USER;
-const pass = process.env.FTP_PWD;
-const dir = process.env.FTP_DIR;
-const host = 'ftp.deansantillan.com';
+const user = process.env.user;
+const pass = process.env.pass;
+const dir = process.env.dir;
+const host = process.env.host;
 const port = 21;
-const remoteFolder = process.env.FTP_FLD;
 const localFolder = 'dist/**/*';
 
 const connection = () => {
@@ -22,7 +20,7 @@ const connection = () => {
 	});
 };
 
-const upload = cb => {
+const upload = done => {
 	const connect = connection();
 
 	connect.rmdir(dir, err => {
@@ -34,7 +32,7 @@ const upload = cb => {
 				.pipe(connect.dest(dir));
 		}
 	});
-	cb();
+	done();
 };
 
 export default upload;

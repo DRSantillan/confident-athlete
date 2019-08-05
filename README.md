@@ -1,2 +1,1 @@
-# fewdbp-drs
-Front End Web Development Boilerplate
+# Front End Web Development Boilerplate
