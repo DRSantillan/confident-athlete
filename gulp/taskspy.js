@@ -6,9 +6,10 @@ import logger from './logger';
 import browsersync from 'browser-sync';
 const browserSync = browsersync.create();
 
-const injectStyles = () => {
+const injectStyles = cb => {
 	logger('Styles Injection');
 	src('./app/dev/assets/css/').pipe(browserSync.stream());
+	cb();
 };
 
 const watchTasks = () => {
