@@ -7,6 +7,9 @@ import nano from 'gulp-cssnano';
 import uglify from 'gulp-uglify';
 import rev from 'gulp-rev';
 
+import browsersync from 'browser-sync';
+const browserSync = browsersync.create();
+
 const optimizeImages = () => {
 	return src(['./app/assets/media/images/**/*'])
 		.pipe(
@@ -53,4 +56,19 @@ const copyFiles = () => {
 	return src(paths).pipe(dest('./dist'));
 };
 
-export default series(deleteDistFolder, useMin, optimizeImages, copyFiles);
+const preview = () => {
+	browserSync.init({
+		notify: false,
+		server: {
+			baseDir: 'dist'
+		}
+	});
+};
+
+export default series(
+	deleteDistFolder,
+	useMin,
+	optimizeImages,
+	copyFiles,
+	preview
+);

@@ -7,7 +7,8 @@
 	"license": "MIT",
 	"scripts": {
 		"dev": "gulp dev",
-		"build": "gulp build && NODE_ENV=production",
+		"build": "gulp deploy",
+		"ftp": "gulp remote",
 		"web": "node_modules/.bin/webpack"
 	},
 	"devDependencies": {

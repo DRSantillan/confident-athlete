@@ -12,6 +12,11 @@ const injectStyles = cb => {
 	cb();
 };
 
+const reload = cb => {
+	browserSync.reload();
+	cb();
+};
+
 const watchTasks = () => {
 	browserSync.init({
 		notify: false,
@@ -19,9 +24,9 @@ const watchTasks = () => {
 			baseDir: 'app'
 		}
 	});
-	watch(['./app/index.html'], series(html, browserSync.reload));
+	watch(['./app/index.html'], series(html, reload));
 	watch(['./app/assets/css/**/*.css'], series(styles, injectStyles));
-	watch(['./app/assets/js/**/*.js'], series(scripts, browserSync.reload));
+	watch(['./app/assets/js/**/*.js'], series(scripts, reload));
 };
 
 export default watchTasks;
