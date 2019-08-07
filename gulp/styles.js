@@ -8,6 +8,13 @@ import cssImport from 'postcss-import';
 import mixins from 'postcss-mixins';
 import rgba from 'postcss-hexrgba';
 import cssbeautify from 'gulp-cssbeautify';
+import { emit } from 'cluster';
+
+const errorHandler = (done, info) => {
+	console.log(info.toString());
+	emit('end');
+	done();
+};
 
 const styles = () => {
 	logger('Styles Sheet');
@@ -21,6 +28,7 @@ const styles = () => {
 				autosemicolon: true
 			})
 		)
+		.on('error', errorHandler)
 		.pipe(dest('./app/dev/assets/css/'));
 };
 
