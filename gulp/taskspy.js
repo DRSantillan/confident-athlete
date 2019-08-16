@@ -17,6 +17,12 @@ const reload = done => {
 	done();
 };
 
+const pages = [
+	'./app/index.html',
+	'./app/series/index.html',
+	'./app/series/fearless/*.html'
+];
+
 const watchTasks = () => {
 	browserSync.init({
 		notify: false,
@@ -24,7 +30,7 @@ const watchTasks = () => {
 			baseDir: 'app'
 		}
 	});
-	watch(['./app/index.html'], series(html, reload));
+	watch(pages, series(html, reload));
 	watch(['./app/assets/css/**/*.css'], series(styles, injectStyles));
 	watch(['./app/assets/js/**/*.js'], series(scripts, reload));
 };

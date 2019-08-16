@@ -3,7 +3,8 @@ import logger from './logger';
 
 const html = done => {
 	logger('HTML');
-	src('./app/index.html').pipe(dest('./app/dev/'));
+	src('./app/**/*.html').pipe(dest('./app/dev/'));
+
 	done();
 };
 
