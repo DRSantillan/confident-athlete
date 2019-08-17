@@ -1,6 +1,6 @@
 /* Global */
 
-body {
+* {
   font-family: 'Roboto', sans-serif;
   color: $Default;
   background-color: lavender

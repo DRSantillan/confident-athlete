@@ -20,7 +20,23 @@ const reload = done => {
 const pages = [
 	'./app/index.html',
 	'./app/series/index.html',
-	'./app/series/fearless/*.html'
+	'./app/series/fearless/index.html',
+	'./app/series/fearless/introduction.html',
+	'./app/series/fearless/day-1.html',
+	'./app/series/fearless/day-2.html',
+	'./app/series/fearless/day-3.html',
+	'./app/series/fearless/day-4.html',
+	'./app/series/fearless/day-5.html',
+	'./app/series/fearless/day-6.html',
+	'./app/series/fearless/day-7.html',
+	'./app/series/fearless/day-8.html',
+	'./app/series/fearless/day-9.html',
+	'./app/series/fearless/day-10.html',
+	'./app/series/fearless/day-11.html',
+	'./app/series/fearless/day-12.html',
+	'./app/series/fearless/day-13.html',
+	'./app/series/fearless/day-14.html',
+	'./app/series/fearless/new-beginning.html'
 ];
 
 const watchTasks = () => {
