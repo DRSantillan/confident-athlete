@@ -1,4 +1,5 @@
 node_modules
 dist
 app/dev
+app/assets/media
 .vs_code

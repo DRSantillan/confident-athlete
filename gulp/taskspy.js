@@ -36,7 +36,9 @@ const pages = [
 	'./app/series/fearless/day-12.html',
 	'./app/series/fearless/day-13.html',
 	'./app/series/fearless/day-14.html',
-	'./app/series/fearless/new-beginning.html'
+	'./app/series/fearless/new-beginning.html',
+	'./app/series/fearless/commitment-contract.html',
+	'./app/series/fearless/appendix.html'
 ];
 
 const watchTasks = () => {
