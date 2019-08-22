@@ -1,0 +1,22 @@
+/* Site Header */
+header {
+  padding: 20px;
+  font-family: 'Montserrat';
+  background-color: #1D78E2;
+  text-align: center;
+
+
+  h1,
+  h2 {
+    font-family: 'Permanent Marker';
+    color: white;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}

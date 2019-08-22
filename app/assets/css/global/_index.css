@@ -1,7 +1,13 @@
 /* Global */
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: $Default;
-  background-color: lavender
+
+
+}
+
+p {
+  line-height: 1.7;
+
 }
