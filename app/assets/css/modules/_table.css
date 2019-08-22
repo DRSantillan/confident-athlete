@@ -1,0 +1,30 @@
+.container {
+
+
+  width: 90%;
+
+  &__row {
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+    align-items: flex-start;
+
+
+    &-title {
+      font-weight: 700;
+    }
+  }
+
+  &__col {
+    padding: 10px;
+    display: flex;
+    flex: 1;
+
+
+
+    input {
+      flex: 1;
+    }
+  }
+
+}

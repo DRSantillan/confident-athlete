@@ -12,7 +12,7 @@ section {
   h4,
   h5 {
     font-family: 'Permanent Marker';
-    color: #1D78E2;
+    color: $main;
   }
 
   h3 {
@@ -23,8 +23,20 @@ section {
     font-size: 1.5rem;
   }
 
-  li {
-    list-style: none;
+  ul {
+    width: 90%;
+    margin: auto;
+
   }
+
+  ol {
+    width: 90%;
+    margin: auto;
+
+  }
+
+
+
+
 
 }

@@ -1,1 +1,5 @@
-.teaser {}
+.teaser {
+  text-align: center;
+  padding: 30px;
+  margin: 30px;
+}

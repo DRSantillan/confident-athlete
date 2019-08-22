@@ -3,11 +3,48 @@
 * {
   font-family: 'Raleway', sans-serif;
   color: $Default;
-
+  margin: 0;
+  padding: 0;
 
 }
 
 p {
-  line-height: 1.7;
+  line-height: 1.5;
+  padding: 10px;
+
+}
+
+a {
+  text-decoration: none;
+  color: $main;
+}
+
+blockquote {
+  background-color: $bq;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  font-style: oblique;
+
+}
+
+div {
+  line-height: 1.5;
+  padding: 10px;
+}
+
+mark {
+
+  padding: 2px;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+
 
 }

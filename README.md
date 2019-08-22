@@ -1,1 +1,1 @@
-# Front End Web Development Boilerplate
+# Mental Training Course for Athletes

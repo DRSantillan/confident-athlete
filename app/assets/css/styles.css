@@ -3,6 +3,10 @@
 @import './global/_mixins';
 @import './global/_index';
 @import './global/_wrapper';
+@import './modules/_checkbox';
+@import './modules/_table';
+@import './modules/_text-input';
+@import './modules/_range-slider';
 
 @import './modules/_audio';
 @import './modules/_warmup';

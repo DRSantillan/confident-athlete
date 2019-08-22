@@ -1,0 +1,9 @@
+.txt-input {
+  background-color: $bq;
+  outline: none;
+  border: none;
+  height: 80px;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
