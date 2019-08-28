@@ -1,0 +1,41 @@
+/* Site Footer */
+footer {
+
+  background-color: $main;
+  text-align: center;
+  margin-top: 100px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  padding: 10px;
+  height: 60px;
+  color: white;
+
+  a {
+    color: white;
+
+  }
+
+  strong {
+    color: white;
+
+
+  }
+
+  span {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+
+
+
+  p {
+    font-family: 'Permanent Marker';
+    color: white;
+  }
+}
+
+current-day {
+  font-size: 3rem;
+}

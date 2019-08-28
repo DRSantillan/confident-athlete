@@ -1,0 +1,123 @@
+{
+	"days": [
+		{
+			"day": 1,
+			"title": "Fear, Anxiety, and Fear of Failure in Sports",
+			"warmup": [
+				"For many athletes, fear and fear of failure are a constant source of <mark> stress</mark> or anxiety that sabotages performance. <strong> What is fear?</strong> Miriam-Webster defines fear as <blockquote>“an unpleasant often strong emotion caused by anticipation or awareness of danger.” </blockquote> In tennis, most of the fear athletes refer to is not about being in danger or harming themselves physically. The fear I am talking about is a <mark>psychological threat</mark> that is often based on an <mark>athlete’s perception</mark> of the importance of a performance or game and what others think about his or her performance.",
+				"Most of the time, an athlete’s fear is worry related to poor results - whether prior to or during a performance. Athletes often fear the negative consequences of their performance. They worry about many things that are often not under their control."
+			],
+			"attitude": [
+				"I worry so much about results that I get a queasy feeling in my stomach before or during competition and it does not go away after I begin.",
+				"I want to win so badly that I try too hard and get in my own way. I feel tense because I worry about failing or not playing well.",
+				"I care so much about what others think that I worry about disappointing others and this affects my mindset."
+			],
+			"objective": [
+				"To understand common fears and anxiety in sports – not all fear is rational or based on reality. The goal is to <mark>recognize</mark> the <mark>fear that prevents you from performing freely at your peak potential.</mark>"
+			],
+			"success": [
+				"Fear does not run my life or sports performance. I am in control.",
+				"The only thing to fear is fear itself.",
+				"I can learn to perform fearlessly without tension or anxiety"
+			],
+			"action": [
+				"Think back to a time when you performed free of fear, anxiety or tension. Try to recall what it felt like to you. Did you feel confident in your ability? Were you focused on performing well? Did your performance come naturally or easy? Relive the experience and how it felt.",
+				"Based on the self-test you took in Table 1, your task is to keep track of how often you experience these signs when you perform."
+			],
+			"progress": [
+				"Assess your progress is a self-awareness or tracking exercise based on one of the action plans in your workbook. Each exercise is designed to help you evaluate how successful you are with the daily lesson and to bring more attention to this area.",
+				"Instructions are provided to help you complete each exercise. In your next competition, keep track of the situations that cause you to experience any of the signs of fear of failure listed in Table 1. ",
+				"This awareness exercise will help you identify your specific fear and when fear of failure is limiting your performance. I have included an example below to help you get started."
+			]
+		},
+		{
+			"day": 2,
+			"title": "How Perfectionism Instills Fear of Failure",
+			"warmup": [
+				"I work with many athletes who have perfectionistic behaviors or tendencies. I don’t know why this is… Do some sports instill perfectionism? Some traits of perfectionism are very helpful to improving your performance as I discuss in Day #3. However, my experience shows that fear of failure is closely related to perfectionism in sports. Athletes who are perfectionistic (and highly motivated) do not perform up to their potential because of fear of failure.",
+				"It is ironic that the athletes who want to win the most, and train the most are often those who are the most likely to be mentally stuck in fear of failure. Perfectionistic athletes often lose sight of the real goal in sports – to use training to perform well in competition. They become so engrossed in training and practice that perfecting their technique or working hard in practice becomes the primary goal instead of performing with confidence in competition. And when they do compete, they believe anything but perfect execution or winning is deemed as failure."
+			]
+		},
+		{
+			"day": 3,
+			"title": "What is functional About Perfectionism",
+			"warmup": [
+				"Many perfectionistic athletes, coaches, and sports parents don’t understand how trying to be perfect in competition can reduce the chance of being successful in sports. After all, humans are led to believe that we should strive to be perfect. However, striving for perfection is not the same as expecting perfection. For perfectionistic athletes, there isn't a clear line between \"striving toward\" in practice and \"expecting\" perfection in competition, which is what leads to fear of failure.",
+				"Perfectionism isn't necessarily a bad quality. Some of the qualities of perfectionists are very functional to performance. For example, a strong work ethic, commitment to goals, and having a desire to learn and improve are very positive characteristics that all athletes should embrace. Perfectionists are often very motivated and this helps them want to train harder than anyone to become successful.",
+				"However, perfectionist traits become a problem when they negatively impact performance and hinder success. The biggest challenge with perfectionism comes down to how you handle competitive environments. If you try to be perfect in competition, you sabotage your ability to perform. Although trying to be perfect may sound logical, it is counter-productive to the performance of your motor skills and causes you to lose self-trust (a concept I will cover in detail later in this workbook).",
+				"One pitfall of perfectionism is harboring high expectations for your performance, which feed into yet more problems. When you don’t achieve your expectations, it is easy to feel frustrated and feel as if you are failing. You might think too much about outcomes such as scores and statistics and this causes anxiety and worry about failing."
+			]
+		},
+		{
+			"day": 4,
+			"title": "Indentifying Beliefs and Thoughts that support Perfectionism",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 5,
+			"title": "Modifiying expectations for fearless performances",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 6,
+			"title": "Being your own best coach and letting go of errors",
+			"warmup": ["", ""]
+		},
+
+		{
+			"day": 7,
+			"title": "Do you strive for success or fear making mistakes?",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 8,
+			"title": "Worry too much about what others think",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 9,
+			"title": "Trust and striving for perfection",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 10,
+			"title": "How you block the performance mindset",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 11,
+			"title": "A Functional Mindset: Getting the Job Fearlessly",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 12,
+			"title": "Becoming a fearless performer",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 13,
+			"title": " Practice Strategies for a Performance Mindset",
+			"warmup": ["", ""]
+		},
+		{
+			"day": 14,
+			"title": "Beyond Sports: Finding Balance in your life",
+			"warmup": ["", ""]
+		},
+		{
+			"day": "newbegin",
+			"title": "New Beginning",
+			"warmup": ["", ""]
+		},
+		{
+			"day": "contract",
+			"title": "Taking Fearless Action: My Commitiment Contract",
+			"warmup": ["", ""]
+		},
+		{
+			"day": "appendix",
+			"title": "Defining your self-concept",
+			"warmup": ["", ""]
+		}
+	]
+}

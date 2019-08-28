@@ -1,0 +1,89 @@
+{
+	"courses": [
+		{
+			"title": "The Fearless Athlete",
+			"contents": [
+				{
+					"day": 0,
+					"title": "Introduction",
+					"warmup": [
+						"For many athletes, fear and fear of failure are a constant source of <mark> stress</mark> or anxiety that sabotages performance. <strong> What is fear?</strong> Miriam-Webster defines fear as <blockquote>“an unpleasant often strong emotion caused by anticipation or awareness of danger.” </blockquote> In tennis, most of the fear athletes refer to is not about being in danger or harming themselves physically. The fear I am talking about is a <mark>psychological threat</mark> that is often based on an <mark>athlete’s perception</mark> of the importance of a performance or game and what others think about his or her performance.",
+						"Most of the time, an athlete’s fear is worry related to poor results - whether prior to or during a performance. Athletes often fear the negative consequences of their performance. They worry about many things that are often not under their control."
+					],
+					"attitude": {
+						"note": "Each day, you will be given a short mental game assessment, which includes three important questions related specifically to the day’s topic. If you answer “yes” to the questions, place a check in the box to the right of the question.",
+						"points": [
+							"I worry so much about results that I get a queasy feeling in my stomach before or during competition and it does not go away after I begin.",
+							"I want to win so badly that I try too hard and get in my own way. I feel tense because I worry about failing or not playing well.",
+							"I care so much about what others think that I worry about disappointing others and this affects my mindset."
+						]
+					},
+					"objective": "To understand common fears and anxiety in sports – not all fear is rational or based on reality. The goal is to recognize the fear that prevents you from performing freely at your peak potential.",
+					"strategy": {
+						"content": [
+							"Fear of failure is one of the major barriers to success for athletes. Understand that your fear does not emerge from an opponent or a difficult game. In Table 1 is a self-test to take that measures your fear in sports and lack of self-trust. Place a check mark next to the statements with which you agree.",
+              "Assessing Your Results: <br>If you checked “yes” to five or more of the statements above, it’s a good bet that fear of failure hinders your focus in competition and causes a lack of trust. If you checked “yes” to one or more statements above, you still may need to address this mental game barrier as you may have at least some perfectionistic tendencies.",
+              "What are the common types of fears for athletes? It’s not enough to know that you have fear of failure. What’s more important is to know what type of fear holds you back. As you can see from the list below, fear of failure often is related to what you assume others think about you."
+						],
+						"table": {
+							"title": "Table 1. Do You Fear Failure?",
+							"points": [
+								"Testing Your Fear of Failure",
+								"I have difficulty taking my “practice game” to competition.",
+								"My level of “competitive self-confidence” does not match the level of my practice self-confidence. (I feel more confident in practice than when in competition).",
+								"I want to win or succeed badly and this leads to cautious performances because I am afraid to make mistakes.",
+								"I focus too much on results or outcomes of my performance (such as the need for a certain score), and thus have a hard time enjoying the process.",
+								"I can become impatient with myself if I don’t perform well in competition and want improvements in practice to happen faster.",
+								"I often feel like my self-esteem is threatened when I do not perform up to my own expectations.",
+								"I care too much about what others think and make assumptions that are not based in reality, such as my parents will not drive me to practice if I don’t perform well.",
+								"I have a fear of letting others down if I don’t perform up to their expectations. For example, I wrongly assume that my teammates will not like me if I give up the winning goal.",
+								"I tighten up or become tense in competition and can’t perform freely.",
+								"I play with too much physical tension and have trouble playing relaxed and free because I try to over-control my movements or performance.",
+								"I try too hard to win and thus get in my own way mentally with a lack of trust.",
+								"I try to be perfect with my execution and thus get tense, try to overcontrol my body, or get frustrated when my game is imperfect."
+							]
+						}
+					}
+				},
+				{ "day": 1, "title": "Fear, Anxiety, and Fear of Failure In Sports" },
+				{ "day": 2, "title": "How Perfectionism Instills Fear of Failure" },
+				{ "day": 3, "title": "What is functional About Perfectionism" },
+				{
+					"day": 4,
+					"title": "Identifying Beliefs and Thoughts that support Perfectionism"
+				},
+				{
+					"day": 5,
+					"title": "Modifiying expectations for fearless performances"
+				},
+				{
+					"day": 6,
+					"title": "Being your own best coach and letting go of errors"
+				},
+				{
+					"day": 7,
+					"title": "Do you strive for success or fear making mistakes?"
+				},
+				{ "day": 8, "title": "Worry too much about what others think" },
+				{ "day": 9, "title": "Trust and striving for perfection" },
+				{ "day": 10, "title": "How you block the performance mindset" },
+				{
+					"day": 11,
+					"title": "A Functional Mindset: Getting the Job Fearlessly"
+				},
+				{ "day": 12, "title": "Becoming a fearless performer" },
+				{ "day": 13, "title": "Practice Strategies for a Performance Mindset" },
+				{ "day": 14, "title": "Beyond Sports: Finding Balance in your life" },
+				{ "day": 15, "title": "New Beginning" },
+				{
+					"day": "Contract",
+					"title": "Taking Fearless Action: My Commitiment Contract"
+				},
+				{ "day": "Appendix", "title": " 1: Defining your self-concept" }
+			]
+		},
+		{ "title": "The Confident Athlete" },
+		{ "title": "The Composed Athlete" },
+		{ "title": "The Focused Athlete" }
+	]
+}

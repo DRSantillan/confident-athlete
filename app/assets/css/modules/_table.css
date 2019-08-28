@@ -1,5 +1,6 @@
 .container {
-
+  margin-left: auto;
+  margin-right: auto;
 
   width: 90%;
 
@@ -20,7 +21,17 @@
     display: flex;
     flex: 1;
 
+    &--bold-red {
+      color: red;
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
 
+    &--bold-black {
+
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
 
     input {
       flex: 1;
