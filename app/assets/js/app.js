@@ -1,23 +1,12 @@
-/* import warmupContent from './warmup';
-const programs = { id: 'fearless' };
-console.log(programs.id);
+import {
+	getAttitudeAnswers,
+	clearAttitudeAnswers,
+	loadAttitudeAnswers
+} from './MentalAssessment';
 
-const getPage = () => {
-	let currentPage = window.location.search;
-	console.log(currentPage, 'search');
-	currentPage = currentPage.replace('?page=', '');
-	console.log(currentPage, 'current');
-};
+const saveAttitudeAns = document.getElementById('saveAttitude');
+const clearAttitudeAns = document.getElementById('clearAttitude');
 
-getPage();
-
-const getData = async (url, program) => {
-	const res = await fetch(url);
-	const data = await res.json();
-
-	warmupContent(data, program, 'warmup');
-	warmupContent(data, program, 'objective');
-};
-
-getData('/series/fearless/fearless.json', 'fearless'); */
-//warmupContent(data);
+saveAttitudeAns.addEventListener('click', getAttitudeAnswers);
+clearAttitudeAns.addEventListener('click', clearAttitudeAnswers);
+window.addEventListener('load', loadAttitudeAnswers);

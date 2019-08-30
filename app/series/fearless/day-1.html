@@ -51,24 +51,26 @@
 			<p>Answer the following mental assessment honestly, by yourself seek no help in answering these responses. </p>
 
 			<h4>Fearless Athlete Day 1 - Mental assessment</h4>
-			<div>
+			<div id="mental">
+				<div>
 				<div class="chkbox">
-					<input type="checkbox" value="1" name="q1" id="">
+					<input type="checkbox" class="mental-assessment" id="ma1">
 				</div>"I worry so much about results that I get a queasy feeling in my stomach before or during competition and
 				it does not go away after I begin."
 			</div>
 			<div>
 				<div class="chkbox">
-					<input type="checkbox" value="1" name="q1" id="">
+					<input type="checkbox" class="mental-assessment" id="ma2">
 				</div>"I want to win so badly that I try too hard and get in my own way. I feel tense because I worry about
 				failing or not playing well."
 			</div>
 			<div>
 				<div class="chkbox">
-					<input type="checkbox" value="1" name="q1" id="">
+					<input type="checkbox" class="mental-assessment" id="ma3">
 				</div>"I care so much about what others think that I worry about disappointing others and this affects my
 				mindset."
-			</div>
+			</div></div>
+			<button class="btn" id="saveAttitude">Save</button><button class="btn" id="clearAttitude">Clear</button>
 
 		</section>
 		<section class="objective" id="objective">
@@ -306,8 +308,8 @@
 	</div>
 	<footer>
 		<strong>
-			<<< Previous:</strong>&nbsp;&nbsp;&nbsp; <a href="introduction.html">Introduction</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span>Day 1</span></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<strong>Next: </strong>&nbsp;&nbsp;&nbsp;<a href="day-2.html">Day 2</a> >>>
+			<<< Previous:</strong>&nbsp;&nbsp;&nbsp; <a id="prevButton" href="introduction.html">Introduction</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong><span>Day 1</span></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<strong>Next: </strong>&nbsp;&nbsp;&nbsp;<a id="nextButton"href="day-2.html">Day 2</a> >>>
 				<p>Developed by Dean Santillan &copy;2019</p>
 	</footer>
 	<!-- build:js assets/js/vendor.js -->
