@@ -31,4 +31,10 @@ const getProgram = () => {
 	return currentProgram;
 };
 
-export { getProgram, getPage, getDate };
+const setCheckBoxesToDefault = chkbox => {
+	for (let i = 0; i < chkbox.length; i++) {
+		chkbox[i].checked = false;
+	}
+};
+
+export { getProgram, getPage, getDate, setCheckBoxesToDefault };
