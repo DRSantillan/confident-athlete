@@ -37,4 +37,16 @@ const setCheckBoxesToDefault = chkbox => {
 	}
 };
 
-export { getProgram, getPage, getDate, setCheckBoxesToDefault };
+const setInputsToDefault = input => {
+	for (let i = 0; i < input.length; i++) {
+		input[i].value = '';
+	}
+};
+
+export {
+	getProgram,
+	getPage,
+	getDate,
+	setCheckBoxesToDefault,
+	setInputsToDefault
+};

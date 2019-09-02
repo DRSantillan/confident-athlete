@@ -63,7 +63,7 @@ const clearAttitudeAnswers = () => {
 const loadAttitudeAnswers = () => {
 	const pageData = loadData();
 
-	if (pageData === undefined) {
+	if (pageData === undefined || pageData.attitude === undefined) {
 		return;
 	}
 	pageData.attitude.forEach((data, index) => {
