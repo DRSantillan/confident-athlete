@@ -1,10 +1,16 @@
-import { savePageData, loadData } from '../db/index';
-import { getProgram, getPage, setInputsToDefault } from './util';
-
+import { savePageData, loadData } from '../../../db';
+import {
+	getProgram,
+	getPage,
+	setInputsToDefault,
+	getAnswers
+} from '../../../lib';
+const pageData = loadData();
+const program = getProgram();
+const page = getPage();
 const inputAwareness = document.getElementsByClassName('txt-input');
-const saveAwarenessAnswers = () => {
-	let pageData = loadData();
-	const program = getProgram();
+
+const saveAwareness = () => {
 	let answerObj = {};
 
 	for (let i = 0; i < inputAwareness.length; i++) {
@@ -30,33 +36,14 @@ const saveAwarenessAnswers = () => {
 
 	savePageData(pageData, program);
 };
-const getAnswers = (input, index, questionNum, obj) => {
-	if (input[index].id.search(questionNum) === 0) {
-		if (input[index].id.search('scenario') > 1) {
-			obj[questionNum] = {};
-			obj[questionNum].scenario = input[index].value;
-		} else if (input[index].id.search('fof') > 1) {
-			obj[questionNum].fof = input[index].value;
-		} else {
-			obj[questionNum].reaction = input[index].value;
-		}
-	}
-};
 
-const clearAwarenessAnswers = () => {
-	const pageData = loadData();
-	const program = getProgram();
-	const page = getPage();
-
-	delete pageData.progress['day' + getPage()];
+const clearAwareness = () => {
+	delete pageData.progress['day' + page];
 	savePageData(pageData, program);
 	setInputsToDefault(inputAwareness);
 };
 
-const loadAwarenessAnswers = () => {
-	const pageData = loadData();
-	const page = getPage();
-
+const loadAwareness = () => {
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.progress === undefined) {
@@ -76,4 +63,4 @@ const loadAwarenessAnswers = () => {
 	}
 };
 
-export { saveAwarenessAnswers, clearAwarenessAnswers, loadAwarenessAnswers };
+export { saveAwareness, clearAwareness, loadAwareness };

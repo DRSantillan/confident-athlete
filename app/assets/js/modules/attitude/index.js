@@ -1,17 +1,24 @@
-import { savePageData, loadData, clearData } from '../db/index';
-import { getDate, getProgram, getPage, setCheckBoxesToDefault } from './util';
+import { savePageData, loadData, clearData } from '../../db';
+import {
+	getDate,
+	getProgram,
+	getPage,
+	setCheckBoxesToDefault
+} from '../../lib';
 
-const chkboxes = document.getElementsByClassName('mental-assessment');
+const chkboxes = document.getElementsByClassName('attitude');
+const pageData = loadData();
+const program = getProgram();
+const page = getPage();
+const today = getDate();
 
-const saveAttitudeAnswers = () => {
-	let pageData = loadData();
+const saveAttitude = () => {
 	let attitudeAnswers = [];
 
 	for (let i = 0; i < chkboxes.length; i++) {
 		let maObject = {};
-
-		maObject.date = getDate();
-		maObject.day = getPage();
+		maObject.date = today;
+		maObject.day = page;
 		maObject.id = chkboxes[i].id;
 		maObject.value = chkboxes[i].checked;
 		attitudeAnswers.push(maObject);
@@ -39,15 +46,10 @@ const saveAttitudeAnswers = () => {
 		});
 		pageData.attitude.push(attitudeAnswers);
 	}
-
-	savePageData(pageData, getProgram());
+	savePageData(pageData, program);
 };
 
-const clearAttitudeAnswers = () => {
-	const pageData = loadData();
-	const program = getProgram();
-	const page = getPage();
-
+const clearAttitude = () => {
 	pageData.attitude.forEach((data, index) => {
 		data.forEach(item => {
 			if (item.day.toString() === page.toString()) {
@@ -56,23 +58,20 @@ const clearAttitudeAnswers = () => {
 		});
 	});
 	savePageData(pageData, program);
-	//localStorage.setItem(program, JSON.stringify(pageData));
 	setCheckBoxesToDefault(chkboxes);
 };
 
-const loadAttitudeAnswers = () => {
-	const pageData = loadData();
-
+const loadAttitude = () => {
 	if (pageData === undefined || pageData.attitude === undefined) {
 		return;
 	}
-	pageData.attitude.forEach((data, index) => {
+	pageData.attitude.forEach(data => {
 		data.forEach((item, i) => {
-			if (chkboxes[i].id === item.id && item.day === getPage()) {
+			if (chkboxes[i].id === item.id && item.day === page) {
 				chkboxes[i].checked = item.value;
 			}
 		});
 	});
 };
 
-export { saveAttitudeAnswers, clearAttitudeAnswers, loadAttitudeAnswers };
+export { saveAttitude, clearAttitude, loadAttitude };

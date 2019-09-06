@@ -1,4 +1,4 @@
-import { getProgram, getPage } from '../modules/util';
+import { getProgram, getPage } from '../lib';
 
 const loadData = () => {
 	const program = getProgram();

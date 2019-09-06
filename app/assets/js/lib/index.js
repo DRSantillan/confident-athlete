@@ -43,10 +43,24 @@ const setInputsToDefault = input => {
 	}
 };
 
+const getAnswers = (input, index, questionNum, obj) => {
+	if (input[index].id.search(questionNum) === 0) {
+		if (input[index].id.search('situation') > 1) {
+			obj[questionNum] = {};
+			obj[questionNum].situtation = input[index].value;
+		} else if (input[index].id.search('fear') > 1) {
+			obj[questionNum].fear = input[index].value;
+		} else if (input[index].id.search('reaction') > 1) {
+			obj[questionNum].reaction = input[index].value;
+		}
+	}
+};
+
 export {
 	getProgram,
 	getPage,
 	getDate,
 	setCheckBoxesToDefault,
-	setInputsToDefault
+	setInputsToDefault,
+	getAnswers
 };

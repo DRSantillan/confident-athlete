@@ -1,13 +1,12 @@
-import { savePageData, loadData } from '../db/index';
-import { getProgram, getPage, setInputsToDefault } from './util';
+import { savePageData, loadData } from '../../db';
+import { getProgram, getPage, setInputsToDefault } from '../../lib/';
 
 const inputNotes = document.getElementById('day-note');
+let pageData = loadData();
+const program = getProgram();
+const page = getPage();
 
 const saveNotes = () => {
-	let pageData = loadData();
-	const program = getProgram();
-	const page = getPage();
-
 	let obj = {};
 	obj.day = page;
 	obj.note = inputNotes.value;
@@ -33,10 +32,6 @@ const saveNotes = () => {
 };
 
 const clearNotes = () => {
-	const pageData = loadData();
-	const program = getProgram();
-	const page = getPage();
-
 	pageData.notes.forEach((item, index) => {
 		if (item.day.toString() === page.toString()) {
 			pageData.notes.splice(index, 1);
@@ -48,9 +43,6 @@ const clearNotes = () => {
 };
 
 const loadNotes = () => {
-	const pageData = loadData();
-	const page = getPage();
-
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.notes === undefined) {
