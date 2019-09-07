@@ -34,9 +34,9 @@ const saveSuccessFear = () => {
 };
 
 const clearSuccessFear = () => {
-	pageData.progress.table4.forEach(item => {
+	pageData.progress.successfear.forEach(item => {
 		if (item.day === page) {
-			delete pageData.strategy.successfear;
+			delete pageData.progress.successfear;
 		}
 	});
 	savePageData(pageData, program);

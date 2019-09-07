@@ -1,44 +1,36 @@
 import { savePageData, loadData } from '../../../db';
-import {
-	getProgram,
-	getPage,
-	setInputsToDefault,
-	getAnswers
-} from '../../../lib';
-const pageData = loadData();
+import { getProgram, setInputsToDefault } from '../../../lib';
+let pageData = loadData();
 const program = getProgram();
-const page = getPage();
-const inputAwareness = document.getElementsByClassName('txt-input');
+const inputAwareness = document.getElementsByClassName('awareness');
 
 const saveAwareness = () => {
-	let answerObj = {};
+	let arr = [];
 
 	for (let i = 0; i < inputAwareness.length; i++) {
-		getAnswers(inputAwareness, i, 'q1', answerObj);
-		getAnswers(inputAwareness, i, 'q2', answerObj);
-		getAnswers(inputAwareness, i, 'q3', answerObj);
-		getAnswers(inputAwareness, i, 'q4', answerObj);
-		getAnswers(inputAwareness, i, 'q5', answerObj);
-	}
+		let answerObj = {};
+		answerObj.id = inputAwareness[i].id;
+		answerObj.value = inputAwareness[i].value;
 
+		arr.push(answerObj);
+	}
+	console.log(arr, 'array');
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};
-		pageData.progress['day' + getPage()] = {};
-		pageData.progress['day' + getPage()] = answerObj;
+		pageData.progress.awareness = arr;
 	} else if (pageData.progress === undefined) {
 		pageData.progress = {};
-		pageData.progress['day' + getPage()] = {};
-		pageData.progress['day' + getPage()] = answerObj;
+		pageData.progress.awareness = arr;
 	} else {
-		pageData.progress['day' + getPage()] = answerObj;
+		pageData.progress.awareness = arr;
 	}
 
 	savePageData(pageData, program);
 };
 
 const clearAwareness = () => {
-	delete pageData.progress['day' + page];
+	delete pageData.progress.awareness;
 	savePageData(pageData, program);
 	setInputsToDefault(inputAwareness);
 };
@@ -50,15 +42,9 @@ const loadAwareness = () => {
 		return;
 	}
 
-	for (let key in pageData.progress['day' + page]) {
+	for (let key in pageData.progress.awareness) {
 		for (let i = 0; i < inputAwareness.length; i++) {
-			if (inputAwareness[i].id === key + 'scenario') {
-				inputAwareness[i].value = pageData.progress['day' + page][key].scenario;
-			} else if (inputAwareness[i].id === key + 'fof') {
-				inputAwareness[i].value = pageData.progress['day' + page][key].fof;
-			} else if (inputAwareness[i].id === key + 'reaction') {
-				inputAwareness[i].value = pageData.progress['day' + page][key].reaction;
-			}
+			inputAwareness[i].value = pageData.progress.awareness[i].value;
 		}
 	}
 };
