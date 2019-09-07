@@ -32,8 +32,27 @@ import {
 	clearTop5Char,
 	saveTop5Char
 } from './modules/progress/3';
+import {
+	loadPerformFunct,
+	clearPerformFunct,
+	savePerformFunct
+} from './modules/progress/4';
+import {
+	saveExpectConfidence,
+	clearExpectConfidence,
+	loadExpectConfidence
+} from './modules/progress/5';
+import {
+	saveHotButtons,
+	clearHotButtons,
+	loadHotButtons
+} from './modules/progress/6';
+import {
+	saveProcessGoals,
+	clearProcessGoals,
+	loadProcessGoals
+} from './modules/progress/7';
 import { saveNotes, clearNotes, loadNotes } from './modules/notes';
-import { getProgram, getPage, setInputsToDefault } from './lib';
 
 const saveAtt = document.getElementById('saveAttitude');
 const clearAtt = document.getElementById('clearAttitude');
@@ -51,7 +70,36 @@ const saveSucFear = document.getElementById('saveTable4');
 const clearSucFear = document.getElementById('clearTable4');
 const saveTop5 = document.getElementById('saveTop5');
 const clearTop5 = document.getElementById('clearTop5');
+const savePerfFunct = document.getElementById('savePerfFunct');
+const clearPerfFunct = document.getElementById('clearPerfFunct');
+const saveExpect = document.getElementById('saveExpect');
+const clearExpect = document.getElementById('clearExpect');
+const saveHotBtn = document.getElementById('saveHotBtn');
+const clearHotBtn = document.getElementById('clearHotBtn');
+const saveProcGoals = document.getElementById('saveProcessGoals');
+const clearProcGoals = document.getElementById('clearProcessGoals');
 
+if (saveProcGoals || clearProcGoals) {
+	saveProcGoals.addEventListener('click', saveProcessGoals);
+	clearProcGoals.addEventListener('click', clearProcessGoals);
+	window.addEventListener('load', loadProcessGoals);
+}
+
+if (saveHotBtn || clearHotBtn) {
+	saveHotBtn.addEventListener('click', saveHotButtons);
+	clearHotBtn.addEventListener('click', clearHotButtons);
+	window.addEventListener('load', loadHotButtons);
+}
+if (saveExpect || clearExpect) {
+	saveExpect.addEventListener('click', saveExpectConfidence);
+	clearExpect.addEventListener('click', clearExpectConfidence);
+	window.addEventListener('load', loadExpectConfidence);
+}
+if (savePerfFunct || clearPerfFunct) {
+	savePerfFunct.addEventListener('click', savePerformFunct);
+	clearPerfFunct.addEventListener('click', clearPerformFunct);
+	window.addEventListener('load', loadPerformFunct);
+}
 if (saveFrTrust || clearFrTrust) {
 	saveFrTrust.addEventListener('click', saveFearTrust);
 	clearFrTrust.addEventListener('click', clearFearTrust);
