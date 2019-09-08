@@ -1,10 +1,11 @@
 import { savePageData, loadData } from '../../../db';
 import { getProgram, setInputsToDefault } from '../../../lib';
-let pageData = loadData();
+
 const program = getProgram();
 const inputBreakDown = document.getElementsByClassName('trust-breakdown');
 
 const saveTrustBreakdown = () => {
+	let pageData = loadData();
 	let arr = [];
 
 	for (let i = 0; i < inputBreakDown.length; i++) {
@@ -14,7 +15,7 @@ const saveTrustBreakdown = () => {
 
 		arr.push(answerObj);
 	}
-	console.log(arr, 'array');
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};
@@ -30,12 +31,14 @@ const saveTrustBreakdown = () => {
 };
 
 const clearTrustBreakdown = () => {
+	let pageData = loadData();
 	delete pageData.progress.breakdown;
 	savePageData(pageData, program);
 	setInputsToDefault(inputBreakDown);
 };
 
 const loadTrustBreakdown = () => {
+	let pageData = loadData();
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.progress === undefined) {

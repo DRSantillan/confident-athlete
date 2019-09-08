@@ -8,7 +8,6 @@ const page = getPage();
 const today = getDate();
 
 const saveLifeBalance = () => {
-	console.log('saving');
 	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputLifeBalance.length; i++) {
@@ -21,7 +20,7 @@ const saveLifeBalance = () => {
 
 		answersArray.push(answers);
 	}
-	console.log(answersArray);
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};

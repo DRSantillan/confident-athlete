@@ -1,4 +1,4 @@
-import { savePageData, loadData, clearData } from '../../db';
+import { savePageData, loadData } from '../../db';
 import {
 	getDate,
 	getProgram,
@@ -29,36 +29,24 @@ const saveAttitude = () => {
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.attitude = {};
-		pageData.attitude.push(attitudeAnswers);
+		pageData.attitude[page] = attitudeAnswers;
+		//pageData.attitude.push(attitudeAnswers);
 	} else if (pageData.attitude === undefined) {
 		pageData.attitude = {};
-		pageData.attitude.push(attitudeAnswers);
+		pageData.attitude[page] = attitudeAnswers;
 	} else {
-		attitudeAnswers.forEach(answer => {
-			pageData.attitude.forEach((storedAnswer, index) => {
-				storedAnswer.forEach(t => {
-					if (
-						t.date.toString() === answer.date.toString() &&
-						t.day === answer.day
-					) {
-						pageData.attitude.splice(index);
-					}
-				});
-			});
-		});
-		pageData.attitude.push(attitudeAnswers);
+		pageData.attitude[page] = attitudeAnswers;
 	}
 	savePageData(pageData, program);
 };
 
 const clearAttitude = () => {
 	let pageData = loadData();
-	pageData.attitude.forEach((data, index) => {
-		data.forEach(item => {
-			if (item.day.toString() === page.toString()) {
-				pageData.attitude.splice(index, 1);
-			}
-		});
+	pageData.attitude[page].forEach((data, index) => {
+		console.log(data);
+		if (data.day === page) {
+			delete pageData.attitude[page];
+		}
 	});
 	savePageData(pageData, program);
 	setCheckBoxesToDefault(chkboxes);
@@ -66,15 +54,18 @@ const clearAttitude = () => {
 
 const loadAttitude = () => {
 	let pageData = loadData();
-	if (pageData === undefined || pageData.attitude === undefined) {
+
+	if (
+		pageData === undefined ||
+		pageData.attitude === undefined ||
+		pageData.attitude[page] === undefined
+	) {
 		return;
 	}
-	pageData.attitude.forEach(data => {
-		data.forEach((item, i) => {
-			if (chkboxes[i].id === item.id && item.day === page) {
-				chkboxes[i].checked = item.value;
-			}
-		});
+	pageData.attitude[page].forEach((data, i) => {
+		if (chkboxes[i].id === data.id && data.day === page) {
+			chkboxes[i].checked = data.value;
+		}
 	});
 };
 

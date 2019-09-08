@@ -1,10 +1,11 @@
 import { savePageData, loadData } from '../../../db';
 import { getProgram, setInputsToDefault } from '../../../lib';
-let pageData = loadData();
+
 const program = getProgram();
 const inputHotButtons = document.getElementsByClassName('hot-buttons');
 
 const saveHotButtons = () => {
+	let pageData = loadData();
 	let arr = [];
 
 	for (let i = 0; i < inputHotButtons.length; i++) {
@@ -14,7 +15,7 @@ const saveHotButtons = () => {
 
 		arr.push(answerObj);
 	}
-	console.log(arr, 'array');
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};
@@ -30,12 +31,14 @@ const saveHotButtons = () => {
 };
 
 const clearHotButtons = () => {
+	let pageData = loadData();
 	delete pageData.progress.hotbuttons;
 	savePageData(pageData, program);
 	setInputsToDefault(inputHotButtons);
 };
 
 const loadHotButtons = () => {
+	let pageData = loadData();
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.progress === undefined) {

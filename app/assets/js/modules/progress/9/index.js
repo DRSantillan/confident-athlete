@@ -1,12 +1,13 @@
 import { savePageData, loadData } from '../../../db';
 import { getProgram, setInputsToDefault } from '../../../lib';
-let pageData = loadData();
+
 const program = getProgram();
 const inputTrainingMindset = document.getElementsByClassName(
 	'training-mindset'
 );
 
 const saveMindset = () => {
+	let pageData = loadData();
 	let arr = [];
 
 	for (let i = 0; i < inputTrainingMindset.length; i++) {
@@ -16,7 +17,7 @@ const saveMindset = () => {
 
 		arr.push(answerObj);
 	}
-	console.log(arr, 'array');
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};
@@ -32,12 +33,14 @@ const saveMindset = () => {
 };
 
 const clearMindset = () => {
+	let pageData = loadData();
 	delete pageData.progress.mindset;
 	savePageData(pageData, program);
 	setInputsToDefault(inputTrainingMindset);
 };
 
 const loadMindset = () => {
+	let pageData = loadData();
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.progress === undefined) {

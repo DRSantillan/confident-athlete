@@ -1,12 +1,5 @@
-import { savePageData, loadData, clearData } from '../../../db';
-import {
-	getDate,
-	getProgram,
-	getPage,
-	setCheckBoxesToDefault,
-	getAnswers,
-	setInputsToDefault
-} from '../../../lib';
+import { savePageData, loadData } from '../../../db';
+import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
 
 const input6Traits = document.getElementsByClassName('six-traits');
 const inputTriggerSituations = document.getElementsByClassName(
@@ -41,7 +34,6 @@ const save6Traits = () => {
 	}
 
 	savePageData(pageData, program);
-	//console.log(answersArray);
 };
 const clear6Traits = () => {
 	let pageData = loadData();
@@ -70,7 +62,6 @@ const load6Traits = () => {
 };
 
 const saveTriggerSituations = () => {
-	console.log('saving');
 	let pageData = loadData();
 	let arr = [];
 
@@ -81,7 +72,7 @@ const saveTriggerSituations = () => {
 
 		arr.push(answerObj);
 	}
-	console.log(arr, 'array');
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.strategy = {};

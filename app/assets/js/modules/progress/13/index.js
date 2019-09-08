@@ -1,4 +1,4 @@
-import { savePageData, loadData, clearData } from '../../../db';
+import { savePageData, loadData } from '../../../db';
 import {
 	getDate,
 	getProgram,
@@ -23,7 +23,7 @@ const savePracticeMindset = () => {
 		maObject.value = chkboxes[i].checked;
 		attitudeAnswers.push(maObject);
 	}
-	console.log(attitudeAnswers);
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};

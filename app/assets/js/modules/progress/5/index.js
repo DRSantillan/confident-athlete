@@ -2,12 +2,13 @@ import { savePageData, loadData } from '../../../db';
 import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
 
 const inputExpectConf = document.getElementsByClassName('expect-confidence');
-let pageData = loadData();
+
 const program = getProgram();
 const page = getPage();
 const today = getDate();
 
 const saveExpectConfidence = () => {
+	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputExpectConf.length; i++) {
 		let answers = {};
@@ -18,7 +19,7 @@ const saveExpectConfidence = () => {
 		answers.value = inputExpectConf[i].value;
 		answersArray.push(answers);
 	}
-	console.log(answersArray);
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};
@@ -34,6 +35,7 @@ const saveExpectConfidence = () => {
 };
 
 const clearExpectConfidence = () => {
+	let pageData = loadData();
 	pageData.progress.expectations.forEach(item => {
 		if (item.day === page) {
 			delete pageData.progress.expectations;
@@ -44,7 +46,12 @@ const clearExpectConfidence = () => {
 };
 
 const loadExpectConfidence = () => {
-	if (pageData === undefined || pageData.progress === undefined) {
+	let pageData = loadData();
+	if (
+		pageData === undefined ||
+		pageData.progress === undefined ||
+		pageData.progress.expectations === undefined
+	) {
 		return;
 	}
 	pageData.progress.expectations.forEach((item, index) => {

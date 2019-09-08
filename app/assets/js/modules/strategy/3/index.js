@@ -1,4 +1,4 @@
-import { savePageData, loadData, clearData } from '../../../db';
+import { savePageData, loadData } from '../../../db';
 import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
 
 const inputTop5 = document.getElementsByClassName('top5-mindsets');
@@ -8,7 +8,6 @@ const page = getPage();
 const today = getDate();
 
 const saveTop5NFMindsets = () => {
-	console.log('savi');
 	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputTop5.length; i++) {
@@ -32,7 +31,6 @@ const saveTop5NFMindsets = () => {
 	}
 
 	savePageData(pageData, program);
-	//console.log(answersArray);
 };
 const clearTop5NFMindsets = () => {
 	let pageData = loadData();

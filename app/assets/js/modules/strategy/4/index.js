@@ -1,4 +1,4 @@
-import { savePageData, loadData, clearData } from '../../../db';
+import { savePageData, loadData } from '../../../db';
 import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
 
 const inputTop5Beliefs = document.getElementsByClassName('top5-beliefs');
@@ -12,7 +12,6 @@ const page = getPage();
 const today = getDate();
 
 const saveTop5NFBeliefs = () => {
-	console.log('savi');
 	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputTop5Beliefs.length; i++) {
@@ -36,7 +35,6 @@ const saveTop5NFBeliefs = () => {
 	}
 
 	savePageData(pageData, program);
-	//console.log(answersArray);
 };
 const clearTop5NFBeliefs = () => {
 	let pageData = loadData();
@@ -65,7 +63,6 @@ const loadTop5NFBeliefs = () => {
 };
 
 const saveIneffectiveBelief = () => {
-	console.log('savi');
 	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputIneffectiveBelief.length; i++) {
@@ -89,7 +86,6 @@ const saveIneffectiveBelief = () => {
 	}
 
 	savePageData(pageData, program);
-	//console.log(answersArray);
 };
 const clearIneffectiveBelief = () => {
 	let pageData = loadData();
@@ -118,7 +114,6 @@ const loadIneffectiveBelief = () => {
 };
 
 const saveNewBelief = () => {
-	console.log('savi');
 	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputNewBelief.length; i++) {
@@ -142,7 +137,6 @@ const saveNewBelief = () => {
 	}
 
 	savePageData(pageData, program);
-	//console.log(answersArray);
 };
 const clearNewBelief = () => {
 	let pageData = loadData();

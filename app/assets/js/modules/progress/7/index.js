@@ -1,10 +1,11 @@
 import { savePageData, loadData } from '../../../db';
 import { getProgram, setInputsToDefault } from '../../../lib';
-let pageData = loadData();
+
 const program = getProgram();
 const inputProcessGoal = document.getElementsByClassName('process-goals');
 
 const saveProcessGoals = () => {
+	let pageData = loadData();
 	let arr = [];
 
 	for (let i = 0; i < inputProcessGoal.length; i++) {
@@ -14,7 +15,7 @@ const saveProcessGoals = () => {
 
 		arr.push(answerObj);
 	}
-	console.log(arr, 'array');
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};
@@ -30,12 +31,14 @@ const saveProcessGoals = () => {
 };
 
 const clearProcessGoals = () => {
+	let pageData = loadData();
 	delete pageData.progress.process;
 	savePageData(pageData, program);
 	setInputsToDefault(inputProcessGoal);
 };
 
 const loadProcessGoals = () => {
+	let pageData = loadData();
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.progress === undefined) {

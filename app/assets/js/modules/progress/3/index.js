@@ -19,7 +19,7 @@ const saveTop5Char = () => {
 		answers.value = inputTop5Char[i].value;
 		answersArray.push(answers);
 	}
-	console.log(answersArray);
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};

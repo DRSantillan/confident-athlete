@@ -15,7 +15,7 @@ const saveAwareness = () => {
 
 		arr.push(answerObj);
 	}
-	console.log(arr, 'array');
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};

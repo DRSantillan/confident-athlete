@@ -1,19 +1,18 @@
-import { savePageData, loadData, clearData } from '../../../db';
+import { savePageData, loadData } from '../../db';
 import {
 	getDate,
 	getProgram,
 	getPage,
-	setCheckBoxesToDefault,
-	setInputsToDefault
-} from '../../../lib';
+	setCheckBoxesToDefault
+} from '../../lib';
 
-const chkboxes = document.getElementsByClassName('fear-trust');
+const chkboxes = document.getElementsByClassName('self-concept');
 
 const today = getDate();
 const page = getPage();
 const program = getProgram();
 
-const saveFearTrust = () => {
+const saveSelfConcept = () => {
 	let pageData = loadData();
 	let answersArray = [];
 
@@ -29,38 +28,36 @@ const saveFearTrust = () => {
 
 	if (pageData === undefined) {
 		pageData = {};
-		pageData.strategy = {};
-		pageData.strategy.feartrust = answersArray;
+		pageData.selfconcept = answersArray;
 	} else if (pageData.strategy === undefined) {
-		pageData.strategy = {};
-		pageData.strategy.feartrust = answersArray;
+		pageData.selfconcept = answersArray;
 	} else {
-		pageData.strategy.feartrust = answersArray;
+		pageData.selfconcept = answersArray;
 	}
 
 	savePageData(pageData, program);
 };
-const clearFearTrust = () => {
+const clearSelfConcept = () => {
 	let pageData = loadData();
-	pageData.strategy.feartrust.forEach(item => {
+	pageData.selfconcept.forEach(item => {
 		if (item.day === page) {
-			delete pageData.strategy.feartrust;
+			delete pageData.selfconcept;
 		}
 	});
 	savePageData(pageData, program);
 	setCheckBoxesToDefault(chkboxes);
 };
 
-const loadFearTrust = () => {
+const loadSelfConcept = () => {
 	let pageData = loadData();
-	if (pageData === undefined || pageData.strategy === undefined) {
+	if (pageData === undefined || pageData.selfconcept === undefined) {
 		return;
 	}
-	pageData.strategy.feartrust.forEach((item, index) => {
+	pageData.selfconcept.forEach((item, index) => {
 		if (chkboxes[index].id === item.id) {
 			chkboxes[index].checked = item.value;
 		}
 	});
 };
 
-export { saveFearTrust, clearFearTrust, loadFearTrust };
+export { saveSelfConcept, clearSelfConcept, loadSelfConcept };

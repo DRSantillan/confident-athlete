@@ -2,13 +2,14 @@ import { savePageData, loadData } from '../../../db';
 import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
 
 const inputSuccessFear = document.getElementsByClassName('success-fear-driven');
-let pageData = loadData();
+
 const program = getProgram();
 const page = getPage();
 const today = getDate();
 
 const saveSuccessFear = () => {
-	console.log('saving');
+	let pageData = loadData();
+	debugger;
 	let answersArray = [];
 	for (let i = 0; i < inputSuccessFear.length; i++) {
 		let answers = {};
@@ -35,6 +36,7 @@ const saveSuccessFear = () => {
 };
 
 const clearSuccessFear = () => {
+	let pageData = loadData();
 	pageData.progress.successfear.forEach(item => {
 		if (item.day === page) {
 			delete pageData.progress.successfear;
@@ -45,7 +47,13 @@ const clearSuccessFear = () => {
 };
 
 const loadSuccessFear = () => {
-	if (pageData === undefined || pageData.progress === undefined) {
+	let pageData = loadData();
+
+	if (
+		pageData === undefined ||
+		pageData.progress === undefined ||
+		pageData.progress.successfear === undefined
+	) {
 		return;
 	}
 	pageData.progress.successfear.forEach((item, index) => {

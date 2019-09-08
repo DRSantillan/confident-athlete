@@ -4,11 +4,12 @@ import {
 	setInputsToDefault,
 	setCheckBoxesToDefault
 } from '../../../lib';
-let pageData = loadData();
+
 const program = getProgram();
 const inputMindRead = document.getElementsByClassName('mind-reader');
 
 const saveMindReader = () => {
+	let pageData = loadData();
 	let arr = [];
 
 	for (let i = 0; i < inputMindRead.length; i++) {
@@ -27,7 +28,7 @@ const saveMindReader = () => {
 
 		arr.push(answerObj);
 	}
-	console.log(arr, 'array');
+
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.progress = {};
@@ -43,6 +44,7 @@ const saveMindReader = () => {
 };
 
 const clearMindReader = () => {
+	let pageData = loadData();
 	delete pageData.progress.mindreader;
 	savePageData(pageData, program);
 	setInputsToDefault(inputMindRead);
@@ -50,6 +52,7 @@ const clearMindReader = () => {
 };
 
 const loadMindReader = () => {
+	let pageData = loadData();
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.progress === undefined) {
@@ -58,8 +61,6 @@ const loadMindReader = () => {
 
 	for (let key in pageData.progress.mindreader) {
 		for (let i = 0; i < inputMindRead.length; i++) {
-			//inputMindRead[i].value = pageData.progress.mindreader[i].value;
-			console.log(pageData.progress.mindreader[i].id, inputMindRead[i].id);
 			if (
 				inputMindRead[i].id === 'q1success' ||
 				inputMindRead[i].id === 'q2success' ||
