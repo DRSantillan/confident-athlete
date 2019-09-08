@@ -4,6 +4,7 @@ import {
 	getProgram,
 	getPage,
 	setCheckBoxesToDefault,
+	getAnswers,
 	setInputsToDefault
 } from '../../../lib';
 
@@ -11,12 +12,13 @@ const input6Traits = document.getElementsByClassName('six-traits');
 const inputTriggerSituations = document.getElementsByClassName(
 	'trigger-situations'
 );
-const pageData = loadData();
+
 const program = getProgram();
 const page = getPage();
 const today = getDate();
 
 const save6Traits = () => {
+	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < input6Traits.length; i++) {
 		let answers = {};
@@ -42,6 +44,7 @@ const save6Traits = () => {
 	//console.log(answersArray);
 };
 const clear6Traits = () => {
+	let pageData = loadData();
 	pageData.strategy.traits.forEach(item => {
 		if (item.day === page) {
 			delete pageData.strategy.traits;
@@ -51,7 +54,12 @@ const clear6Traits = () => {
 	setInputsToDefault(input6Traits);
 };
 const load6Traits = () => {
-	if (pageData === undefined || pageData.strategy === undefined) {
+	let pageData = loadData();
+	if (
+		pageData === undefined ||
+		pageData.strategy === undefined ||
+		pageData.strategy.traits === undefined
+	) {
 		return;
 	}
 	pageData.strategy.traits.forEach((item, index) => {
@@ -62,53 +70,50 @@ const load6Traits = () => {
 };
 
 const saveTriggerSituations = () => {
-	let answerObj = {};
+	console.log('saving');
+	let pageData = loadData();
+	let arr = [];
 
 	for (let i = 0; i < inputTriggerSituations.length; i++) {
-		getAnswers(inputTriggerSituations, i, 'q1', answerObj);
-		getAnswers(inputTriggerSituations, i, 'q2', answerObj);
-		getAnswers(inputTriggerSituations, i, 'q3', answerObj);
-		getAnswers(inputTriggerSituations, i, 'q4', answerObj);
-		getAnswers(inputTriggerSituations, i, 'q5', answerObj);
-	}
+		let answerObj = {};
+		answerObj.id = inputTriggerSituations[i].id;
+		answerObj.value = inputTriggerSituations[i].value;
 
+		arr.push(answerObj);
+	}
+	console.log(arr, 'array');
 	if (pageData === undefined) {
 		pageData = {};
 		pageData.strategy = {};
-		pageData.strategy['day' + page] = {};
-		pageData.strategy['day' + page] = answerObj;
+		pageData.strategy.triggers = arr;
 	} else if (pageData.strategy === undefined) {
 		pageData.strategy = {};
-		pageData.strategy['day' + page] = {};
-		pageData.strategy['day' + page] = answerObj;
+		pageData.strategy.triggers = arr;
 	} else {
-		pageData.strategy['day' + page] = answerObj;
+		pageData.strategy.triggers = arr;
 	}
 
 	savePageData(pageData, program);
 };
 
 const clearTriggerSituations = () => {
-	delete pageData.strategy['day' + page];
+	let pageData = loadData();
+	delete pageData.strategy.triggers;
 	savePageData(pageData, program);
 	setInputsToDefault(inputTriggerSituations);
 };
 
 const loadTriggerSituations = () => {
-	if (pageData !== undefined || pageData.strategy !== undefined) {
-		for (let key in pageData.strategy['day' + page]) {
-			for (let i = 0; i < inputTriggerSituations.length; i++) {
-				if (inputTriggerSituations[i].id === key + 'situation') {
-					inputTriggerSituations[i].value =
-						pageData.strategy['day' + page][key].situation;
-				} else if (inputTriggerSituations[i].id === key + 'fear') {
-					inputTriggerSituations[i].value =
-						pageData.strategy['day' + page][key].fear;
-				} else if (inputTriggerSituations[i].id === key + 'reaction') {
-					inputTriggerSituations[i].value =
-						pageData.strategy['day' + page][key].reaction;
-				}
-			}
+	let pageData = loadData();
+	if (pageData === undefined) {
+		return;
+	} else if (pageData.strategy === undefined) {
+		return;
+	}
+
+	for (let key in pageData.strategy.triggers) {
+		for (let i = 0; i < inputTriggerSituations.length; i++) {
+			inputTriggerSituations[i].value = pageData.strategy.triggers[i].value;
 		}
 	}
 };

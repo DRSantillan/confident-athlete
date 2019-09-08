@@ -4,12 +4,13 @@ import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
 const inputPerformFunctional = document.getElementsByClassName(
 	'perform-functional'
 );
-let pageData = loadData();
+
 const program = getProgram();
 const page = getPage();
 const today = getDate();
 
 const savePerformFunct = () => {
+	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputPerformFunctional.length; i++) {
 		let answers = {};
@@ -36,6 +37,7 @@ const savePerformFunct = () => {
 };
 
 const clearPerformFunct = () => {
+	let pageData = loadData();
 	pageData.progress.perform.forEach(item => {
 		if (item.day === page) {
 			delete pageData.progress.perform;
@@ -46,7 +48,12 @@ const clearPerformFunct = () => {
 };
 
 const loadPerformFunct = () => {
-	if (pageData === undefined || pageData.progress === undefined) {
+	let pageData = loadData();
+	if (
+		pageData === undefined ||
+		pageData.progress === undefined ||
+		pageData.progress.perform === undefined
+	) {
 		return;
 	}
 	pageData.progress.perform.forEach((item, index) => {

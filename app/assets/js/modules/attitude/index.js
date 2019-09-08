@@ -6,13 +6,14 @@ import {
 	setCheckBoxesToDefault
 } from '../../lib';
 
-const chkboxes = document.getElementsByClassName('attitude');
-const pageData = loadData();
+const chkboxes = document.getElementsByClassName('mental-assessment');
+
 const program = getProgram();
 const page = getPage();
 const today = getDate();
 
 const saveAttitude = () => {
+	let pageData = loadData();
 	let attitudeAnswers = [];
 
 	for (let i = 0; i < chkboxes.length; i++) {
@@ -21,15 +22,16 @@ const saveAttitude = () => {
 		maObject.day = page;
 		maObject.id = chkboxes[i].id;
 		maObject.value = chkboxes[i].checked;
+
 		attitudeAnswers.push(maObject);
 	}
 
 	if (pageData === undefined) {
 		pageData = {};
-		pageData.attitude = [];
+		pageData.attitude = {};
 		pageData.attitude.push(attitudeAnswers);
 	} else if (pageData.attitude === undefined) {
-		pageData.attitude = [];
+		pageData.attitude = {};
 		pageData.attitude.push(attitudeAnswers);
 	} else {
 		attitudeAnswers.forEach(answer => {
@@ -50,6 +52,7 @@ const saveAttitude = () => {
 };
 
 const clearAttitude = () => {
+	let pageData = loadData();
 	pageData.attitude.forEach((data, index) => {
 		data.forEach(item => {
 			if (item.day.toString() === page.toString()) {
@@ -62,6 +65,7 @@ const clearAttitude = () => {
 };
 
 const loadAttitude = () => {
+	let pageData = loadData();
 	if (pageData === undefined || pageData.attitude === undefined) {
 		return;
 	}

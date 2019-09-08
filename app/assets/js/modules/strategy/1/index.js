@@ -8,11 +8,12 @@ import {
 } from '../../../lib';
 
 const chkboxes = document.getElementsByClassName('fear-trust');
-const pageData = loadData();
+
 const today = getDate();
 const page = getPage();
 
 const saveFearTrust = () => {
+	let pageData = loadData();
 	let answersArray = [];
 
 	for (let i = 0; i < chkboxes.length; i++) {
@@ -39,6 +40,7 @@ const saveFearTrust = () => {
 	savePageData(pageData, program);
 };
 const clearFearTrust = () => {
+	let pageData = loadData();
 	pageData.strategy.feartrust.forEach(item => {
 		if (item.day === page) {
 			delete pageData.strategy.feartrust;
@@ -49,6 +51,7 @@ const clearFearTrust = () => {
 };
 
 const loadFearTrust = () => {
+	let pageData = loadData();
 	if (pageData === undefined || pageData.strategy === undefined) {
 		return;
 	}

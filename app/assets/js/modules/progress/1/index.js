@@ -1,10 +1,11 @@
 import { savePageData, loadData } from '../../../db';
 import { getProgram, setInputsToDefault } from '../../../lib';
-let pageData = loadData();
+
 const program = getProgram();
 const inputAwareness = document.getElementsByClassName('awareness');
 
 const saveAwareness = () => {
+	let pageData = loadData();
 	let arr = [];
 
 	for (let i = 0; i < inputAwareness.length; i++) {
@@ -30,12 +31,14 @@ const saveAwareness = () => {
 };
 
 const clearAwareness = () => {
+	let pageData = loadData();
 	delete pageData.progress.awareness;
 	savePageData(pageData, program);
 	setInputsToDefault(inputAwareness);
 };
 
 const loadAwareness = () => {
+	let pageData = loadData();
 	if (pageData === undefined) {
 		return;
 	} else if (pageData.progress === undefined) {

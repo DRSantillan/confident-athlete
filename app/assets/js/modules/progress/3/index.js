@@ -2,12 +2,13 @@ import { savePageData, loadData } from '../../../db';
 import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
 
 const inputTop5Char = document.getElementsByClassName('top5');
-let pageData = loadData();
+
 const program = getProgram();
 const page = getPage();
 const today = getDate();
 
 const saveTop5Char = () => {
+	let pageData = loadData();
 	let answersArray = [];
 	for (let i = 0; i < inputTop5Char.length; i++) {
 		let answers = {};
@@ -34,6 +35,7 @@ const saveTop5Char = () => {
 };
 
 const clearTop5Char = () => {
+	let pageData = loadData();
 	pageData.progress.top5.forEach(item => {
 		if (item.day === page) {
 			delete pageData.progress.top5;
@@ -44,7 +46,12 @@ const clearTop5Char = () => {
 };
 
 const loadTop5Char = () => {
-	if (pageData === undefined || pageData.progress === undefined) {
+	let pageData = loadData();
+	if (
+		pageData === undefined ||
+		pageData.progress === undefined ||
+		pageData.progress.top5 === undefined
+	) {
 		return;
 	}
 	pageData.progress.top5.forEach((item, index) => {

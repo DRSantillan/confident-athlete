@@ -8,6 +8,7 @@ const page = getPage();
 const today = getDate();
 
 const saveSuccessFear = () => {
+	console.log('saving');
 	let answersArray = [];
 	for (let i = 0; i < inputSuccessFear.length; i++) {
 		let answers = {};
