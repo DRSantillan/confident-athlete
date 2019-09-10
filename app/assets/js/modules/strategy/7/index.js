@@ -6,27 +6,30 @@ import {
 	clearTextBoxes,
 	loadTextBoxes
 } from '../../../lib';
-
-const chkboxDefMind = document.getElementsByClassName('defensive-mindset');
-const inputMenPerf = document.getElementsByClassName('mental-performance');
+/* Area: Strategy  Day: 7  Type: defensive-mindset,mental-performance */
+const type = 'defensive-mindset';
+const type2 = 'mental-performance';
+const area = 'strategy';
+const chkboxDefMind = document.getElementsByClassName(type);
+const inputMenPerf = document.getElementsByClassName(type2);
 
 const saveDefensiveMindset = () => {
-	saveCheckBoxes(chkboxDefMind, 'strategy', 'defensivemindset');
+	saveCheckBoxes(chkboxDefMind, area, type);
 };
 const clearDefensiveMindset = () => {
-	clearCheckBoxes(chkboxDefMind, 'strategy', 'defensivemindset');
+	clearCheckBoxes(chkboxDefMind, area, type);
 };
 const loadDefensiveMindset = () => {
-	loadCheckBoxes(chkboxDefMind, 'strategy', 'defensivemindset');
+	loadCheckBoxes(chkboxDefMind, area, type);
 };
 const saveMentalPerformance = () => {
-	saveTextBoxes(inputMenPerf, 'strategy', 'mentalperformance');
+	saveTextBoxes(inputMenPerf, area, type2);
 };
 const clearMentalPerformance = () => {
-	clearTextBoxes(inputMenPerf, 'strategy', 'mentalperformance');
+	clearTextBoxes(inputMenPerf, area, type2);
 };
 const loadMentalPerformance = () => {
-	loadTextBoxes(inputMenPerf, 'strategy', 'mentalperformance');
+	loadTextBoxes(inputMenPerf, area, type2);
 };
 
 export {

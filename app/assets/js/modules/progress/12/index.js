@@ -1,17 +1,19 @@
 import { saveSliders, clearSliders, loadSliders } from '../../../lib';
-
-const inputCompMental = document.getElementsByClassName('comp-mentality');
+/* Area: Progress  Day: 12  Type: competition-mentality */
+const type = 'competition-mentality';
+const area = 'progress';
+const inputCompMental = document.getElementsByClassName(type);
 
 const saveCompetitionMentality = () => {
-	saveSliders(inputCompMental, 'progress', 'mentality');
+	saveSliders(inputCompMental, area, type);
 };
 
 const clearCompetitionMentality = () => {
-	clearSliders(inputCompMental, 'progress', 'mentality');
+	clearSliders(inputCompMental, area, type);
 };
 
 const loadCompetitionMentality = () => {
-	loadSliders(inputCompMental, 'progress', 'mentality');
+	loadSliders(inputCompMental, area, type);
 };
 
 export {

@@ -1,14 +1,17 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
-const inputUnbeatTrust = document.getElementsByClassName('unbeatable-trust');
+/* Area: Strategy  Day: 12  Type: unbeatable-trust */
+const type = 'unbeatable-trust';
+const area = 'strategy';
+const inputUnbeatTrust = document.getElementsByClassName(type);
 
 const saveUnbeatableTrust = () => {
-	saveTextBoxes(inputUnbeatTrust, 'strategy', 'unbeatabletrust');
+	saveTextBoxes(inputUnbeatTrust, area, type);
 };
 const clearUnbeatableTrust = () => {
-	clearTextBoxes(inputUnbeatTrust, 'strategy', 'unbeatabletrust');
+	clearTextBoxes(inputUnbeatTrust, area, type);
 };
 const loadUnbeatableTrust = () => {
-	loadTextBoxes(inputUnbeatTrust, 'strategy', 'unbeatabletrust');
+	loadTextBoxes(inputUnbeatTrust, area, type);
 };
 
 export { saveUnbeatableTrust, clearUnbeatableTrust, loadUnbeatableTrust };

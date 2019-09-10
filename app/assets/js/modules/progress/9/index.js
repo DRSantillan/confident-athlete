@@ -1,20 +1,19 @@
-import { savePageData, loadData } from '../../../db';
 import { clearTextBoxes, saveTextBoxes, loadTextBoxes } from '../../../lib';
-
-const inputTrainingMindset = document.getElementsByClassName(
-	'training-mindset'
-);
+/* Area: Progress  Day: 9  Type: training-mindset */
+const type = 'training-mindset';
+const area = 'progress';
+const inputTrainingMindset = document.getElementsByClassName(type);
 
 const saveMindset = () => {
-	saveTextBoxes(inputTrainingMindset, 'progress', 'mindset');
+	saveTextBoxes(inputTrainingMindset, area, type);
 };
 
 const clearMindset = () => {
-	clearTextBoxes(inputTrainingMindset, 'progress', 'mindset');
+	clearTextBoxes(inputTrainingMindset, area, type);
 };
 
 const loadMindset = () => {
-	loadTextBoxes(inputTrainingMindset, 'progress', 'mindset');
+	loadTextBoxes(inputTrainingMindset, area, type);
 };
 
 export { saveMindset, clearMindset, loadMindset };

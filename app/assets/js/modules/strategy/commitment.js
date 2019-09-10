@@ -1,14 +1,17 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../lib';
-const inputContract = document.getElementsByClassName('contract');
+/* Area: Contract  Day: Commitment  Type: performers-practice-mindset */
+//const type = 'fear-self-trust';
+const area = 'contract';
+const inputContract = document.getElementsByClassName(area);
 
 const saveCommitment = () => {
-	saveTextBoxes(inputContract, 'contract');
+	saveTextBoxes(inputContract, area);
 };
 const clearCommitment = () => {
-	clearTextBoxes(inputContract, 'contract');
+	clearTextBoxes(inputContract, area);
 };
 const loadCommitment = () => {
-	loadTextBoxes(inputContract, 'contract');
+	loadTextBoxes(inputContract, area);
 };
 
 export { saveCommitment, clearCommitment, loadCommitment };

@@ -1,17 +1,19 @@
 import { clearTextBoxes, saveTextBoxes, loadTextBoxes } from '../../../lib';
-
-const inputFuncMind = document.getElementsByClassName('functional-mindset');
+/* Area: Progress  Day: 11  Type: functional-mindset */
+const type = 'functional-mindset';
+const area = 'progress';
+const inputFuncMind = document.getElementsByClassName(type);
 
 const saveFunctionalMindset = () => {
-	saveTextBoxes(inputFuncMind, 'progress', 'mindset');
+	saveTextBoxes(inputFuncMind, area, type);
 };
 
 const clearFunctionalMindset = () => {
-	clearTextBoxes(inputFuncMind, 'progress', 'mindset');
+	clearTextBoxes(inputFuncMind, area, type);
 };
 
 const loadFunctionalMindset = () => {
-	loadTextBoxes(inputFuncMind, 'progress', 'mindset');
+	loadTextBoxes(inputFuncMind, area, type);
 };
 
 export { saveFunctionalMindset, clearFunctionalMindset, loadFunctionalMindset };

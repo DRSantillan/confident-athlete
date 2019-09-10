@@ -1,39 +1,41 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
+/* Area: Strategy  Day: 4  Type: non-functional-beliefs,new-functional-beliefs,ineffective-beliefs */
+const type = 'non-functional-beliefs';
+const type2 = 'new-functional-beliefs';
+const type3 = 'ineffective-beliefs';
+const area = 'strategy';
+const inputTop5Beliefs = document.getElementsByClassName(type);
 
-const inputTop5Beliefs = document.getElementsByClassName('top5-beliefs');
-const inputIneffectiveBelief = document.getElementsByClassName(
-	'ineffective-belief'
-);
-const inputNewBelief = document.getElementsByClassName('new-belief');
-
+const inputNewBelief = document.getElementsByClassName(type2);
+const inputIneffectiveBelief = document.getElementsByClassName(type3);
 const saveTop5NFBeliefs = () => {
-	saveTextBoxes(inputTop5Beliefs, 'strategy', 'top5beliefs');
+	saveTextBoxes(inputTop5Beliefs, area, type);
 };
 const clearTop5NFBeliefs = () => {
-	clearTextBoxes(inputTop5Beliefs, 'strategy', 'top5beliefs');
+	clearTextBoxes(inputTop5Beliefs, area, type);
 };
 const loadTop5NFBeliefs = () => {
-	loadTextBoxes(inputTop5Beliefs, 'strategy', 'top5beliefs');
+	loadTextBoxes(inputTop5Beliefs, area, type);
 };
 
 const saveIneffectiveBelief = () => {
-	saveTextBoxes(inputIneffectiveBelief, 'strategy', 'ineffectivebelief');
+	saveTextBoxes(inputIneffectiveBelief, area, type3);
 };
 const clearIneffectiveBelief = () => {
-	clearTextBoxes(inputIneffectiveBelief, 'strategy', 'ineffectivebelief');
+	clearTextBoxes(inputIneffectiveBelief, area, type3);
 };
 const loadIneffectiveBelief = () => {
-	loadTextBoxes(inputIneffectiveBelief, 'strategy', 'ineffectivebelief');
+	loadTextBoxes(inputIneffectiveBelief, area, type3);
 };
 
 const saveNewBelief = () => {
-	saveTextBoxes(inputNewBelief, 'strategy', 'newbelief');
+	saveTextBoxes(inputNewBelief, area, type2);
 };
 const clearNewBelief = () => {
-	clearTextBoxes(inputNewBelief, 'strategy', 'newbelief');
+	clearTextBoxes(inputNewBelief, area, type2);
 };
 const loadNewBelief = () => {
-	loadTextBoxes(inputNewBelief, 'strategy', 'newbelief');
+	loadTextBoxes(inputNewBelief, area, type2);
 };
 
 export {

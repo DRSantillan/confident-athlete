@@ -1,14 +1,17 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
-const inputPractice = document.getElementsByClassName('practice-routines');
+/* Area: Strategy  Day: 13  Type: practice-routines */
+const type = 'practice-routines';
+const area = 'strategy';
+const inputPractice = document.getElementsByClassName(type);
 
 const savePracticeRoutines = () => {
-	saveTextBoxes(inputPractice, 'strategy', 'practiceroutines');
+	saveTextBoxes(inputPractice, area, type);
 };
 const clearPracticeRoutines = () => {
-	clearTextBoxes(inputPractice, 'strategy', 'practiceroutines');
+	clearTextBoxes(inputPractice, area, type);
 };
 const loadPracticeRoutines = () => {
-	loadTextBoxes(inputPractice, 'strategy', 'practiceroutines');
+	loadTextBoxes(inputPractice, area, type);
 };
 
 export { savePracticeRoutines, clearPracticeRoutines, loadPracticeRoutines };

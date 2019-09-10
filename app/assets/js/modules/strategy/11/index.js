@@ -1,14 +1,17 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
-const inputPlan = document.getElementsByClassName('sports-specific-plan');
+/* Area: Strategy  Day: 11  Type: sports-specific-plan */
+const type = 'sports-specific-plan';
+const area = 'strategy';
+const inputPlan = document.getElementsByClassName(type);
 
 const saveSportsPlan = () => {
-	saveTextBoxes(inputPlan, 'strategy', 'sportsplan');
+	saveTextBoxes(inputPlan, area, type);
 };
 const clearSportsPlan = () => {
-	clearTextBoxes(inputPlan, 'strategy', 'sportsplan');
+	clearTextBoxes(inputPlan, area, type);
 };
 const loadSportsPlan = () => {
-	loadTextBoxes(inputPlan, 'strategy', 'sportsplan');
+	loadTextBoxes(inputPlan, area, type);
 };
 
 export { saveSportsPlan, clearSportsPlan, loadSportsPlan };

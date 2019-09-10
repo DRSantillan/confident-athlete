@@ -1,61 +1,17 @@
-import { savePageData, loadData } from '../../db';
-import { getProgram, getPage, setInputsToDefault } from '../../lib/';
+import { saveTextBox, clearTextBox, loadTextBox } from '../../lib/';
 
 const inputNotes = document.getElementById('day-note');
 
-const program = getProgram();
-const page = getPage();
-
 const saveNotes = () => {
-	let pageData = loadData();
-	let obj = {};
-	obj.day = page;
-	obj.note = inputNotes.value;
-	//debugger;
-	if (pageData === undefined) {
-		pageData = {};
-		pageData.notes = [];
-		pageData.notes.push(obj);
-	} else if (pageData.notes === undefined) {
-		pageData.notes = [];
-		pageData.notes.push(obj);
-	} else {
-		pageData.notes.forEach((item, index) => {
-			if (item.day === page) {
-				pageData.notes.splice(index, 1);
-			}
-		});
-		pageData.notes.push(obj);
-	}
-
-	obj = {};
-	savePageData(pageData, program);
+	saveTextBox(inputNotes, 'notes');
 };
 
 const clearNotes = () => {
-	let pageData = loadData();
-	pageData.notes.forEach((item, index) => {
-		if (item.day.toString() === page.toString()) {
-			pageData.notes.splice(index, 1);
-		}
-	});
-	inputNotes.value = '';
-
-	savePageData(pageData, program);
+	clearTextBox(inputNotes, 'notes');
 };
 
 const loadNotes = () => {
-	let pageData = loadData();
-	if (pageData === undefined) {
-		return;
-	} else if (pageData.notes === undefined) {
-		return;
-	}
-	pageData.notes.forEach((item, index) => {
-		if (item.day === page) {
-			inputNotes.value = item.note;
-		}
-	});
+	loadTextBox(inputNotes, 'notes');
 };
 
 export { saveNotes, clearNotes, loadNotes };

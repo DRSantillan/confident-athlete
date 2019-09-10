@@ -1,24 +1,28 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
-const inputRoles = document.getElementsByClassName('roles');
-const inputRec = document.getElementsByClassName('recreational-activities');
+/* Area: Strategy  Day: 14  Type: life-roles,recreational-activities */
+const type = 'life-roles';
+const type2 = 'recreational-activities';
+const area = 'strategy';
+const inputRoles = document.getElementsByClassName(type);
+const inputRec = document.getElementsByClassName(type2);
 
 const saveRoles = () => {
-	saveTextBoxes(inputRoles, 'strategy', 'roles');
+	saveTextBoxes(inputRoles, area, type);
 };
 const clearRoles = () => {
-	clearTextBoxes(inputRoles, 'strategy', 'roles');
+	clearTextBoxes(inputRoles, area, type);
 };
 const loadRoles = () => {
-	loadTextBoxes(inputRoles, 'strategy', 'roles');
+	loadTextBoxes(inputRoles, area, type);
 };
 const saveRecretional = () => {
-	saveTextBoxes(inputRec, 'strategy', 'recreational');
+	saveTextBoxes(inputRec, area, type2);
 };
 const clearRecretional = () => {
-	clearTextBoxes(inputRec, 'strategy', 'recreational');
+	clearTextBoxes(inputRec, area, type2);
 };
 const loadRecretional = () => {
-	loadTextBoxes(inputRec, 'strategy', 'recreational');
+	loadTextBoxes(inputRec, area, type2);
 };
 
 export {

@@ -1,18 +1,19 @@
-import { savePageData, loadData } from '../../../db';
 import { saveSliders, clearSliders, loadSliders } from '../../../lib';
-
-const inputSuccessFear = document.getElementsByClassName('success-fear-driven');
+/* Area: Progress  Day: 2  Type: success-fear */
+const type = 'success-fear';
+const area = 'progress';
+const inputSuccessFear = document.getElementsByClassName(type);
 
 const saveSuccessFear = () => {
-	saveSliders(inputSuccessFear, 'progress', 'successfear');
+	saveSliders(inputSuccessFear, area, type);
 };
 
 const clearSuccessFear = () => {
-	clearSliders(inputSuccessFear, 'progress', 'successfear');
+	clearSliders(inputSuccessFear, area, type);
 };
 
 const loadSuccessFear = () => {
-	loadSliders(inputSuccessFear, 'progress', 'successfear');
+	loadSliders(inputSuccessFear, area, type);
 };
 
 export { loadSuccessFear, clearSuccessFear, saveSuccessFear };

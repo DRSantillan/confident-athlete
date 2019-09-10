@@ -1,17 +1,19 @@
 import { clearTextBoxes, saveTextBoxes, loadTextBoxes } from '../../../lib';
-
-const inputExpectConf = document.getElementsByClassName('expect-confidence');
+/* Area: Progress  Day: 5  Type: performance-expectations */
+const type = 'performance-expectations';
+const area = 'progress';
+const inputExpectConf = document.getElementsByClassName(type);
 
 const saveExpectConfidence = () => {
-	saveTextBoxes(inputExpectConf, 'progress', 'expectations');
+	saveTextBoxes(inputExpectConf, area, type);
 };
 
 const clearExpectConfidence = () => {
-	clearTextBoxes(inputExpectConf, 'progress', 'expectations');
+	clearTextBoxes(inputExpectConf, area, type);
 };
 
 const loadExpectConfidence = () => {
-	loadTextBoxes(inputExpectConf, 'progress', 'expectations');
+	loadTextBoxes(inputExpectConf, area, type);
 };
 
 export { saveExpectConfidence, clearExpectConfidence, loadExpectConfidence };

@@ -1,30 +1,31 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
-
-const input6Traits = document.getElementsByClassName('six-traits');
-const inputTriggerSituations = document.getElementsByClassName(
-	'trigger-situations'
-);
+/* Area: Strategy  Day: 2  Type: perfectionism-traits,trigger-situations */
+const type = 'perfectionism-traits';
+const type2 = 'trigger-situations';
+const area = 'strategy';
+const input6Traits = document.getElementsByClassName(type);
+const inputTriggerSituations = document.getElementsByClassName(type2);
 
 const save6Traits = () => {
-	saveTextBoxes(input6Traits, 'strategy', 'traits');
+	saveTextBoxes(input6Traits, area, type);
 };
 const clear6Traits = () => {
-	clearTextBoxes(input6Traits, 'strategy', 'traits');
+	clearTextBoxes(input6Traits, area, type);
 };
 const load6Traits = () => {
-	loadTextBoxes(input6Traits, 'strategy', 'traits');
+	loadTextBoxes(input6Traits, area, type);
 };
 
 const saveTriggerSituations = () => {
-	saveTextBoxes(inputTriggerSituations, 'strategy', 'triggers');
+	saveTextBoxes(inputTriggerSituations, area, type2);
 };
 
 const clearTriggerSituations = () => {
-	clearTextBoxes(inputTriggerSituations, 'strategy', 'triggers');
+	clearTextBoxes(inputTriggerSituations, area, type2);
 };
 
 const loadTriggerSituations = () => {
-	loadTextBoxes(inputTriggerSituations, 'strategy', 'triggers');
+	loadTextBoxes(inputTriggerSituations, area, type2);
 };
 
 export {

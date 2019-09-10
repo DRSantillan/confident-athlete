@@ -1,17 +1,19 @@
 import { clearTextBoxes, saveTextBoxes, loadTextBoxes } from '../../../lib';
-
-const inputBreakDown = document.getElementsByClassName('trust-breakdown');
+/* Area: Progress  Day: 10  Type: trust-breakdown */
+const type = 'trust-breakdown';
+const area = 'progress';
+const inputBreakDown = document.getElementsByClassName(type);
 
 const saveTrustBreakdown = () => {
-	saveTextBoxes(inputBreakDown, 'progress', 'breakdown');
+	saveTextBoxes(inputBreakDown, area, type);
 };
 
 const clearTrustBreakdown = () => {
-	clearTextBoxes(inputBreakDown, 'progress', 'breakdown');
+	clearTextBoxes(inputBreakDown, area, type);
 };
 
 const loadTrustBreakdown = () => {
-	loadTextBoxes(inputBreakDown, 'progress', 'breakdown');
+	loadTextBoxes(inputBreakDown, area, type);
 };
 
 export { saveTrustBreakdown, clearTrustBreakdown, loadTrustBreakdown };

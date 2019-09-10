@@ -1,17 +1,19 @@
 import { clearTextBoxes, saveTextBoxes, loadTextBoxes } from '../../../lib';
-
-const inputHotButtons = document.getElementsByClassName('hot-buttons');
+/* Area: Progress  Day: 6  Type: hot-buttons */
+const type = 'hot-buttons';
+const area = 'progress';
+const inputHotButtons = document.getElementsByClassName(type);
 
 const saveHotButtons = () => {
-	saveTextBoxes(inputHotButtons, 'progress', 'hotbuttons');
+	saveTextBoxes(inputHotButtons, area, type);
 };
 
 const clearHotButtons = () => {
-	clearTextBoxes(inputHotButtons, 'progress', 'hotbuttons');
+	clearTextBoxes(inputHotButtons, area, type);
 };
 
 const loadHotButtons = () => {
-	loadTextBoxes(inputHotButtons, 'progress', 'hotbuttons');
+	loadTextBoxes(inputHotButtons, area, type);
 };
 
 export { saveHotButtons, clearHotButtons, loadHotButtons };

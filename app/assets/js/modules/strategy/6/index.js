@@ -1,27 +1,29 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
-const inputTop5HotReaction = document.getElementsByClassName(
-	'top5-hot-reaction'
-);
-const inputOldNew = document.getElementsByClassName('old-new-selftalk');
+/* Area: Strategy  Day: 6  Type: hot-button-reactions,positive-negative-talk */
+const type = 'hot-button-reactions';
+const type2 = 'positive-negative-talk';
+const area = 'strategy';
+const inputTop5HotReaction = document.getElementsByClassName(type);
+const inputOldNew = document.getElementsByClassName(type2);
 
 const saveTop5HotButtonsReactions = () => {
-	saveTextBoxes(inputTop5HotReaction, 'strategy', 'hot5buttonsreactions');
+	saveTextBoxes(inputTop5HotReaction, area, type);
 };
 const clearTop5HotButtonsReactions = () => {
-	clearTextBoxes(inputTop5HotReaction, 'strategy', 'hot5buttonsreactions');
+	clearTextBoxes(inputTop5HotReaction, area, type);
 };
 const loadTop5HotButtonsReactions = () => {
-	loadTextBoxes(inputTop5HotReaction, 'strategy', 'hot5buttonsreactions');
+	loadTextBoxes(inputTop5HotReaction, area, type);
 };
 
 const saveOldNewSelfTalk = () => {
-	saveTextBoxes(inputOldNew, 'strategy', 'oldnewtalk');
+	saveTextBoxes(inputOldNew, area, type2);
 };
 const clearOldNewSelfTalk = () => {
-	clearTextBoxes(inputOldNew, 'strategy', 'oldnewtalk');
+	clearTextBoxes(inputOldNew, area, type2);
 };
 const loadOldNewSelfTalk = () => {
-	loadTextBoxes(inputOldNew, 'strategy', 'oldnewtalk');
+	loadTextBoxes(inputOldNew, area, type2);
 };
 
 export {

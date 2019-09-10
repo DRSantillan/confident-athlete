@@ -1,37 +1,41 @@
 import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
-
+/* Area: Strategy  Day: 5  Type: strict-expectations,expectations,change-expectations */
+const type = 'strict-expectations';
+const type2 = 'expectations';
+const type3 = 'change-expectations';
+const area = 'strategy';
 const inputStrictExpect = document.getElementsByClassName(
 	'strict-expectations'
 );
-const inputExpect = document.getElementsByClassName('expectations');
-const inputChange = document.getElementsByClassName('change-expectations');
+const inputExpect = document.getElementsByClassName(type2);
+const inputChange = document.getElementsByClassName(type3);
 
 const saveStrictExpectations = () => {
-	saveTextBoxes(inputStrictExpect, 'strategy', 'strictexpectations');
+	saveTextBoxes(inputStrictExpect, 'strategy', type);
 };
 const clearStrictExpectations = () => {
-	clearTextBoxes(inputStrictExpect, 'strategy', 'strictexpectations');
+	clearTextBoxes(inputStrictExpect, 'strategy', type);
 };
 const loadStrictExpectations = () => {
-	loadTextBoxes(inputStrictExpect, 'strategy', 'strictexpectations');
+	loadTextBoxes(inputStrictExpect, 'strategy', type);
 };
 const saveExpectations = () => {
-	saveTextBoxes(inputExpect, 'strategy', 'expectations');
+	saveTextBoxes(inputExpect, 'strategy', type2);
 };
 const clearExpectations = () => {
-	clearTextBoxes(inputExpect, 'strategy', 'expectations');
+	clearTextBoxes(inputExpect, 'strategy', type2);
 };
 const loadExpectations = () => {
-	loadTextBoxes(inputExpect, 'strategy', 'expectations');
+	loadTextBoxes(inputExpect, 'strategy', type2);
 };
 const saveChangeExpectations = () => {
-	saveTextBoxes(inputChange, 'strategy', 'changeexpectations');
+	saveTextBoxes(inputChange, 'strategy', type3);
 };
 const clearChangeExpectations = () => {
-	clearTextBoxes(inputChange, 'strategy', 'changeexpectations');
+	clearTextBoxes(inputChange, 'strategy', type3);
 };
 const loadChangeExpectations = () => {
-	loadTextBoxes(inputChange, 'strategy', 'changeexpectations');
+	loadTextBoxes(inputChange, 'strategy', type3);
 };
 
 export {

@@ -1,19 +1,19 @@
 import { saveSliders, clearSliders, loadSliders } from '../../../lib';
-
-const inputPerformFunctional = document.getElementsByClassName(
-	'perform-functional'
-);
+/* Area: Progress  Day: 4  Type: functional-mindset-performance */
+const type = 'functional-mindset-performance';
+const area = 'progress';
+const inputPerformFunctional = document.getElementsByClassName(type);
 
 const savePerformFunct = () => {
-	saveSliders(inputPerformFunctional, 'progress', 'perform');
+	saveSliders(inputPerformFunctional, area, type);
 };
 
 const clearPerformFunct = () => {
-	clearSliders(inputPerformFunctional, 'progress', 'perform');
+	clearSliders(inputPerformFunctional, area, type);
 };
 
 const loadPerformFunct = () => {
-	loadSliders(inputPerformFunctional, 'progress', 'perform');
+	loadSliders(inputPerformFunctional, area, type);
 };
 
 export { loadPerformFunct, clearPerformFunct, savePerformFunct };

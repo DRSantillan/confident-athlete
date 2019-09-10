@@ -1,16 +1,18 @@
 import { saveCheckBoxes, clearCheckBoxes, loadCheckBoxes } from '../../../lib';
-
-const chkboxSocApp = document.getElementsByClassName('social-approval');
+/* Area: Strategy  Day: 8  Type: social-approval */
+const type = 'social-approval';
+const area = 'strategy';
+const chkboxSocApp = document.getElementsByClassName(type);
 
 const saveSocialApproval = () => {
-	saveCheckBoxes(chkboxSocApp, 'strategy', 'socialapproval');
+	saveCheckBoxes(chkboxSocApp, area, type);
 };
 const clearSocialApproval = () => {
-	clearCheckBoxes(chkboxSocApp, 'strategy', 'socialapproval');
+	clearCheckBoxes(chkboxSocApp, area, type);
 };
 
 const loadSocialApproval = () => {
-	loadCheckBoxes(chkboxSocApp, 'strategy', 'socialapproval');
+	loadCheckBoxes(chkboxSocApp, area, type);
 };
 
 export { saveSocialApproval, clearSocialApproval, loadSocialApproval };

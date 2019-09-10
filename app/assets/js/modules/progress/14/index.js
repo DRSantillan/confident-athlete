@@ -1,17 +1,19 @@
 import { saveSliders, clearSliders, loadSliders } from '../../../lib';
-
-const inputLifeBalance = document.getElementsByClassName('life-balance');
+/* Area: Progress  Day: 14  Type: performers-practice-mindset */
+const type = 'life-balance';
+const area = 'progress';
+const inputLifeBalance = document.getElementsByClassName(type);
 
 const saveLifeBalance = () => {
-	saveSliders(inputLifeBalance, 'progress', 'lifebalance');
+	saveSliders(inputLifeBalance, area, type);
 };
 
 const clearLifeBalance = () => {
-	clearSliders(inputLifeBalance, 'progress', 'lifebalance');
+	clearSliders(inputLifeBalance, area, type);
 };
 
 const loadLifeBalance = () => {
-	loadSliders(inputLifeBalance, 'progress', 'lifebalance');
+	loadSliders(inputLifeBalance, area, type);
 };
 
 export { loadLifeBalance, clearLifeBalance, saveLifeBalance };
