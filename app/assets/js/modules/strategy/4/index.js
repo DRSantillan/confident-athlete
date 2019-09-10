@@ -1,5 +1,4 @@
-import { savePageData, loadData } from '../../../db';
-import { getDate, getProgram, getPage, setInputsToDefault } from '../../../lib';
+import { saveTextBoxes, clearTextBoxes, loadTextBoxes } from '../../../lib';
 
 const inputTop5Beliefs = document.getElementsByClassName('top5-beliefs');
 const inputIneffectiveBelief = document.getElementsByClassName(
@@ -7,161 +6,34 @@ const inputIneffectiveBelief = document.getElementsByClassName(
 );
 const inputNewBelief = document.getElementsByClassName('new-belief');
 
-const program = getProgram();
-const page = getPage();
-const today = getDate();
-
 const saveTop5NFBeliefs = () => {
-	let pageData = loadData();
-	let answersArray = [];
-	for (let i = 0; i < inputTop5Beliefs.length; i++) {
-		let answers = {};
-
-		answers.date = today;
-		answers.day = page;
-		answers.id = inputTop5Beliefs[i].id;
-		answers.value = inputTop5Beliefs[i].value;
-		answersArray.push(answers);
-	}
-	if (pageData === undefined) {
-		pageData = {};
-		pageData.strategy = {};
-		pageData.strategy.top5beliefs = answersArray;
-	} else if (pageData.strategy === undefined) {
-		pageData.strategy = {};
-		pageData.strategy.top5beliefs = answersArray;
-	} else {
-		pageData.strategy.top5beliefs = answersArray;
-	}
-
-	savePageData(pageData, program);
+	saveTextBoxes(inputTop5Beliefs, 'strategy', 'top5beliefs');
 };
 const clearTop5NFBeliefs = () => {
-	let pageData = loadData();
-	pageData.strategy.top5beliefs.forEach(item => {
-		if (item.day === page) {
-			delete pageData.strategy.top5beliefs;
-		}
-	});
-	savePageData(pageData, program);
-	setInputsToDefault(inputTop5Beliefs);
+	clearTextBoxes(inputTop5Beliefs, 'strategy', 'top5beliefs');
 };
 const loadTop5NFBeliefs = () => {
-	let pageData = loadData();
-	if (
-		pageData === undefined ||
-		pageData.strategy === undefined ||
-		pageData.strategy.top5beliefs === undefined
-	) {
-		return;
-	}
-	pageData.strategy.top5beliefs.forEach((item, index) => {
-		if (inputTop5Beliefs[index].id === item.id) {
-			inputTop5Beliefs[index].value = item.value;
-		}
-	});
+	loadTextBoxes(inputTop5Beliefs, 'strategy', 'top5beliefs');
 };
 
 const saveIneffectiveBelief = () => {
-	let pageData = loadData();
-	let answersArray = [];
-	for (let i = 0; i < inputIneffectiveBelief.length; i++) {
-		let answers = {};
-
-		answers.date = today;
-		answers.day = page;
-		answers.id = inputIneffectiveBelief[i].id;
-		answers.value = inputIneffectiveBelief[i].value;
-		answersArray.push(answers);
-	}
-	if (pageData === undefined) {
-		pageData = {};
-		pageData.strategy = {};
-		pageData.strategy.ineffectivebelief = answersArray;
-	} else if (pageData.strategy === undefined) {
-		pageData.strategy = {};
-		pageData.strategy.ineffectivebelief = answersArray;
-	} else {
-		pageData.strategy.ineffectivebelief = answersArray;
-	}
-
-	savePageData(pageData, program);
+	saveTextBoxes(inputIneffectiveBelief, 'strategy', 'ineffectivebelief');
 };
 const clearIneffectiveBelief = () => {
-	let pageData = loadData();
-	pageData.strategy.ineffectivebelief.forEach(item => {
-		if (item.day === page) {
-			delete pageData.strategy.ineffectivebelief;
-		}
-	});
-	savePageData(pageData, program);
-	setInputsToDefault(inputTop5Beliefs);
+	clearTextBoxes(inputIneffectiveBelief, 'strategy', 'ineffectivebelief');
 };
 const loadIneffectiveBelief = () => {
-	let pageData = loadData();
-	if (
-		pageData === undefined ||
-		pageData.strategy === undefined ||
-		pageData.strategy.ineffectivebelief === undefined
-	) {
-		return;
-	}
-	pageData.strategy.ineffectivebelief.forEach((item, index) => {
-		if (inputTop5Beliefs[index].id === item.id) {
-			inputTop5Beliefs[index].value = item.value;
-		}
-	});
+	loadTextBoxes(inputIneffectiveBelief, 'strategy', 'ineffectivebelief');
 };
 
 const saveNewBelief = () => {
-	let pageData = loadData();
-	let answersArray = [];
-	for (let i = 0; i < inputNewBelief.length; i++) {
-		let answers = {};
-
-		answers.date = today;
-		answers.day = page;
-		answers.id = inputNewBelief[i].id;
-		answers.value = inputNewBelief[i].value;
-		answersArray.push(answers);
-	}
-	if (pageData === undefined) {
-		pageData = {};
-		pageData.strategy = {};
-		pageData.strategy.newbelief = answersArray;
-	} else if (pageData.strategy === undefined) {
-		pageData.strategy = {};
-		pageData.strategy.newbelief = answersArray;
-	} else {
-		pageData.strategy.newbelief = answersArray;
-	}
-
-	savePageData(pageData, program);
+	saveTextBoxes(inputNewBelief, 'strategy', 'newbelief');
 };
 const clearNewBelief = () => {
-	let pageData = loadData();
-	pageData.strategy.newbelief.forEach(item => {
-		if (item.day === page) {
-			delete pageData.strategy.newbelief;
-		}
-	});
-	savePageData(pageData, program);
-	setInputsToDefault(inputNewBelief);
+	clearTextBoxes(inputNewBelief, 'strategy', 'newbelief');
 };
 const loadNewBelief = () => {
-	let pageData = loadData();
-	if (
-		pageData === undefined ||
-		pageData.strategy === undefined ||
-		pageData.strategy.newbelief === undefined
-	) {
-		return;
-	}
-	pageData.strategy.newbelief.forEach((item, index) => {
-		if (inputNewBelief[index].id === item.id) {
-			inputNewBelief[index].value = item.value;
-		}
-	});
+	loadTextBoxes(inputNewBelief, 'strategy', 'newbelief');
 };
 
 export {
