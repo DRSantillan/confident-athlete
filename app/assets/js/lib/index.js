@@ -95,14 +95,6 @@ const loadTextBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let data;
 
-	if (
-		pageData === undefined ||
-		pageData[area] === undefined ||
-		pageData[area][type] === undefined
-	) {
-		return;
-	}
-
 	if (type) {
 		data = pageData[area][type];
 	} else {
@@ -257,7 +249,6 @@ const loadSliders = (input, area, type) => {
 		}
 	});
 };
-
 const saveCheckBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let answersArray = [];
@@ -317,16 +308,11 @@ const clearCheckBoxes = (input, area, type) => {
 	savePageData(pageData, getProgram());
 	setCheckBoxesToDefault(input);
 };
-
 const loadCheckBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let data;
 
-	if (
-		pageData === undefined ||
-		pageData[area] === undefined ||
-		pageData[area][type] === undefined
-	) {
+	if (pageData === undefined || pageData[area] === undefined) {
 		return;
 	}
 
@@ -345,7 +331,6 @@ const loadCheckBoxes = (input, area, type) => {
 		}
 	});
 };
-
 const getPage = () => {
 	let currentDay = window.location.pathname;
 	const program = getProgram();
@@ -357,7 +342,6 @@ const getPage = () => {
 	}
 	return currentDay;
 };
-
 const getProgram = () => {
 	let currentProgram = window.location.pathname;
 
@@ -372,13 +356,11 @@ const getProgram = () => {
 
 	return currentProgram;
 };
-
 const setCheckBoxesToDefault = chkbox => {
 	for (let i = 0; i < chkbox.length; i++) {
 		chkbox[i].checked = false;
 	}
 };
-
 const setInputsToDefault = input => {
 	for (let i = 0; i < input.length; i++) {
 		input[i].value = '';
