@@ -95,6 +95,8 @@ const loadTextBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let data;
 
+	if (pageData === undefined || pageData[area][type] === undefined) return;
+
 	if (type) {
 		data = pageData[area][type];
 	} else {

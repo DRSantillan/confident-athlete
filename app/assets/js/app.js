@@ -1,3 +1,6 @@
+import { displayHeader, renderPreviousDay } from './modules/templates/header';
+displayHeader();
+
 import { saveAttitude, clearAttitude, loadAttitude } from './modules/attitude';
 import {
 	saveCommitment,

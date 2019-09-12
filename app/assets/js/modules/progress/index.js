@@ -26,6 +26,7 @@ const types = [
 	'trust-breakdown',
 	'functional-mindset',
 	'competition-mentality',
+	'performers-practice-mindset',
 	'life-balance'
 ];
 const area = 'progress';
@@ -40,7 +41,6 @@ const clearSelfAwareness = () => {
 	clearTextBoxes(inputAwareness, area, types[0]);
 };
 const loadSelfAwareness = () => {
-	console.log(types[0]);
 	loadTextBoxes(inputAwareness, area, types[0]);
 };
 /* End  Area: Progress  Day: 1*/
