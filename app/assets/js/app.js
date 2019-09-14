@@ -1,5 +1,8 @@
-import { displayHeader, renderPreviousDay } from './modules/templates/header';
+import { displayHeader, injectPageTitle } from './modules/templates/header';
+import { displayFooter } from './modules/templates/footer';
+injectPageTitle();
 displayHeader();
+displayFooter();
 
 import { saveAttitude, clearAttitude, loadAttitude } from './modules/attitude';
 import {

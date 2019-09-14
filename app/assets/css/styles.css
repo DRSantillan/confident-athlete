@@ -7,21 +7,12 @@
 @import './modules/_table';
 @import './modules/_text-input';
 @import './modules/_range-slider';
-
-@import './modules/_audio';
-@import './modules/_warmup';
-@import './modules/_attitude';
-@import './modules/_objective';
-@import './modules/_mottos';
-@import './modules/_action-plans';
-@import './modules/_progress';
-@import './modules/_strategy';
 @import './modules/_teaser';
 @import './modules/_notes';
 @import './modules/_btn';
-@import './modules/_hero';
 @import './modules/_header';
 @import './modules/_footer';
-@import './modules/_site-nav';
 @import './modules/_section.css';
 @import './modules/_site-modal';
+@import './modules/_contents';
+/* @import './modules/_contents.'; */

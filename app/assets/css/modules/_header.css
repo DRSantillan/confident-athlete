@@ -1,26 +1,69 @@
 /* Site Header */
 header {
 
-  font-family: 'Montserrat';
+
   background-color: $main;
   text-align: center;
   position: fixed;
   width: 100%;
   z-index: 99;
-  height: 150px;
+  //height: 130px;
+  color: white;
+  border-bottom: solid 2px grey;
 
+
+
+
+
+
+  box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.5);
 
   h1,
   h2 {
-    font-family: 'Permanent Marker';
+
     color: white;
+    font-style: oblique;
+    text-shadow: rgba(0, 0, 0, .5) 1px 1px 2px;
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+    margin-bottom: -2px;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+
   }
+
+  .day {
+    display: flex;
+    width: 70%;
+    justify-content: space-evenly;
+    margin: 0 auto;
+
+    color: white;
+    text-shadow: rgba(0, 0, 0, .5) 1px 1px 2px;
+
+    .day-item {
+      width: 100px;
+
+      align-content: center;
+
+    }
+
+    .day-main-title {
+      width: 75%;
+      text-align: center;
+
+    }
+
+    a {
+      color: white;
+    }
+  }
+
+
+
+
 }

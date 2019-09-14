@@ -1,5 +1,6 @@
 $Default: #000;
 $siteWhite: #fff;
-$main: rgb(29, 120, 226);
-$bq: rgb(153, 186, 224);
-$chkbox: rgb(122, 226, 166);
+$main: #50DD22;
+$bq: rgba(102, 255, 0, 0.5);
+$chkbox: rgb(0, 129, 54);
+$mark: rgb(162, 236, 140);

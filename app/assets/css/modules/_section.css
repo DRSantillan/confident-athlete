@@ -1,26 +1,43 @@
 /* Site Sections */
 section {
   padding: 20px;
-  margin: 20px;
+
   line-height: 1.5;
-  font-size: 1.4rem;
-  font-family: 'Montserrat';
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 200;
+
 
 
   h3,
   h4,
   h5 {
-    font-family: 'Permanent Marker';
+    text-shadow: rgba(0, 0, 0, .5) 1px 1px 2px;
+    color: blueviolet;
+
+    .confidence {
+      color: blueviolet;
+    }
+  }
+
+
+
+
+
+  h3,
+  h4,
+  h5 {
+    text-shadow: rgba(0, 0, 0, .5) 1px 1px 2px;
     color: $main;
+
+
   }
 
   h3 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   ul {
