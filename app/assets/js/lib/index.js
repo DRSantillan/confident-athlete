@@ -5,6 +5,85 @@ const getDate = () => {
 
 	return today;
 };
+const saveDDL = (input, area, type) => {
+	let pageData = loadData();
+
+	let arr = [];
+	for (let i = 0; i < input.length; i++) {
+		let answers = {};
+		answers.date = getDate();
+		answers.day = getPage();
+		answers.id = input[i].id;
+		answers.value = input[i].value;
+		arr.push(answers);
+	}
+	if (pageData === undefined) {
+		pageData = {};
+		if (type) {
+			pageData[area] = {};
+			pageData[area][type] = arr;
+		} else {
+			pageData[area] = arr;
+		}
+	} else if (pageData[area] === undefined) {
+		if (type) {
+			pageData[area] = {};
+			pageData[area][type] = arr;
+		} else {
+			pageData[area] = arr;
+		}
+	} else {
+		if (type) {
+			pageData[area][type] = arr;
+		} else {
+			pageData[area] = arr;
+		}
+	}
+	savePageData(pageData, getProgram());
+};
+const clearDDL = (input, area, type) => {
+	let pageData = loadData();
+
+	if (type) {
+		pageData[area][type].forEach(item => {
+			if (item.day === getPage()) {
+				delete pageData[area][type];
+			}
+		});
+	} else {
+		pageData[area].forEach(item => {
+			if (item.day === getPage()) {
+				delete pageData[area];
+			}
+		});
+	}
+
+	savePageData(pageData, getProgram());
+	setInputsToDefault(input, 'Select One');
+};
+const loadDDL = (input, area, type) => {
+	let pageData = loadData();
+	let data;
+
+	if (pageData === undefined || pageData[area][type] === undefined) return;
+
+	if (type) {
+		data = pageData[area][type];
+	} else {
+		data = pageData[area];
+	}
+
+	if (data === undefined) {
+		return;
+	}
+
+	for (let key in data) {
+		for (let i = 0; i < input.length; i++) {
+			input[i].value = data[i].value;
+		}
+	}
+};
+
 const saveTxtChecks = (input, area, type) => {
 	let pageData = loadData();
 	let arr = [];
@@ -95,7 +174,19 @@ const loadTextBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let data;
 
-	if (pageData === undefined || pageData[area][type] === undefined) return;
+	if (pageData === null) {
+		pageData = undefined;
+	}
+
+	if (
+		pageData !== undefined ||
+		pageData[area] !== undefined ||
+		pageData[area][type] !== undefined
+	) {
+		console.log(pageData);
+	} else {
+		return;
+	}
 
 	if (type) {
 		data = pageData[area][type];
@@ -116,6 +207,10 @@ const loadTextBoxes = (input, area, type) => {
 const saveTextBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let arr = [];
+
+	if (pageData === null) {
+		pageData = undefined;
+	}
 
 	for (let i = 0; i < input.length; i++) {
 		let answers = {};
@@ -265,7 +360,7 @@ const saveCheckBoxes = (input, area, type) => {
 		answersArray.push(answers);
 	}
 
-	if (pageData === undefined) {
+	if (pageData === undefined || pageData === null) {
 		pageData = {};
 		pageData[area] = {};
 		if (type) {
@@ -273,7 +368,7 @@ const saveCheckBoxes = (input, area, type) => {
 		} else {
 			pageData[area] = answersArray;
 		}
-	} else if (pageData[area] === undefined) {
+	} else if (pageData[area] === undefined || pageData[area] === null) {
 		pageData[area] = {};
 		if (type) {
 			pageData[area][type] = answersArray;
@@ -314,7 +409,12 @@ const loadCheckBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let data;
 
-	if (pageData === undefined || pageData[area] === undefined) {
+	if (
+		pageData === undefined ||
+		pageData === null ||
+		pageData[area] === null ||
+		pageData[area] === undefined
+	) {
 		return;
 	}
 
@@ -363,9 +463,13 @@ const setCheckBoxesToDefault = chkbox => {
 		chkbox[i].checked = false;
 	}
 };
-const setInputsToDefault = input => {
+const setInputsToDefault = (input, select) => {
 	for (let i = 0; i < input.length; i++) {
-		input[i].value = '';
+		if (select) {
+			input[i].value = select;
+		} else {
+			input[i].value = '';
+		}
 	}
 };
 
@@ -389,5 +493,8 @@ export {
 	loadCheckBoxes,
 	saveTxtChecks,
 	loadTxtChecks,
-	clearTxtChecks
+	clearTxtChecks,
+	saveDDL,
+	clearDDL,
+	loadDDL
 };

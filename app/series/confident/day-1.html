@@ -9,13 +9,13 @@
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap"
 			rel="stylesheet"
-		/>
-		<!-- build:css assets/css/styles.css -->
-		<link rel="stylesheet" href="/dev/assets/css/styles.css" />
-		<link
+		/><link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 		/>
+		<!-- build:css assets/css/styles.css -->
+		<link rel="stylesheet" href="/dev/assets/css/styles.css" />
+		
 		<!-- endbuild -->
 		<!-- build:js assets/js/vendor.js -->
 		<script src="/dev/assets/js/vendor.js"></script>
@@ -23,10 +23,10 @@
 	</head>
 
 	<body>
-		<header class="confident"></header>
+		<header></header>
 		<div class="wrapper">
 			<section class="audio">
-				<h3 class="confident">Day 1 - Audio</h3>
+				<h3>Day 1 - Audio</h3>
 				<p>
 					Either listen to the audio online or click the ellipsis to the right
 					and click "download" to save to your device.
@@ -34,7 +34,7 @@
 				<audio controls src="/assets/media/mp3/confident/Day1.mp3"></audio>
 			</section>
 
-			<section class="warmup">
+			<section  class="warmup">
 				<h3>Day 1 - Warm-up</h3>
 				<p>
 					My definition of self-confidence is how firmly you believe in your
@@ -55,7 +55,7 @@
 					sense of selfconfidence.
 				</p>
 			</section>
-			<section class="clip">
+			<section  class="clip">
 				<h3>Day 1 - Confidence Clip</h3>
 				<p>
 					When asked about his confidence, 2005 Indy 500 Champion, Dan Wheldon
@@ -77,8 +77,7 @@
 					<strong>~Dan Wheldon, 2005 Indianapolis 500 Champion</strong>
 				</blockquote>
 			</section>
-
-			<section class="objective">
+			<section  class="objective">
 				<h3>Day 1 - Daily Objective</h3>
 				<p>
 					To understand the concept of self-confidence, what it is, and how to
@@ -86,7 +85,7 @@
 					personal confidence.
 				</p>
 			</section>
-			<section class="boost">
+			<section  class="boost">
 				<h3>Day 1 - Daily Confidence Boost</h3>
 				<p>
 					This exercise is designed to help you improve your awareness of how
@@ -166,7 +165,8 @@
 					<div class="container__row">
 						<div class="container__col">1.</div>
 						<div class="container__col">
-							<select id="q1">
+							<select id="q1" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -238,7 +238,8 @@
 						</div>
 						<div class="container__col">2.</div>
 						<div class="container__col">
-							<select id="q2">
+							<select id="q2" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -312,7 +313,8 @@
 					<div class="container__row">
 						<div class="container__col">3.</div>
 						<div class="container__col">
-							<select id="q3">
+							<select id="q3" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -384,7 +386,8 @@
 						</div>
 						<div class="container__col">4.</div>
 						<div class="container__col">
-							<select id="q4">
+							<select id="q4" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -458,7 +461,8 @@
 					<div class="container__row">
 						<div class="container__col">5.</div>
 						<div class="container__col">
-							<select id="q5">
+							<select id="q5" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -530,7 +534,8 @@
 						</div>
 						<div class="container__col">6.</div>
 						<div class="container__col">
-							<select id="q6">
+							<select id="q6" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -604,7 +609,8 @@
 					<div class="container__row">
 						<div class="container__col">7.</div>
 						<div class="container__col">
-							<select id="q7">
+							<select id="q7" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -676,7 +682,8 @@
 						</div>
 						<div class="container__col">8.</div>
 						<div class="container__col">
-							<select id="q8">
+							<select id="q8" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -750,9 +757,9 @@
 					<div class="container__row">
 						<div class="container__col">9.</div>
 						<div class="container__col">
-							<select id="q9">
-								<option value="Past success in your sport"
-									>Past success in your sport</option
+							<select id="q9" class="sources-confidence">
+								<option>Select One</option>
+								<option value="Past success in your sport">Past success in your sport</option
 								>
 								<option value="An effective training program"
 									>An effective training program</option
@@ -822,7 +829,8 @@
 						</div>
 						<div class="container__col">10.</div>
 						<div class="container__col">
-							<select id="q10">
+							<select id="q10" class="sources-confidence">
+								<option>Select One</option>
 								<option value="Past success in your sport"
 									>Past success in your sport</option
 								>
@@ -893,11 +901,11 @@
 							</select>
 						</div>
 					</div>
-					<button class="btn" id="saveBoost">Save</button
-					><button class="btn" id="clearBoost">Clear</button>
+					<button class="btn" id="saveSources">Save</button
+					><button class="btn" id="clearSources">Clear</button>
 				</div>
 			</section>
-			<section class="energize">
+			<section  class="energize">
 				<h3>Day 1 - Energize Your Confidence</h3>
 				<p>
 					You will be guided through a short period of relaxation (an abdominal
@@ -926,7 +934,7 @@
 					</li>
 				</ol>
 			</section>
-			<section class="action">
+			<section  class="action">
 				<h3>Day 1 - Taking Confident Action</h3>
 				<p>
 					Note that a few sources of confidence are under your control, such as
@@ -946,7 +954,7 @@
 						1.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input action-sources-confidence"
 								type="text"
 								id="q1"
 								placeholder="Sources of Confidence I Control..."
@@ -957,7 +965,7 @@
 						2.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input action-sources-confidence"
 								type="text"
 								id="q2"
 								placeholder="Sources of Confidence I Control..."
@@ -968,7 +976,7 @@
 						3.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input action-sources-confidence"
 								type="text"
 								id="q3"
 								placeholder="Sources of Confidence I Control..."
@@ -979,7 +987,7 @@
 						4.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input action-sources-confidence"
 								type="text"
 								id="q4"
 								placeholder="Sources of Confidence I Control..."
@@ -990,17 +998,17 @@
 						5.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input action-sources-confidence"
 								type="text"
 								id="q5"
 								placeholder="Sources of Confidence I Control..."
 							/>
 						</div>
-					</div><button class="btn" id="saveBoost">Save</button
-					><button class="btn" id="clearBoost">Clear</button>
+					</div><button class="btn" id="saveActionSources">Save</button
+					><button class="btn" id="clearActionSources">Clear</button>
 				</div>
 			</section>
-			<section class="scoreboad">
+			<section  class="scoreboad">
 				<h3>Day 1 - Confidence Scoreboard</h3>
 				<p>
 					You can use the confidence scoreboard everyday after you complete the
@@ -1027,7 +1035,7 @@
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -1043,7 +1051,7 @@
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -1061,7 +1069,7 @@
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -1082,7 +1090,7 @@
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -1094,11 +1102,11 @@
 							I don’t understand what confidence is
 						</div>
 					</div>
-					<button class="btn" id="saveBoost">Save</button
-					><button class="btn" id="clearBoost">Clear</button>
+					<button class="btn" id="saveScoreBrd">Save</button
+					><button class="btn" id="clearScoreBrd">Clear</button>
 				</div>
 			</section>
-			<section class="notes">
+			<section  class="notes">
 				<h3>Day 1 - Additional notes</h3>
 				<div class="container">
 					<div class="container__row">
@@ -1116,7 +1124,7 @@
 					><button class="btn" id="clearNotes">Clear</button>
 				</div>
 			</section>
-			<section class="teaser">
+			<section  class="teaser">
 				<h2>Are you ready to learn how to be a Fearless Warrior?</h2>
 			</section>
 		</div>

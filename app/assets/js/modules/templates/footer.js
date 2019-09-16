@@ -15,7 +15,7 @@ const renderPreviousDay = () => {
 						if (typeof item.contents[index - 1].day === 'number') {
 							temp = `<a href="day-${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">Day ${item.contents[index - 1].day}</a>`;
 						} else {
-							console.log(item.contents[index - 1].day);
+							
 							if (item.contents[index - 1].day === '') {
 								temp = `<a href="/series/${program}/" title="${item.contents[index - 1].title}">Contents</a>`;
 							} else {

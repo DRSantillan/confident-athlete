@@ -12,11 +12,9 @@ section {
   h4,
   h5 {
     text-shadow: rgba(0, 0, 0, .5) 1px 1px 2px;
-    color: blueviolet;
+    
 
-    .confidence {
-      color: blueviolet;
-    }
+    
   }
 
 

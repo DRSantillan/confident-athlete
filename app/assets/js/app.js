@@ -130,7 +130,205 @@ import {
 	saveLifeBalance
 } from './modules/progress';
 
+import {
+	saveSourcesOfConfidence,
+	clearSourcesOfConfidence,
+	loadSourcesOfConfidence,
+	saveDoubtsAndThoughts,
+	clearDoubtsAndThoughts,
+	loadDoubtsAndThoughts,
+	saveConfidenceResume,
+	clearConfidenceResume,
+	loadConfidenceResume,
+	saveEnvironmentControl,
+	clearEnvironmentControl,
+	loadEnvironmentControl,
+	savePreGameRoutines,
+	clearPreGameRoutines,
+	loadPreGameRoutines,
+	saveNegativeBeliefs,
+	clearNegativeBeliefs,
+	loadNegativeBeliefs,
+	saveConfidenceTraits,
+	clearConfidenceTraits,
+	loadConfidenceTraits,
+	saveSelfTalkStatements,
+	clearSelfTalkStatements,
+	loadSelfTalkStatements,
+	saveCurrentDoubts,
+	clearCurrentDoubts,
+	loadCurrentDoubts,
+	saveReframeDoubts,
+	clearReframeDoubts,
+	loadReframeDoubts,
+	saveErrorsAndCoping,
+	clearErrorsAndCoping,
+	loadErrorsAndCoping,
+	saveTopStrengths,
+	clearTopStrengths,
+	loadTopStrengths,
+	saveSituationCoping,
+	clearSituationCoping,
+	loadSituationCoping
+} from './modules/boost';
+
+import {
+	saveScoreBoard,
+	clearScoreBoard,
+	loadScoreBoard
+} from './modules/scoreboard';
+
+import {
+	saveActionSourcesConfidence,
+	clearActionSourcesConfidence,
+	loadActionSourcesConfidence,
+	saveActionDoubtsThoughts,
+	clearActionDoubtsThoughts,
+	loadActionDoubtsThoughts
+} from './modules/action';
+
+import {
+	saveHealthyPhilosphy,
+	clearHealthyPhilosphy,
+	loadHealthyPhilosphy
+} from './modules/energize';
+
 import { saveNotes, clearNotes, loadNotes } from './modules/notes';
+
+const savePhilos = document.getElementById('savePhilos');
+const clearPhilos = document.getElementById('clearPhilos');
+if (savePhilos || clearPhilos) {
+	savePhilos.addEventListener('click', saveHealthyPhilosphy);
+	clearPhilos.addEventListener('click', clearHealthyPhilosphy);
+	window.addEventListener('load', loadHealthyPhilosphy);
+}
+
+const saveActionDoubts = document.getElementById('saveActionDoubts');
+const clearActionDoubts = document.getElementById('clearActionDoubts');
+if (saveActionDoubts || clearActionDoubts) {
+	saveActionDoubts.addEventListener('click', saveActionDoubtsThoughts);
+	clearActionDoubts.addEventListener('click', clearActionDoubtsThoughts);
+	window.addEventListener('load', loadActionDoubtsThoughts);
+}
+
+const saveActionSources = document.getElementById('saveActionSources');
+const clearActionSources = document.getElementById('clearActionSources');
+if (saveActionSources || clearActionSources) {
+	saveActionSources.addEventListener('click', saveActionSourcesConfidence);
+	clearActionSources.addEventListener('click', clearActionSourcesConfidence);
+	window.addEventListener('load', loadActionSourcesConfidence);
+}
+
+const saveScoreBrd = document.getElementById('saveScoreBrd');
+const clearScoreBrd = document.getElementById('clearScoreBrd');
+if (saveScoreBrd || clearScoreBrd) {
+	saveScoreBrd.addEventListener('click', saveScoreBoard);
+	clearScoreBrd.addEventListener('click', clearScoreBoard);
+	window.addEventListener('load', loadScoreBoard);
+}
+
+const saveCope = document.getElementById('saveCope');
+const clearCope = document.getElementById('clearCope');
+if (saveCope || clearCope) {
+	saveCope.addEventListener('click', saveSituationCoping);
+	clearCope.addEventListener('click', clearSituationCoping);
+	window.addEventListener('load', loadSituationCoping);
+}
+
+const saveStrengths = document.getElementById('saveStrengths');
+const clearStrengths = document.getElementById('clearStrengths');
+if (saveStrengths || clearStrengths) {
+	saveStrengths.addEventListener('click', saveTopStrengths);
+	clearStrengths.addEventListener('click', clearTopStrengths);
+	window.addEventListener('load', loadTopStrengths);
+}
+
+const saveErrorCoping = document.getElementById('saveErrorCoping');
+const clearErrorCoping = document.getElementById('clearErrorCoping');
+if (saveErrorCoping || clearErrorCoping) {
+	saveErrorCoping.addEventListener('click', saveErrorsAndCoping);
+	clearErrorCoping.addEventListener('click', clearErrorsAndCoping);
+	window.addEventListener('load', loadErrorsAndCoping);
+}
+
+const saveReframe = document.getElementById('saveReframe');
+const clearReframe = document.getElementById('clearReframe');
+if (saveReframe || clearReframe) {
+	saveReframe.addEventListener('click', saveReframeDoubts);
+	clearReframe.addEventListener('click', clearReframeDoubts);
+	window.addEventListener('load', loadReframeDoubts);
+}
+
+const saveDoubts = document.getElementById('saveDoubts');
+const clearDoubts = document.getElementById('clearDoubts');
+if (saveDoubts || clearDoubts) {
+	saveDoubts.addEventListener('click', saveCurrentDoubts);
+	clearDoubts.addEventListener('click', clearCurrentDoubts);
+	window.addEventListener('load', loadCurrentDoubts);
+}
+
+const saveSelfTalk = document.getElementById('saveSelfTalk');
+const clearSelfTalk = document.getElementById('clearSelfTalk');
+if (saveSelfTalk || clearSelfTalk) {
+	saveSelfTalk.addEventListener('click', saveSelfTalkStatements);
+	clearSelfTalk.addEventListener('click', clearSelfTalkStatements);
+	window.addEventListener('load', loadSelfTalkStatements);
+}
+
+const saveConfTraits = document.getElementById('saveConfTraits');
+const clearConfTraits = document.getElementById('clearConfTraits');
+if (saveConfTraits || clearConfTraits) {
+	saveConfTraits.addEventListener('click', saveConfidenceTraits);
+	clearConfTraits.addEventListener('click', clearConfidenceTraits);
+	window.addEventListener('load', loadConfidenceTraits);
+}
+
+const saveNegBeliefs = document.getElementById('saveNegBeliefs');
+const clearNegBeliefs = document.getElementById('clearNegBeliefs');
+if (saveNegBeliefs || clearNegBeliefs) {
+	saveNegBeliefs.addEventListener('click', saveNegativeBeliefs);
+	clearNegBeliefs.addEventListener('click', clearNegativeBeliefs);
+	window.addEventListener('load', loadNegativeBeliefs);
+}
+
+const saveRoutine = document.getElementById('saveRoutine');
+const clearRoutine = document.getElementById('clearRoutine');
+if (saveRoutine || clearRoutine) {
+	saveRoutine.addEventListener('click', savePreGameRoutines);
+	clearRoutine.addEventListener('click', clearPreGameRoutines);
+	window.addEventListener('load', loadPreGameRoutines);
+}
+
+const saveEnv = document.getElementById('saveEnv');
+const clearEnv = document.getElementById('clearEnv');
+if (saveEnv || clearEnv) {
+	saveEnv.addEventListener('click', saveEnvironmentControl);
+	clearEnv.addEventListener('click', clearEnvironmentControl);
+	window.addEventListener('load', loadEnvironmentControl);
+}
+
+const saveResume = document.getElementById('saveResume');
+const clearResume = document.getElementById('clearResume');
+if (saveResume || clearResume) {
+	saveResume.addEventListener('click', saveConfidenceResume);
+	clearResume.addEventListener('click', clearConfidenceResume);
+	window.addEventListener('load', loadConfidenceResume);
+}
+
+const savesDoubtsThoughts = document.getElementById('saveDoubtsThoughts');
+const clearDoubtsThoughts = document.getElementById('clearDoubtsThoughts');
+if (savesDoubtsThoughts || clearDoubtsThoughts) {
+	savesDoubtsThoughts.addEventListener('click', saveDoubtsAndThoughts);
+	clearDoubtsThoughts.addEventListener('click', clearDoubtsAndThoughts);
+	window.addEventListener('load', loadDoubtsAndThoughts);
+}
+const saveSources = document.getElementById('saveSources');
+const clearSources = document.getElementById('clearSources');
+if (saveSources || clearSources) {
+	saveSources.addEventListener('click', saveSourcesOfConfidence);
+	clearSources.addEventListener('click', clearSourcesOfConfidence);
+	window.addEventListener('load', loadSourcesOfConfidence);
+}
 
 const saveNote = document.getElementById('saveNotes');
 const clearNote = document.getElementById('clearNotes');

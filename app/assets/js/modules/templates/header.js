@@ -3,13 +3,16 @@ import { contents } from '../../db/contents';
 
 const courseTitle = () => {
 	let temp;
-	const program = getProgram();
+	let program = getProgram();
+	console.log(program);
 
 	contents.programs.forEach(item => {
-		if (item.course === program) {
-			temp = `<a href="/series/fearless/"><h1>${item.title}</h1></a>`;
+		if (program.length === 0) {
+			temp = `<a href="/"><h1>The Mental Athlete Series</h1></a>`;
 		} else {
-			temp = `<a href="/series/fearless/"><h1>The Mental Athlete Series</h1></a>`;
+			if (item.course === program) {
+				temp = `<a href="/series/${program}/"><h1>${item.title}</h1></a>`;
+			}
 		}
 	});
 	return temp;
@@ -111,8 +114,6 @@ const renderTitle = () => {
 
 const displayHeader = () => {
 	const header = document.querySelector('header');
-	const header_template = `
-		${renderPreviousDay()}${renderTitle()}${renderNextDay()}`;
 
 	const template = `${courseTitle()}
 			<div class="day">

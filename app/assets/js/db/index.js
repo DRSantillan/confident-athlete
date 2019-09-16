@@ -7,7 +7,7 @@ const loadData = () => {
 	if (localStorage.length !== 0) {
 		return JSON.parse(localStorage.getItem(program));
 	}
-	return;
+	return undefined;
 };
 const clearData = () => {
 	if (localStorage.length !== 0) {
