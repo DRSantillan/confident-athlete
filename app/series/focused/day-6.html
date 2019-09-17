@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title></title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<!-- build:css assets/css/styles.css -->
+		<link rel="stylesheet" href="/dev/assets/css/styles.css" />
+
+		<!-- endbuild -->
+		<!-- build:js assets/js/vendor.js -->
+		<script src="/dev/assets/js/vendor.js"></script>
+		<!-- endbuild -->
+	</head>
+
+	<body>
+		<header></header>
+		<div class="wrapper">
+			<section class="audio">
+				<h3>Day - Audio</h3>
+				<p>
+					Either listen to the audio online or click the ellipsis to the right
+					and click "download" to save to your device.
+				</p>
+				<audio controls src="/assets/media/mp3/composed/Day1.mp3"></audio>
+			</section>
+			<section class="warmup">
+				<h3>Day - Warm-up</h3>
+			</section>
+			<section class="clip">
+				<h3>Day - Concentration Clip</h3>
+				<blockquote></blockquote>
+				<cite></cite>
+			</section>
+			<section class="objective">
+				<h3>Day - Daily Objective</h3>
+				<p></p>
+			</section>
+			<section class="boost">
+				<h3>Day - Daily Focus Boost</h3>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</section>
+			<section class="affirm">
+				<h3>Day - Affirm Your Focus</h3>
+				<p>
+					You will be guided through a short period of relaxation (an abdominal
+					breathing exercise) followed by a simple guided mental imagery
+					exercise. In addition, you will repeat the following affirmations to
+					yourself three times during the guided imagery exercise.
+				</p>
+				<ol>
+					<li>
+						<mark></mark>
+					</li>
+					<li>
+						<mark></mark>
+					</li>
+					<li>
+						<mark></mark>
+					</li>
+				</ol>
+			</section>
+			<section class="action">
+				<h3>Day - Taking Focused Action</h3>
+				<ul>
+					<li></li>
+					<li></li>
+				</ul>
+			</section>
+			<section class="scoreboad">
+				<h3>Day - Focus Scoreboard</h3>
+				<p>
+					You can use the focus scoreboard every day after you complete the
+					daily tasks to test your understanding and application of the
+					concepts. (Remember; be as honest as possible to gain the most from
+					the program!) From time to time, you can also review how well you are
+					accomplishing the daily tasks by referring back to this scorecard.
+					Using the table below, please rate your performance (circle the number
+					for each item; 10 being more positive than negative and 1 being more
+					negative than positive) on the following tasks:
+				</p>
+				<div class="container">
+					<div class="container__row container__row-title">
+						<div class="container__col">Positive</div>
+						<div class="container__col">Scorecard</div>
+						<div class="container__col">Negative</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							txt
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q1"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							txt
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							txt
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q2"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							txt
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							txt
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q3"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							txt
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							txt
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q4"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							txt
+						</div>
+					</div>
+					<button class="btn" id="saveFocusScoreBrd">Save</button
+					><button class="btn" id="clearFocusScoreBrd">Clear</button>
+				</div>
+			</section>
+			<section class="notes">
+				<h3>Day 1 - Additional notes</h3>
+				<div class="container">
+					<div class="container__row">
+						<div class="container__col">
+							<textarea
+								id="day-note"
+								class="txt-input"
+								placeholder="Enter Notes here..."
+								rows="200"
+								wrap
+							></textarea>
+						</div>
+					</div>
+					<button class="btn" id="saveNotes">Save</button
+					><button class="btn" id="clearNotes">Clear</button>
+				</div>
+			</section>
+			<section class="teaser">
+				<h2>Are you ready to learn how to be a Composed Warrior?</h2>
+			</section>
+		</div>
+		<footer></footer>
+		<!-- build:js assets/js/vendor.js -->
+		<script src="/dev/assets/js/app.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

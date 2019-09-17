@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title></title>
+
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<!-- build:css assets/css/styles.css -->
+		<link rel="stylesheet" href="/dev/assets/css/styles.css" />
+
+		<!-- endbuild -->
+		<!-- build:js assets/js/vendor.js -->
+		<script src="/dev/assets/js/vendor.js"></script>
+		<!-- endbuild -->
+	</head>
+
+	<body>
+		<header></header>
+		<div class="wrapper">
+			<section class="audio">
+				<h3>Day - Audio</h3>
+				<p>
+					Either listen to the audio online or click the ellipsis to the right
+					and click "download" to save to your device.
+				</p>
+				<audio controls src="/assets/media/mp3/composed/Day1.mp3"></audio>
+			</section>
+			<section class="warmup">
+				<h3>Day - Warm-up</h3>
+				<p>
+					Every person who plays sports has the ability to concentrate – you
+					would not be able to throw a ball to a target or hit a golf shot
+					unless you were able to focus your attention for a few seconds on an
+					object, feeling, or target. We would go crazy if we did not have the
+					ability to selectively attend to certain thoughts or perceptual cues
+					in the environment. Every athlete has the power to selectively attend
+					to certain performance “cues” and that gives you the ability to
+					concentrate, by choosing what you focus on during your performance.
+				</p>
+				<p>
+					The mind works in a way to filter out what is necessary to focus on
+					and what is not necessary to focus on in order to throw a baseball or
+					hit a slap shot. I call these “task-relevant performance cues” because
+					they are the important things you need to focus on for successful
+					execution of any motor task.
+				</p>
+				<p>
+					The next step in this program is to identify the performance cues or
+					task-cues that you must CHOOSE to attend to so you can perform your
+					best. However, we must keep in mind that the important cues for each
+					sport will change depending on what task you are engaged in. For
+					example, a golfer must focus on a different set of performance cues
+					when preparing to hit a drive, compared to hitting a putt. When I talk
+					about task-relevant performance cues, there are many different types
+					of “cues” you may need to attend to, such cues as thoughts, feelings,
+					communication from teammates, targets, and cues from your
+					surroundings, just to mention a few. (So keep a broad mind here when I
+					discuss cues).
+				</p>
+			</section>
+			<section class="clip">
+				<h3>Day - Concentration Clip</h3>
+				<blockquote>
+					"The formula for success is simple: practice and concentration then
+					more practice and more concentration."
+				</blockquote>
+				<cite>~Babe Didrikson Zaharias</cite>
+			</section>
+			<section class="objective">
+				<h3>Day - Daily Objective</h3>
+				<p>
+					To identify the relevant performance cues that will help you execute a
+					task successfully.
+				</p>
+			</section>
+			<section class="boost">
+				<h3>Day - Daily Focus Boost</h3>
+				<p>
+					The first step is to identify the certain tasks you perform in your
+					sport. Then we can begin to set forth the performance cues that are
+					important for you. This is a simple step that requires you to think
+					about the skills you perform on a regular basis. If you only perform
+					one skill like shooting, it makes your job even easier. However, in
+					some sports, such as gymnastics and golf, you perform several
+					different routines or different skills.
+				</p>
+
+				<h4>Examples of Skills Performed in Golf:</h4>
+				<ul>
+					<li>Hitting a tee shot/ full shot from the fairway to the green</li>
+					<li>Chipping a ball onto a green</li>
+					<li>Putting ball into a hole</li>
+					<li>Hitting a fairway bunker shot</li>
+					<li>Hitting a green-side bunker shot</li>
+					<li>Playing a specialty shot</li>
+				</ul>
+				<div class="container">
+					<div class="container__row container__row-title">
+						<div class="container__col">
+							Identify three or more skills you perform in your sport:
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							1.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q1"
+								placeholder="Skills Performed..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							2.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q2"
+								placeholder="Skills Performed..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							3.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q3"
+								placeholder="Skills Performed..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							4.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q4"
+								placeholder="Skills Performed..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							5.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q5"
+								placeholder="Skills Performed..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							6.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q6"
+								placeholder="Skills Performed..."
+							/>
+						</div>
+					</div>
+					<button class="btn" id="saveSkillPerform">Save</button
+					><button class="btn" id="clearSkillPerform">Clear</button>
+				</div>
+				<p>
+					The second step is to break these skills down into performance cues.
+					Each skill or set of skills will require their own special performance
+					cues for successful execution. There will be some overlap between
+					skills too. Your coach should be able to give you some guidance with
+					this task.
+				</p>
+				<p>
+					I will use a golf example to highlight the changes to the important
+					cues:
+				</p>
+				<div class="container">
+					<div class="container__row container__row-title">
+						<div class="container__col">
+							Table 5. Performance Cues for Full Shot and Putting in Golf
+						</div>
+					</div>
+					<div class="container__row container__row-title">
+						<div class="container__col">Task</div>
+						<div class="container__col">Relevant Performance Cues</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col container__row-title">Fairway Shot</div>
+						<div class="container__col">
+							<ul>
+								<li>Lie of the ball</li>
+								<li>Wind direction and speed</li>
+								<li>Distance to the hole</li>
+								<li>Club selection</li>
+								<li>Target</li>
+								<li>Type of shot and plan</li>
+								<li>Seeing a good shot</li>
+								<li>Feeling a good shot</li>
+								<li>Taking a practice swing</li>
+								<li>Aim and alignment</li>
+								<li>Positive self-talk</li>
+								<li>A swing, thought or feeling</li>
+							</ul>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col container__row-title">Putting</div>
+						<div class="container__col">
+							<ul>
+								<li>Looking at the slope of the green</li>
+								<li>Reading the line and picking a line</li>
+								<li>Seeing the ball go in the hole</li>
+								<li>Feeling the ball go in the hole</li>
+								<li>Committing to the line</li>
+								<li>Focusing on the line or target</li>
+								<li>Aim or alignment</li>
+								<li>Trusting your putting stroke</li>
+								<li>Reacting to the target or line</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<p>
+					If you play golf, keep in mind you will need to define the cues for
+					the other skills you perform too, including sand play, chipping,
+					driving, and specialty shots. Hint: These performance cues are part of
+					your normal preshot routine.
+				</p>
+				<p>
+					Now it is your turn. Divide your sport up into skills or sub skills.
+					For example in tennis, you would have service, return of serve,
+					baseline rally, net volley, and overhead.
+				</p>
+				<div class="container">
+					<div class="container__row container__row-title">
+						<div class="container__col">
+							Table 6. Identifying Performance Cues for Sports Tasks
+						</div>
+					</div>
+					<div class="container__row container__row-title">
+						<div class="container__col">My Sports Tasks</div>
+						<div class="container__col">Relevant Performance Cues</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							1.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q1"
+								placeholder="Tasks..."
+							/>
+						</div>
+						<div class="container__col">
+							<input
+								class="txt-input"
+								type="text"
+								id="q1a"
+								placeholder="Cues..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							2.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q2"
+								placeholder="Tasks..."
+							/>
+						</div>
+						<div class="container__col">
+							<input
+								class="txt-input"
+								type="text"
+								id="q2a"
+								placeholder="Cues..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							3.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q3"
+								placeholder="Tasks..."
+							/>
+						</div>
+						<div class="container__col">
+							<input
+								class="txt-input"
+								type="text"
+								id="q3a"
+								placeholder="Cues..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							4.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q4"
+								placeholder="Tasks..."
+							/>
+						</div>
+						<div class="container__col">
+							<input
+								class="txt-input"
+								type="text"
+								id="q4a"
+								placeholder="Cues..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							5.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q5"
+								placeholder="Tasks..."
+							/>
+						</div>
+						<div class="container__col">
+							<input
+								class="txt-input"
+								type="text"
+								id="q5a"
+								placeholder="Cues..."
+							/>
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							6.&nbsp;<input
+								class="txt-input"
+								type="text"
+								id="q6"
+								placeholder="Tasks..."
+							/>
+						</div>
+						<div class="container__col">
+							<input
+								class="txt-input"
+								type="text"
+								id="q6a"
+								placeholder="Cues..."
+							/>
+						</div>
+					</div>
+					<button class="btn" id="savePerformCues">Save</button
+					><button class="btn" id="clearPerformCues">Clear</button>
+				</div>
+			</section>
+			<section class="affirm">
+				<h3>Day - Affirm Your Focus</h3>
+				<p>
+					You will be guided through a short period of relaxation (an abdominal
+					breathing exercise) followed by a simple guided mental imagery
+					exercise. In addition, you will repeat the following affirmations to
+					yourself three times during the guided imagery exercise.
+				</p>
+				<ol>
+					<li>
+						<mark
+							>“I choose to focus on performance cues that will help me execute
+							(a skill).”</mark
+						>
+					</li>
+					<li>
+						<mark
+							>“Performance cues are the foundation of my ability to
+							concentrate.”</mark
+						>
+					</li>
+					<li>
+						<mark>“I understand what I need to attend to in my sport.”</mark>
+					</li>
+				</ol>
+			</section>
+			<section class="action">
+				<h3>Day - Taking Focused Action</h3>
+				<ul>
+					<li>
+						In your next practice or competition, I want you to review your list
+						of important performance cues so you know what to think about.
+					</li>
+					<li>
+						Your mission is to become immersed in the cues you have identified
+						in your sport that will allow you to execute successfully.
+					</li>
+				</ul>
+			</section>
+			<section class="scoreboad">
+				<h3>Day - Focus Scoreboard</h3>
+				<p>
+					You can use the focus scoreboard every day after you complete the
+					daily tasks to test your understanding and application of the
+					concepts. (Remember; be as honest as possible to gain the most from
+					the program!) From time to time, you can also review how well you are
+					accomplishing the daily tasks by referring back to this scorecard.
+					Using the table below, please rate your performance (circle the number
+					for each item; 10 being more positive than negative and 1 being more
+					negative than positive) on the following tasks:
+				</p>
+				<div class="container">
+					<div class="container__row container__row-title">
+						<div class="container__col">Positive</div>
+						<div class="container__col">Scorecard</div>
+						<div class="container__col">Negative</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							I understand why I need to define important cues
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q1"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							I do not understand why I need to define important cues
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							I can identify the relevant performance cues in my sport
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q2"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							I can’t identify the relevant performance cues in my sport
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							I can maintain 100% focus on the relevant performance cues
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q3"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							I get distracted by cues that do not help me perform a task
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							It’s easy for me to remember what I need to think about
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q4"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							It’s hard for me to remember what I need to think about
+						</div>
+					</div>
+					<button class="btn" id="saveFocusScoreBrd">Save</button
+					><button class="btn" id="clearFocusScoreBrd">Clear</button>
+				</div>
+			</section>
+			<section class="notes">
+				<h3>Day 1 - Additional notes</h3>
+				<div class="container">
+					<div class="container__row">
+						<div class="container__col">
+							<textarea
+								id="day-note"
+								class="txt-input"
+								placeholder="Enter Notes here..."
+								rows="200"
+								wrap
+							></textarea>
+						</div>
+					</div>
+					<button class="btn" id="saveNotes">Save</button
+					><button class="btn" id="clearNotes">Clear</button>
+				</div>
+			</section>
+			<section class="teaser">
+				<h2>Are you ready to learn how to be a Composed Warrior?</h2>
+			</section>
+		</div>
+		<footer></footer>
+		<!-- build:js assets/js/vendor.js -->
+		<script src="/dev/assets/js/app.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>
