@@ -143,7 +143,7 @@
 						1.&nbsp;
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input negative-self-labels"
 								type="text"
 								id="q1a"
 								placeholder="Negative Self Labels..."
@@ -154,7 +154,7 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input negative-self-labels"
 								type="text"
 								id="q1b"
 								placeholder="Negative Self Labels..."
@@ -165,7 +165,7 @@
 						2.&nbsp;
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input negative-self-labels"
 								type="text"
 								id="q2a"
 								placeholder="Negative Self Labels..."
@@ -176,15 +176,15 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input negative-self-labels"
 								type="text"
 								id="q2b"
 								placeholder="Negative Self Labels..."
 							/>
 						</div>
 					</div>
-					<button class="btn" id="saveNegSelf">Save</button
-					><button class="btn" id="clearNegSelf">Clear</button>
+					<button class="btn" id="saveNSL">Save</button
+					><button class="btn" id="clearNSL">Clear</button>
 				</div>
 				<p>
 					The goal is to recognize, confront, and discard negative self-labels
@@ -208,11 +208,10 @@
 						3.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input positive-self-labels"
 								type="text"
-								name=""
-								id=""
-								placeholder="..."
+								id="q1"
+								placeholder="Positive Self Labels..."
 							/>
 						</div>
 					</div>
@@ -220,11 +219,10 @@
 						4.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input positive-self-labels"
 								type="text"
-								name=""
-								id=""
-								placeholder="..."
+								id="q2"
+								placeholder="Positive Self Labels..."
 							/>
 						</div>
 					</div>
@@ -232,42 +230,57 @@
 						5.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input positive-self-labels"
 								type="text"
-								name=""
-								id=""
-								placeholder="..."
+								id="q3"
+								placeholder="Positive Self Labels..."
 							/>
 						</div>
 					</div>
-					<button class="btn" id="saveScoreBoard">Save</button
-					><button class="btn" id="clearScoreBoard">Clear</button>
+					<button class="btn" id="savePSL">Save</button
+					><button class="btn" id="clearPSL">Clear</button>
 				</div>
 			</section>
 			<section class="collect">
 				<h3>Day 8 - Collect Your Composure</h3>
-				<p>Repeat the following affirmations three times during the guided imagery exercise.</p>
+				<p>
+					Repeat the following affirmations three times during the guided
+					imagery exercise.
+				</p>
 				<ol>
 					<li>
-						<mark>“I am gaining confidence in my ability to thrive in crunch time.”</mark>
+						<mark
+							>“I am gaining confidence in my ability to thrive in crunch
+							time.”</mark
+						>
 					</li>
 					<li>
-						<mark>“I can clearly imagine myself as the crunch time performer.”</mark>
+						<mark
+							>“I can clearly imagine myself as the crunch time
+							performer.”</mark
+						>
 					</li>
 					<li>
-						<mark>“My image of myself as a mentally tough athlete under pressure improves
-every day.”</mark>
+						<mark
+							>“My image of myself as a mentally tough athlete under pressure
+							improves every day.”</mark
+						>
 					</li>
 				</ol>
 			</section>
 			<section class="action">
 				<h3>Day 8 - Action Plans For Composure</h3>
 				<ul>
-					<li>The goal is to replace past, negative self-images or labels with new positive
-self-images. To do this you will need to review your positive self-image
-statements daily.</li>
-					<li>During each competition note any instances that you labeled yourself with
-negative statements and replace these with confidence enhancing selfimages.</li>
+					<li>
+						The goal is to replace past, negative self-images or labels with new
+						positive self-images. To do this you will need to review your
+						positive self-image statements daily.
+					</li>
+					<li>
+						During each competition note any instances that you labeled yourself
+						with negative statements and replace these with confidence enhancing
+						selfimages.
+					</li>
 				</ul>
 			</section>
 			<section class="scoreboad">
@@ -280,16 +293,13 @@ negative statements and replace these with confidence enhancing selfimages.</li>
 					</div>
 					<div class="container__row">
 						<div class="container__col">
-							I understand why
-confidence is
-necessary for
-composure
+							I understand why confidence is necessary for composure
 						</div>
 						<div class="container__col">
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -298,21 +308,18 @@ composure
 							</div>
 						</div>
 						<div class="container__col">
-							I don’t think
-confidence has
-anything to do with
-composure
+							I don’t think confidence has anything to do with composure
 						</div>
 					</div>
 					<div class="container__row">
-						<div class="container__col">I can identify
-negative self-talk
-when it arises</div>
+						<div class="container__col">
+							I can identify negative self-talk when it arises
+						</div>
 						<div class="container__col">
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -320,19 +327,17 @@ when it arises</div>
 								/>
 							</div>
 						</div>
-						<div class="container__col">I frequently talk
-down to myself</div>
+						<div class="container__col">I frequently talk down to myself</div>
 					</div>
 					<div class="container__row">
 						<div class="container__col">
-							I only have positive
-labels for myself
+							I only have positive labels for myself
 						</div>
 						<div class="container__col">
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -341,24 +346,19 @@ labels for myself
 							</div>
 						</div>
 						<div class="container__col">
-							I have many
-negative labels for
-myself in sports
+							I have many negative labels for myself in sports
 						</div>
 					</div>
 
 					<div class="container__row">
 						<div class="container__col">
-							My image as a
-mentally tough
-athlete is improving
-everyday
+							My image as a mentally tough athlete is improving everyday
 						</div>
 						<div class="container__col">
 							<div class="range-slider">
 								<input
 									type="range"
-									class="input-range"
+									class="input-range scoreboard"
 									min="0"
 									max="10"
 									step="1"
@@ -367,13 +367,11 @@ everyday
 							</div>
 						</div>
 						<div class="container__col">
-							I don’t think I have
-what it takes to be
-mental tough
+							I don’t think I have what it takes to be mental tough
 						</div>
 					</div>
-					<button class="btn" id="saveScoreBoard">Save</button
-					><button class="btn" id="clearScoreBoard">Clear</button>
+					<button class="btn" id="saveScoreBrd">Save</button
+					><button class="btn" id="clearScoreBrd">Clear</button>
 				</div>
 			</section>
 			<section class="notes">

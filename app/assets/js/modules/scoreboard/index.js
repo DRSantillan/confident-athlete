@@ -3,7 +3,7 @@ import { getPage, saveSliders, clearSliders, loadSliders } from '../../lib';
 const area = 'scoreboard';
 
 /* Scoreboard */
-const inputScore = document.getElementsByClassName('scoreboard');
+const inputScore = document.getElementsByClassName(area);
 const saveScoreBoard = () => {
 	saveSliders(inputScore, area, getPage());
 };

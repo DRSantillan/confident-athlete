@@ -169,7 +169,67 @@ import {
 	loadTopStrengths,
 	saveSituationCoping,
 	clearSituationCoping,
-	loadSituationCoping
+	loadSituationCoping,
+	saveBehavioursToEmulate,
+	clearBehavioursToEmulate,
+	loadBehavioursToEmulate,
+	saveMentalGameErrors,
+	clearMentalGameErrors,
+	loadMentalGameErrors,
+	saveShortComingOfPerfection,
+	clearShortComingOfPerfection,
+	loadShortComingOfPerfection,
+	saveNewAttitudePlan,
+	clearNewAttitudePlan,
+	loadNewAttitudePlan,
+	saveSocialApprovalNeeds,
+	clearSocialApprovalNeeds,
+	loadSocialApprovalNeeds,
+	saveApprovalRebuttal,
+	clearApprovalRebuttal,
+	loadApprovalRebuttal,
+	saveIdentifyUnhealthyBeliefs,
+	clearIdentifyUnhealthyBeliefs,
+	loadIdentifyUnhealthyBeliefs,
+	saveReplaceUnhealthyBeliefs,
+	clearReplaceUnhealthyBeliefs,
+	loadReplaceUnhealthyBeliefs,
+	saveFearOfFailureSigns,
+	clearFearOfFailureSigns,
+	loadFearOfFailureSigns,
+	saveFearDrivenSuccessDriven,
+	clearFearDrivenSuccessDriven,
+	loadFearDrivenSuccessDriven,
+	saveNegativeSelfLabel,
+	clearNegativeSelfLabel,
+	loadNegativeSelfLabel,
+	savePositiveSelfLabel,
+	clearPositiveSelfLabel,
+	loadPositiveSelfLabel,
+	saveFeelingsOfIntimidation,
+	clearFeelingsOfIntimidation,
+	loadFeelingsOfIntimidation,
+	saveStopIntimidation,
+	clearStopIntimidation,
+	loadStopIntimidation,
+	saveControlFactors,
+	clearControlFactors,
+	loadControlFactors,
+	savePainExpectations,
+	clearPainExpectations,
+	loadPainExpectations,
+	saveManageExpectations,
+	clearManageExpectations,
+	loadManageExpectations,
+	saveChallengeComposure,
+	clearChallengeComposure,
+	loadChallengeComposure,
+	saveCompetitionMistakes,
+	clearCompetitionMistakes,
+	loadCompetitionMistakes,
+	saveChallengeDispute,
+	clearChallengeDispute,
+	loadChallengeDispute
 } from './modules/boost';
 
 import {
@@ -194,6 +254,163 @@ import {
 } from './modules/energize';
 
 import { saveNotes, clearNotes, loadNotes } from './modules/notes';
+
+const saveCM = document.getElementById('saveCM');
+const clearCM = document.getElementById('clearCM');
+if (saveCM || clearCM) {
+	saveCM.addEventListener('click', saveCompetitionMistakes);
+	clearCM.addEventListener('click', clearCompetitionMistakes);
+	window.addEventListener('load', loadCompetitionMistakes);
+}
+const saveCD = document.getElementById('saveCD');
+const clearCD = document.getElementById('clearCD');
+if (saveCD || clearCD) {
+	saveCD.addEventListener('click', saveChallengeDispute);
+	clearCD.addEventListener('click', clearChallengeDispute);
+	window.addEventListener('load', loadChallengeDispute);
+}
+
+const saveCC = document.getElementById('saveCC');
+const clearCC = document.getElementById('clearCC');
+if (saveCC || clearCC) {
+	saveCC.addEventListener('click', saveChallengeComposure);
+	clearCC.addEventListener('click', clearChallengeComposure);
+	window.addEventListener('load', loadChallengeComposure);
+}
+const saveME = document.getElementById('saveME');
+const clearME = document.getElementById('clearME');
+if (saveME || clearME) {
+	saveME.addEventListener('click', saveManageExpectations);
+	clearME.addEventListener('click', clearManageExpectations);
+	window.addEventListener('load', loadManageExpectations);
+}
+const savePE = document.getElementById('savePE');
+const clearPE = document.getElementById('clearPE');
+if (savePE || clearPE) {
+	savePE.addEventListener('click', savePainExpectations);
+	clearPE.addEventListener('click', clearPainExpectations);
+	window.addEventListener('load', loadPainExpectations);
+}
+
+const saveCF = document.getElementById('saveCF');
+const clearCF = document.getElementById('clearCF');
+if (saveCF || clearCF) {
+	saveCF.addEventListener('click', saveControlFactors);
+	clearCF.addEventListener('click', clearControlFactors);
+	window.addEventListener('load', loadControlFactors);
+}
+
+const saveSI = document.getElementById('saveSI');
+const clearSI = document.getElementById('clearSI');
+if (saveSI || clearSI) {
+	saveSI.addEventListener('click', saveStopIntimidation);
+	clearSI.addEventListener('click', clearStopIntimidation);
+	window.addEventListener('load', loadStopIntimidation);
+}
+
+const saveFOI = document.getElementById('saveFOI');
+const clearFOI = document.getElementById('clearFOI');
+if (saveFOI || clearFOI) {
+	saveFOI.addEventListener('click', saveFeelingsOfIntimidation);
+	clearFOI.addEventListener('click', clearFeelingsOfIntimidation);
+	window.addEventListener('load', loadFeelingsOfIntimidation);
+}
+
+const savePSL = document.getElementById('savePSL');
+const clearPSL = document.getElementById('clearPSL');
+if (savePSL || clearPSL) {
+	savePSL.addEventListener('click', savePositiveSelfLabel);
+	clearPSL.addEventListener('click', clearPositiveSelfLabel);
+	window.addEventListener('load', loadPositiveSelfLabel);
+}
+
+const saveNSL = document.getElementById('saveNSL');
+const clearNSL = document.getElementById('clearNSL');
+if (saveNSL || clearNSL) {
+	saveNSL.addEventListener('click', saveNegativeSelfLabel);
+	clearNSL.addEventListener('click', clearNegativeSelfLabel);
+	window.addEventListener('load', loadNegativeSelfLabel);
+}
+
+const saveFDSD = document.getElementById('saveFDSD');
+const clearFDSD = document.getElementById('clearFDSD');
+if (saveFDSD || clearFDSD) {
+	saveFDSD.addEventListener('click', saveFearDrivenSuccessDriven);
+	clearFDSD.addEventListener('click', clearFearDrivenSuccessDriven);
+	window.addEventListener('load', loadFearDrivenSuccessDriven);
+}
+
+const saveFOFS = document.getElementById('saveFOFS');
+const clearFOFS = document.getElementById('clearFOFS');
+if (saveFOFS || clearFOFS) {
+	saveFOFS.addEventListener('click', saveFearOfFailureSigns);
+	clearFOFS.addEventListener('click', clearFearOfFailureSigns);
+	window.addEventListener('load', loadFearOfFailureSigns);
+}
+
+const saveRUB = document.getElementById('saveRUB');
+const clearRUB = document.getElementById('clearRUB');
+if (saveRUB || clearRUB) {
+	saveRUB.addEventListener('click', saveReplaceUnhealthyBeliefs);
+	clearRUB.addEventListener('click', clearReplaceUnhealthyBeliefs);
+	window.addEventListener('load', loadReplaceUnhealthyBeliefs);
+}
+
+const saveIUB = document.getElementById('saveIUB');
+const clearIUB = document.getElementById('clearIUB');
+if (saveIUB || clearIUB) {
+	saveIUB.addEventListener('click', saveIdentifyUnhealthyBeliefs);
+	clearIUB.addEventListener('click', clearIdentifyUnhealthyBeliefs);
+	window.addEventListener('load', loadIdentifyUnhealthyBeliefs);
+}
+
+const saveAppRebut = document.getElementById('saveAppRebut');
+const clearAppRebut = document.getElementById('clearAppRebut');
+if (saveAppRebut || clearAppRebut) {
+	saveAppRebut.addEventListener('click', saveApprovalRebuttal);
+	clearAppRebut.addEventListener('click', clearApprovalRebuttal);
+	window.addEventListener('load', loadApprovalRebuttal);
+}
+
+const saveSAN = document.getElementById('saveSAN');
+const clearSAN = document.getElementById('clearSAN');
+if (saveSAN || clearSAN) {
+	saveSAN.addEventListener('click', saveSocialApprovalNeeds);
+	clearSAN.addEventListener('click', clearSocialApprovalNeeds);
+	window.addEventListener('load', loadSocialApprovalNeeds);
+}
+
+const saveNewAtt = document.getElementById('saveNewAtt');
+const clearNewAtt = document.getElementById('clearNewAtt');
+if (saveNewAtt || clearNewAtt) {
+	saveNewAtt.addEventListener('click', saveNewAttitudePlan);
+	clearNewAtt.addEventListener('click', clearNewAttitudePlan);
+	window.addEventListener('load', loadNewAttitudePlan);
+}
+
+const saveShortCome = document.getElementById('saveShortCome');
+const clearShortCome = document.getElementById('clearShortCome');
+if (saveShortCome || clearShortCome) {
+	saveShortCome.addEventListener('click', saveShortComingOfPerfection);
+	clearShortCome.addEventListener('click', clearShortComingOfPerfection);
+	window.addEventListener('load', loadShortComingOfPerfection);
+}
+
+const saveCBMentalGame = document.getElementById('saveCBMentalGame');
+const clearCBMentalGame = document.getElementById('clearCBMentalGame');
+if (saveCBMentalGame || clearCBMentalGame) {
+	saveCBMentalGame.addEventListener('click', saveMentalGameErrors);
+	clearCBMentalGame.addEventListener('click', clearMentalGameErrors);
+	window.addEventListener('load', loadMentalGameErrors);
+}
+
+const saveCompBehav = document.getElementById('saveCompBehav');
+const clearCompBehav = document.getElementById('clearCompBehav');
+if (saveCompBehav || clearCompBehav) {
+	saveCompBehav.addEventListener('click', saveBehavioursToEmulate);
+	clearCompBehav.addEventListener('click', clearBehavioursToEmulate);
+	window.addEventListener('load', loadBehavioursToEmulate);
+}
 
 const savePhilos = document.getElementById('savePhilos');
 const clearPhilos = document.getElementById('clearPhilos');

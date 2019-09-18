@@ -121,7 +121,7 @@
 						1.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input social-approval-need"
 								type="text"
 								name=""
 								id="q1"
@@ -133,7 +133,7 @@
 						2.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input social-approval-need"
 								type="text"
 								name=""
 								id="q2"
@@ -145,7 +145,7 @@
 						3.
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input social-approval-need"
 								type="text"
 								name=""
 								id="q3"
@@ -153,8 +153,8 @@
 							/>
 						</div>
 					</div>
-					<button class="btn" id="saveNeedAppr">Save</button
-					><button class="btn" id="clearNeedAppr">Clear</button>
+					<button class="btn" id="saveSAN">Save</button
+					><button class="btn" id="clearSAN">Clear</button>
 				</div>
 				<p>
 					Once you identify the source of approval that you desire, consciously
@@ -204,7 +204,7 @@
 					<div class="container__row">
 						<div class="container__col container__row-title">
 							2.&nbsp;&nbsp;<input
-								class="txt-input"
+								class="txt-input approval-rebuttal"
 								type="text"
 								name=""
 								id="q2a"
@@ -213,7 +213,7 @@
 						</div>
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input approval-rebuttal"
 								type="text"
 								name=""
 								id="q2b"
@@ -225,7 +225,7 @@
 					<div class="container__row">
 						<div class="container__col container__row-title">
 							3.&nbsp;&nbsp;<input
-								class="txt-input"
+								class="txt-input approval-rebuttal"
 								type="text"
 								name=""
 								id="q3a"
@@ -234,7 +234,7 @@
 						</div>
 						<div class="container__col">
 							<input
-								class="txt-input"
+								class="txt-input approval-rebuttal"
 								type="text"
 								name=""
 								id="q3b"
@@ -243,8 +243,8 @@
 						</div>
 					</div>
 
-					<button class="btn" id="saveApprNeed">Save</button
-					><button class="btn" id="clearApprNeed">Clear</button>
+					<button class="btn" id="saveAppRebut">Save</button
+					><button class="btn" id="clearAppRebut">Clear</button>
 				</div>
 			</section>
 			<section class="collect">
@@ -282,114 +282,106 @@
 						See how often you start to crave approval from others during a week
 						of practice.
 					</li>
-					<li>Implement your “Stop the Mind Reading” strategies outlined in Table 6 every
-day when you notice yourself worrying too much about what others think.</li>
+					<li>
+						Implement your “Stop the Mind Reading” strategies outlined in Table
+						6 every day when you notice yourself worrying too much about what
+						others think.
+					</li>
 				</ul>
 			</section>
 			<section class="scoreboad">
 				<h3>Day 4 - Composure Scoreboard</h3>
 				<div class="container">
-		<div class="container__row container__row-title">
-			<div class="container__col">Positive</div>
-			<div class="container__col">Scorecard</div>
-			<div class="container__col">Negative</div>
-		</div>
-		<div class="container__row">
-			<div class="container__col">
-				What others think
-is irrelevant to my
-goals
-			</div>
-			<div class="container__col">
-				<div class="range-slider">
-					<input
-						type="range"
-						class="input-range"
-						min="0"
-						max="10"
-						step="1"
-						id="q1"
-					/>
-				</div>
-			</div>
-			<div class="container__col">
-				I should focus on
-what others want for
-me in sports
-			</div>
-		</div>
-		<div class="container__row">
-			<div class="container__col">I no longer try to
-“read the minds” of
-others</div>
-			<div class="container__col">
-				<div class="range-slider">
-					<input
-						type="range"
-						class="input-range"
-						min="0"
-						max="10"
-						step="1"
-						id="q2"
-					/>
-				</div>
-			</div>
-			<div class="container__col">I can’t stop mind
-reading what others
-think about me</div>
-		</div>
-		<div class="container__row">
-			<div class="container__col">
-				I choose not to
-adopt others’
-expectations
-			</div>
-			<div class="container__col">
-				<div class="range-slider">
-					<input
-						type="range"
-						class="input-range"
-						min="0"
-						max="10"
-						step="1"
-						id="q3"
-					/>
-				</div>
-			</div>
-			<div class="container__col">
-				I adopt others’
-expectations for me
-			</div>
-		</div>
+					<div class="container__row container__row-title">
+						<div class="container__col">Positive</div>
+						<div class="container__col">Scorecard</div>
+						<div class="container__col">Negative</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							What others think is irrelevant to my goals
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q1"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							I should focus on what others want for me in sports
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							I no longer try to “read the minds” of others
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q2"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							I can’t stop mind reading what others think about me
+						</div>
+					</div>
+					<div class="container__row">
+						<div class="container__col">
+							I choose not to adopt others’ expectations
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q3"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							I adopt others’ expectations for me
+						</div>
+					</div>
 
-		<div class="container__row">
-			<div class="container__col">
-				I play for the love
-of the game and to
-be competitive, not
-for the recognition
-			</div>
-			<div class="container__col">
-				<div class="range-slider">
-					<input
-						type="range"
-						class="input-range"
-						min="0"
-						max="10"
-						step="1"
-						id="q4"
-					/>
+					<div class="container__row">
+						<div class="container__col">
+							I play for the love of the game and to be competitive, not for the
+							recognition
+						</div>
+						<div class="container__col">
+							<div class="range-slider">
+								<input
+									type="range"
+									class="input-range scoreboard"
+									min="0"
+									max="10"
+									step="1"
+									id="q4"
+								/>
+							</div>
+						</div>
+						<div class="container__col">
+							I play to get respect and recognition from those around me
+						</div>
+					</div>
+					<button class="btn" id="saveScoreBrd">Save</button
+					><button class="btn" id="clearScoreBrd">Clear</button>
 				</div>
-			</div>
-			<div class="container__col">
-				I play to get respect
-and recognition from
-those around me
-			</div>
-		</div>
-		<button class="btn" id="saveScoreBoard">Save</button
-		><button class="btn" id="clearScoreBoard">Clear</button>
-	</div>
 			</section>
 			<section class="notes">
 				<h3>Day 4 - Additional notes</h3>
