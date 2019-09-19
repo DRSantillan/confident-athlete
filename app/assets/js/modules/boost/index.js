@@ -43,7 +43,19 @@ const types = [
 	'manage-expectations',
 	'challenge-composure',
 	'competition-mistakes',
-	'challenge-dispute'
+	'challenge-dispute',
+	'zone-performance',
+	'performance-cues',
+	'skills-performed',
+	'irrelevant-cues',
+	'trigger-distractions',
+	'three-rs',
+	'entering-the-role',
+	'pre-game-routine',
+	'mental-process-goals',
+	'pre-shot-routine',
+	'focused-athlete-eval',
+	'assessing-your-concentration'
 ];
 const area = 'boost';
 
@@ -448,6 +460,143 @@ const clearChallengeDispute = () => {
 const loadChallengeDispute = () => {
 	loadTextBoxes(inputCD, area, types[32]);
 };
+/* Day 1 Focus Boost */
+const inputZP = document.getElementsByClassName(types[33]);
+const saveZonePerformance = () => {
+	saveTextBoxes(inputZP, area, types[33]);
+};
+const clearZonePerformance = () => {
+	clearTextBoxes(inputZP, area, types[33]);
+};
+const loadZonePerformance = () => {
+	loadTextBoxes(inputZP, area, types[33]);
+};
+/* Day 3 Focus Boost */
+const inputPC = document.getElementsByClassName(types[34]);
+const savePerformanceCues = () => {
+	saveTextBoxes(inputPC, area, types[34]);
+};
+const clearPerformanceCues = () => {
+	clearTextBoxes(inputPC, area, types[34]);
+};
+const loadPerformanceCues = () => {
+	loadTextBoxes(inputPC, area, types[34]);
+};
+/* Day 3.1 Focus Boost */
+const inputSP = document.getElementsByClassName(types[35]);
+const saveSkillsPerformed = () => {
+	saveTextBoxes(inputSP, area, types[35]);
+};
+const clearSkillsPerformed = () => {
+	clearTextBoxes(inputSP, area, types[35]);
+};
+const loadSkillsPerformed = () => {
+	loadTextBoxes(inputSP, area, types[35]);
+};
+/* Day 4 Focus Boost */
+const inputIC = document.getElementsByClassName(types[36]);
+const saveIrrelevantCues = () => {
+	saveTextBoxes(inputIC, area, types[36]);
+};
+const clearIrrelevantCues = () => {
+	clearTextBoxes(inputIC, area, types[36]);
+};
+const loadIrrelevantCues = () => {
+	loadTextBoxes(inputIC, area, types[36]);
+};
+/* Day 6 Focus Boost */
+const inputTD = document.getElementsByClassName(types[37]);
+const saveTriggerDistractions = () => {
+	saveTextBoxes(inputTD, area, types[37]);
+};
+const clearTriggerDistractions = () => {
+	clearTextBoxes(inputTD, area, types[37]);
+};
+const loadTriggerDistractions = () => {
+	loadTextBoxes(inputTD, area, types[37]);
+};
+/* Day 7 Focus Boost */
+const inputTR = document.getElementsByClassName(types[38]);
+const saveThreeRs = () => {
+	saveTextBoxes(inputTR, area, types[38]);
+};
+const clearThreeRs = () => {
+	clearTextBoxes(inputTR, area, types[38]);
+};
+const loadThreeRs = () => {
+	loadTextBoxes(inputTR, area, types[38]);
+};
+
+/* Day 9 Focus Boost */
+const inputETR = document.getElementsByClassName(types[39]);
+const saveEnteringTheRole = () => {
+	saveTextBoxes(inputETR, area, types[39]);
+};
+const clearEnteringTheRole = () => {
+	clearTextBoxes(inputETR, area, types[39]);
+};
+const loadEnteringTheRole = () => {
+	loadTextBoxes(inputETR, area, types[39]);
+};
+
+/* Day 10 Focus Boost */
+const inputPGR = document.getElementsByClassName(types[40]);
+const savePreGameMentalRoutines = () => {
+	saveTextBoxes(inputPGR, area, types[40]);
+};
+const clearPreGameMentalRoutines = () => {
+	clearTextBoxes(inputPGR, area, types[40]);
+};
+const loadPreGameMentalRoutines = () => {
+	loadTextBoxes(inputPGR, area, types[40]);
+};
+
+/* Day 11 Focus Boost */
+const inputMPG = document.getElementsByClassName(types[41]);
+const saveMentalProcessGoals = () => {
+	saveTextBoxes(inputMPG, area, types[41]);
+};
+const clearMentalProcessGoals = () => {
+	clearTextBoxes(inputMPG, area, types[41]);
+};
+const loadMentalProcessGoals = () => {
+	loadTextBoxes(inputMPG, area, types[41]);
+};
+/* Day 12 Focus Boost */
+const inputPSR = document.getElementsByClassName(types[42]);
+const savePreShotRoutines = () => {
+	saveTextBoxes(inputPSR, area, types[42]);
+};
+const clearPreShotRoutines = () => {
+	clearTextBoxes(inputPSR, area, types[42]);
+};
+const loadPreShotRoutines = () => {
+	loadTextBoxes(inputPSR, area, types[42]);
+};
+
+/* Day 13 Focus Boost */
+const inputFAE = document.getElementsByClassName(types[43]);
+const saveAthleteEvaluation = () => {
+	saveCheckBoxes(inputFAE, area, types[43]);
+};
+const clearAthleteEvaluation = () => {
+	clearCheckBoxes(inputFAE, area, types[43]);
+};
+const loadAthleteEvaluation = () => {
+	loadCheckBoxes(inputFAE, area, types[43]);
+};
+
+/* Day 13.1 Focus Boost */
+const inputACS = document.getElementsByClassName(types[44]);
+const saveConcentrationAssessment = () => {
+	saveTextBoxes(inputACS, area, types[44]);
+};
+const clearConcentrationAssessment = () => {
+	clearTextBoxes(inputACS, area, types[44]);
+};
+const loadConcentrationAssessment = () => {
+	loadTextBoxes(inputACS, area, types[44]);
+};
 
 export {
 	saveSourcesOfConfidence,
@@ -548,5 +697,41 @@ export {
 	loadCompetitionMistakes,
 	saveChallengeDispute,
 	clearChallengeDispute,
-	loadChallengeDispute
+	loadChallengeDispute,
+	saveZonePerformance,
+	clearZonePerformance,
+	loadZonePerformance,
+	savePerformanceCues,
+	clearPerformanceCues,
+	loadPerformanceCues,
+	saveSkillsPerformed,
+	clearSkillsPerformed,
+	loadSkillsPerformed,
+	saveIrrelevantCues,
+	clearIrrelevantCues,
+	loadIrrelevantCues,
+	saveTriggerDistractions,
+	clearTriggerDistractions,
+	loadTriggerDistractions,
+	saveThreeRs,
+	clearThreeRs,
+	loadThreeRs,
+	saveEnteringTheRole,
+	clearEnteringTheRole,
+	loadEnteringTheRole,
+	savePreGameMentalRoutines,
+	clearPreGameMentalRoutines,
+	loadPreGameMentalRoutines,
+	saveMentalProcessGoals,
+	clearMentalProcessGoals,
+	loadMentalProcessGoals,
+	savePreShotRoutines,
+	clearPreShotRoutines,
+	loadPreShotRoutines,
+	saveAthleteEvaluation,
+	clearAthleteEvaluation,
+	loadAthleteEvaluation,
+	saveConcentrationAssessment,
+	clearConcentrationAssessment,
+	loadConcentrationAssessment
 };

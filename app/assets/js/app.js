@@ -229,7 +229,43 @@ import {
 	loadCompetitionMistakes,
 	saveChallengeDispute,
 	clearChallengeDispute,
-	loadChallengeDispute
+	loadChallengeDispute,
+	saveZonePerformance,
+	clearZonePerformance,
+	loadZonePerformance,
+	savePerformanceCues,
+	clearPerformanceCues,
+	loadPerformanceCues,
+	saveSkillsPerformed,
+	clearSkillsPerformed,
+	loadSkillsPerformed,
+	saveIrrelevantCues,
+	clearIrrelevantCues,
+	loadIrrelevantCues,
+	saveTriggerDistractions,
+	clearTriggerDistractions,
+	loadTriggerDistractions,
+	saveThreeRs,
+	clearThreeRs,
+	loadThreeRs,
+	saveEnteringTheRole,
+	clearEnteringTheRole,
+	loadEnteringTheRole,
+	savePreGameMentalRoutines,
+	clearPreGameMentalRoutines,
+	loadPreGameMentalRoutines,
+	saveMentalProcessGoals,
+	clearMentalProcessGoals,
+	loadMentalProcessGoals,
+	savePreShotRoutines,
+	clearPreShotRoutines,
+	loadPreShotRoutines,
+	saveAthleteEvaluation,
+	clearAthleteEvaluation,
+	loadAthleteEvaluation,
+	saveConcentrationAssessment,
+	clearConcentrationAssessment,
+	loadConcentrationAssessment
 } from './modules/boost';
 
 import {
@@ -244,7 +280,13 @@ import {
 	loadActionSourcesConfidence,
 	saveActionDoubtsThoughts,
 	clearActionDoubtsThoughts,
-	loadActionDoubtsThoughts
+	loadActionDoubtsThoughts,
+	saveInternalDistractions,
+	clearInternalDistractions,
+	loadInternalDistractions,
+	saveExternalDistractions,
+	clearExternalDistractions,
+	loadExternalDistractions
 } from './modules/action';
 
 import {
@@ -254,6 +296,118 @@ import {
 } from './modules/energize';
 
 import { saveNotes, clearNotes, loadNotes } from './modules/notes';
+
+const saveACS = document.getElementById('saveACS');
+const clearACS = document.getElementById('clearACS');
+if (saveACS || clearACS) {
+	saveACS.addEventListener('click', saveConcentrationAssessment);
+	clearACS.addEventListener('click', clearConcentrationAssessment);
+	window.addEventListener('load', loadConcentrationAssessment);
+}
+
+const saveFAE = document.getElementById('saveFAE');
+const clearFAE = document.getElementById('clearFAE');
+if (saveFAE || clearFAE) {
+	saveFAE.addEventListener('click', saveAthleteEvaluation);
+	clearFAE.addEventListener('click', clearAthleteEvaluation);
+	window.addEventListener('load', loadAthleteEvaluation);
+}
+
+const savePSR = document.getElementById('savePSR');
+const clearPSR = document.getElementById('clearPSR');
+if (savePSR || clearPSR) {
+	savePSR.addEventListener('click', savePreShotRoutines);
+	clearPSR.addEventListener('click', clearPreShotRoutines);
+	window.addEventListener('load', loadPreShotRoutines);
+}
+
+const saveMPG = document.getElementById('saveMPG');
+const clearMPG = document.getElementById('clearMPG');
+if (saveMPG || clearMPG) {
+	saveMPG.addEventListener('click', saveMentalProcessGoals);
+	clearMPG.addEventListener('click', clearMentalProcessGoals);
+	window.addEventListener('load', loadMentalProcessGoals);
+}
+
+const savePGR = document.getElementById('savePGR');
+const clearPGR = document.getElementById('clearPGR');
+if (savePGR || clearPGR) {
+	savePGR.addEventListener('click', savePreGameMentalRoutines);
+	clearPGR.addEventListener('click', clearPreGameMentalRoutines);
+	window.addEventListener('load', loadPreGameMentalRoutines);
+}
+
+const saveETR = document.getElementById('saveETR');
+const clearETR = document.getElementById('clearETR');
+if (saveETR || clearETR) {
+	saveETR.addEventListener('click', saveEnteringTheRole);
+	clearETR.addEventListener('click', clearEnteringTheRole);
+	window.addEventListener('load', loadEnteringTheRole);
+}
+
+const saveTR = document.getElementById('saveTR');
+const clearTR = document.getElementById('clearTR');
+if (saveTR || clearTR) {
+	saveTR.addEventListener('click', saveThreeRs);
+	clearTR.addEventListener('click', clearThreeRs);
+	window.addEventListener('load', loadThreeRs);
+}
+
+const saveTD = document.getElementById('saveTD');
+const clearTD = document.getElementById('clearTD');
+if (saveTD || clearTD) {
+	saveTD.addEventListener('click', saveTriggerDistractions);
+	clearTD.addEventListener('click', clearTriggerDistractions);
+	window.addEventListener('load', loadTriggerDistractions);
+}
+
+const saveIC = document.getElementById('saveIC');
+const clearIC = document.getElementById('clearIC');
+if (saveIC || clearIC) {
+	saveIC.addEventListener('click', saveIrrelevantCues);
+	clearIC.addEventListener('click', clearIrrelevantCues);
+	window.addEventListener('load', loadIrrelevantCues);
+}
+
+const saveSP = document.getElementById('saveSP');
+const clearSP = document.getElementById('clearSP');
+if (saveSP || clearSP) {
+	saveSP.addEventListener('click', saveSkillsPerformed);
+	clearSP.addEventListener('click', clearSkillsPerformed);
+	window.addEventListener('load', loadSkillsPerformed);
+}
+
+const savePC = document.getElementById('savePC');
+const clearPC = document.getElementById('clearPC');
+if (savePC || clearPC) {
+	savePC.addEventListener('click', savePerformanceCues);
+	clearPC.addEventListener('click', clearPerformanceCues);
+	window.addEventListener('load', loadPerformanceCues);
+}
+
+const saveED = document.getElementById('saveED');
+const clearED = document.getElementById('clearED');
+if (saveED || clearED) {
+	saveED.addEventListener('click', saveExternalDistractions);
+	clearED.addEventListener('click', clearExternalDistractions);
+	window.addEventListener('load', loadExternalDistractions);
+}
+
+const saveID = document.getElementById('saveID');
+const clearID = document.getElementById('clearID');
+if (saveID || clearID) {
+	saveID.addEventListener('click', saveInternalDistractions);
+	clearID.addEventListener('click', clearInternalDistractions);
+	window.addEventListener('load', loadInternalDistractions);
+}
+
+const saveZP = document.getElementById('saveZP');
+const clearZP = document.getElementById('clearZP');
+if (saveZP || clearZP) {
+	saveZP.addEventListener('click', saveZonePerformance);
+	clearZP.addEventListener('click', clearZonePerformance);
+	window.addEventListener('load', loadZonePerformance);
+}
 
 const saveCM = document.getElementById('saveCM');
 const clearCM = document.getElementById('clearCM');

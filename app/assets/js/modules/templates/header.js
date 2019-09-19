@@ -4,7 +4,7 @@ import { contents } from '../../db/contents';
 const courseTitle = () => {
 	let temp;
 	let program = getProgram();
-	console.log(program);
+	
 
 	contents.programs.forEach(item => {
 		if (program.length === 0) {

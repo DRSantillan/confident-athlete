@@ -10,7 +10,7 @@ const renderPreviousDay = () => {
 			item.contents.forEach((course, index) => {
 				if (course.day.toString() === page) {
 					if (item.contents[index - 1] === undefined) {
-						temp = `<a href="/series/${program}/"> Contents </a>`;
+						temp = ``;
 					} else {
 						if (typeof item.contents[index - 1].day === 'number') {
 							temp = `<a href="day-${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">Day ${item.contents[index - 1].day}</a>`;
@@ -113,7 +113,10 @@ const displayFooter = () => {
 				<div class="day-item day-main-title">${renderTitle()}</div>
 				<div class="day-item">${renderNextDay()}</div>
 			</div><p>Developed by Dean Santillan &copy;2019</p>`;
-	footer.innerHTML = template;
+			if(footer) {
+				footer.innerHTML = template;
+			}
+	
 };
 
 export { displayFooter };

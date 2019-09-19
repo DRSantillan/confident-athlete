@@ -174,19 +174,18 @@ const loadTextBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let data;
 
-	if (pageData === null) {
+	if (pageData === null  ) {
 		pageData = undefined;
-	}
+		
+	} 
 
 	if (
-		pageData !== undefined ||
-		pageData[area] !== undefined ||
-		pageData[area][type] !== undefined
+		pageData === undefined ||
+		pageData[area] === undefined ||
+		pageData[area][type] === undefined
 	) {
-		console.log(pageData);
-	} else {
-		return;
-	}
+		return
+	} 
 
 	if (type) {
 		data = pageData[area][type];
@@ -250,7 +249,7 @@ const saveTextBox = (input, area) => {
 	obj.day = getPage();
 	obj.note = input.value;
 	//debugger;
-	if (pageData === undefined) {
+	if (pageData === undefined || pageData === null) {
 		pageData = {};
 		pageData[area] = [];
 		pageData[area].push(obj);
@@ -282,6 +281,15 @@ const clearTextBox = (input, area) => {
 };
 const loadTextBox = (input, area) => {
 	let pageData = loadData();
+
+	if (
+		pageData === undefined ||
+		pageData === null ||
+		pageData[area] === null ||
+		pageData[area] === undefined
+	) {
+		return;
+	}
 	if (pageData === undefined) {
 		return;
 	} else if (pageData[area] === undefined) {
