@@ -8,6 +8,10 @@ const getDate = () => {
 const saveDDL = (input, area, type) => {
 	let pageData = loadData();
 
+	if(pageData === null){
+		pageData = undefined;
+	}
+
 	let arr = [];
 	for (let i = 0; i < input.length; i++) {
 		let answers = {};
@@ -64,6 +68,9 @@ const clearDDL = (input, area, type) => {
 const loadDDL = (input, area, type) => {
 	let pageData = loadData();
 	let data;
+	if(pageData === null) {
+		pageData = undefined;
+	}
 
 	if (pageData === undefined || pageData[area][type] === undefined) return;
 
@@ -87,7 +94,9 @@ const loadDDL = (input, area, type) => {
 const saveTxtChecks = (input, area, type) => {
 	let pageData = loadData();
 	let arr = [];
-
+if (pageData === null) {
+	pageData = undefined;
+}
 	for (let i = 0; i < input.length; i++) {
 		let answerObj = {};
 		answerObj.id = input[i].id;
@@ -121,6 +130,9 @@ const saveTxtChecks = (input, area, type) => {
 };
 const loadTxtChecks = (input, area, type) => {
 	let pageData = loadData();
+	if (pageData === null) {
+		pageData = undefined;
+	}
 	if (
 		pageData === undefined ||
 		pageData[area] === undefined ||
@@ -245,6 +257,10 @@ const saveTextBoxes = (input, area, type) => {
 };
 const saveTextBox = (input, area) => {
 	let pageData = loadData();
+
+	if (pageData === null) {
+		pageData = undefined;
+	}
 	let obj = {};
 	obj.day = getPage();
 	obj.note = input.value;
@@ -314,6 +330,9 @@ const clearSliders = (input, area, type) => {
 };
 const saveSliders = (input, area, type) => {
 	let pageData = loadData();
+	if (pageData === null) {
+		pageData = undefined;
+	}
 	let answersArray = [];
 	for (let i = 0; i < input.length; i++) {
 		let answers = {};
@@ -341,6 +360,10 @@ const saveSliders = (input, area, type) => {
 };
 const loadSliders = (input, area, type) => {
 	let pageData = loadData();
+
+		if (pageData === null) {
+			pageData = undefined;
+		}
 	if (
 		pageData === undefined ||
 		pageData[area] === undefined ||
@@ -356,6 +379,9 @@ const loadSliders = (input, area, type) => {
 };
 const saveCheckBoxes = (input, area, type) => {
 	let pageData = loadData();
+	if (pageData === null) {
+		pageData = undefined;
+	}
 	let answersArray = [];
 
 	for (let i = 0; i < input.length; i++) {

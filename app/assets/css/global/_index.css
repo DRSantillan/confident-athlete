@@ -1,47 +1,62 @@
-/* Global */
-
 * {
-  font-family: "Roboto";
-  color: $Default;
+  font-family: 'Roboto';
   margin: 0;
   padding: 0;
+}
 
+#notes {
+  margin-bottom: 80px;
+}
+
+#teaser {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+select {
+  display: block;
+  padding: 10px 70px 10px 13px !important;
+  max-width: 100%;
+  height: auto !important;
+  //border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  background: url("/assets/media/images/selectbox-arrow.png") right center no-repeat;
+  //background-color: #fff;
+  //color: #444444;
+  font-size: 12px;
+  line-height: 16px !important;
+  appearance: none;
+  outline: none;
+
+  option {
+    padding: 0 4px;
+
+  }
 }
 
 p {
   line-height: 1.5;
   padding: 10px;
-
 }
 
 a {
   text-decoration: none;
-  color: $main;
+  color: black;
 }
 
 blockquote {
-  background-color: $bq;
   border-radius: 5px;
   padding: 20px;
   margin: 20px;
   text-align: center;
   font-style: oblique;
-
+  color: $white;
 }
 
-div {
-  line-height: 1.5;
-  padding: 10px;
-}
-
-mark {
-  background-color: $mark;
-  padding: 2px;
-  border-radius: 5px;
-}
-
-strong {
-  color: $main
+cite {
+  display: block;
+  font-weight: 500;
+  text-align: right;
 }
 
 textarea {
@@ -49,6 +64,62 @@ textarea {
   width: 100%;
   box-sizing: border-box;
   outline: none;
+}
+
+mark {
+  padding: 5px;
+  border-radius: 3px;
+
+  font-style: oblique;
+}
+
+button {
+  outline: none;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: .75rem;
+  border: 0;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.4);
+  width: 100px;
+  height: 50px;
+  color: white;
+}
 
 
+audio {
+  outline: none;
+  width: 100%;
+}
+
+
+
+.day {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  color: white;
+  text-shadow: rgba(0, 0, 0, .5) 1px 1px 2px;
+
+  .fa-home {
+    vertical-align: middle;
+  }
+
+  .day-item {
+    width: 100px;
+    align-content: center;
+  }
+
+
+
+  .day-main-title {
+    width: 75%;
+    text-align: center;
+  }
+
+  a {
+    color: white;
+  }
 }

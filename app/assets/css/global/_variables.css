@@ -1,6 +1,31 @@
-$Default: #000;
-$siteWhite: #fff;
-$main: #50DD22;
-$bq: rgba(102, 255, 0, 0.5);
-$chkbox: rgb(0, 129, 54);
-$mark: rgb(162, 236, 140);
+$main: #000;
+$white: #fff;
+
+
+
+$fearlessMain: #7235C2;
+$fearlessDarker:rgb(99, 24, 197);
+$fearlessDarkest:rgb(85, 0, 197);
+$fearlessLighter:rgb(137, 95, 190);
+$fearlessLightest:rgb(194, 178, 218);
+
+
+$confidentMain: #C2353E;
+$confidentDarker:rgb(180, 31, 41);
+$confidentDarkest:rgb(112, 27, 33);
+$confidentLighter:rgb(238, 125, 133);
+$confidentLightest:rgb(252, 190, 194);
+
+
+
+$composedMain: #6FC400;
+$composedDarker:rgb(93, 165, 0);
+$composedDarkest:rgb(73, 129, 0);
+$composedLighter:rgb(186, 255, 95);
+$composedLightest:rgb(175, 252, 74);
+
+$focusedMain: #00B2FF;
+$focusedDarker:rgb(0, 140, 201);
+$focusedDarkest:rgb(0, 106, 151);
+$focusedLighter:rgb(103, 209, 255);
+$focusedLightest:rgb(166, 228, 255);

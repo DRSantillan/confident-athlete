@@ -1,0 +1,27 @@
+.course-nav {
+  display: flex;
+  
+  justify-content: stretch;
+  align-content: center;
+color: white;
+a{
+  color: white;
+}
+
+  .home {
+    width: 2%;
+    
+    
+
+    .fa-home {
+      font-size: 1.5rem;
+    }
+  }
+
+  .title {
+    width: 95%;
+    //background-color: blueviolet;
+    
+    
+  }
+}

@@ -13,20 +13,22 @@ const renderPreviousDay = () => {
 						temp = ``;
 					} else {
 						if (typeof item.contents[index - 1].day === 'number') {
-							temp = `<a href="day-${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">Day ${item.contents[index - 1].day}</a>`;
+							temp = `<a href="day-${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}"><< Day ${item.contents[index - 1].day}</a>`;
 						} else {
 							
 							if (item.contents[index - 1].day === '') {
-								temp = `<a href="/series/${program}/" title="${item.contents[index - 1].title}">Contents</a>`;
+								temp = `<a href="/series/${program}/" title="${item.contents[index - 1].title}"><< Contents</a>`;
 							} else {
 								if (item.contents[index - 1].day === 'appendix') {
-									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">Appendix</a>`;
+									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}"><< Appendix</a>`;
 								} else if (item.contents[index - 1].day === 'new-beginning') {
-									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">New Start</a>`;
+									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}"><< New Start</a>`;
 								} else if (item.contents[index - 1].day === 'contract') {
-									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">Contract</a>`;
+									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}"><< Contract</a>`;
 								} else if (item.contents[index - 1].day === 'bonus') {
-									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">Bonus</a>`;
+									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}"><< Bonus</a>`;
+								}else if (item.contents[index - 1].day === 'introduction') {
+									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}"><< Intro</a>`;
 								} else {
 									temp = `<a href="${item.contents[index - 1].day}.html" title="${item.contents[index - 1].title}">${item.contents[index - 1].title}</a>`;
 								}
@@ -48,24 +50,24 @@ const renderNextDay = () => {
 			item.contents.forEach((course, index) => {
 				if (course.day.toString() === page) {
 					if (item.contents[index + 1] === undefined) {
-						temp = `<a href="/series/${program}/"> Contents </a>`;
+						temp = `<a href="/series/${program}/"> Contents >></a>`;
 					} else {
 						if (typeof item.contents[index + 1].day === 'number') {
 							temp = `<a href="day-${item.contents[index + 1].day}.html"> Day ${item.contents[index + 1].day} </a> >>`;
 						} else {
 							if (item.contents[index + 1].day === '') {
-								temp = `<a href="/series/${program}/"> Contents </a> >>`;
+								temp = `<a href="/series/${program}/"> Contents >></a> `;
 							} else {
 								if (item.contents[index + 1].day === 'appendix') {
-									temp = `<a href="${item.contents[index + 1].day}.html"> Appendix </a> >>`;
+									temp = `<a href="${item.contents[index + 1].day}.html"> Appendix >></a>`;
 								} else if (item.contents[index + 1].day === 'new-beginning') {
-									temp = `<a href="${item.contents[index + 1].day}.html"> New Start </a> >>`;
+									temp = `<a href="${item.contents[index + 1].day}.html"> New Start >></a>`;
 								} else if (item.contents[index + 1].day === 'contract') {
-									temp = `<a href="${item.contents[index + 1].day}.html"> Contract </a> >>`;
+									temp = `<a href="${item.contents[index + 1].day}.html"> Contract >></a>`;
 								} else if (item.contents[index + 1].day === 'bonus') {
-									temp = `<a href="${item.contents[index + 1].day}.html" title="${item.contents[index - 1].title}">Bonus</a>`;
+									temp = `<a href="${item.contents[index + 1].day}.html" title="${item.contents[index - 1].title}">Bonus >></a> >>`;
 								} else {
-									temp = `<a href="${item.contents[index + 1].day}.html"> ${item.contents[index + 1].title} </a> >>`;
+									temp = `<a href="${item.contents[index + 1].day}.html"> ${item.contents[index + 1].title} >></a>`;
 								}
 							}
 						}
@@ -106,13 +108,13 @@ const renderTitle = () => {
 
 const displayFooter = () => {
 	const footer = document.querySelector('footer');
-
-	const template = `
+const program = getProgram();
+	const template = `<div class="${program}__ftr--bg">
 			<div class="day">
 				<div class="day-item">${renderPreviousDay()}</div>
 				<div class="day-item day-main-title">${renderTitle()}</div>
 				<div class="day-item">${renderNextDay()}</div>
-			</div><p>Developed by Dean Santillan &copy;2019</p>`;
+			</div><p>Developed by Dean Santillan &copy;2019</p></div>`;
 			if(footer) {
 				footer.innerHTML = template;
 			}

@@ -4,7 +4,6 @@ import { contents } from '../../db/contents';
 const courseTitle = () => {
 	let temp;
 	let program = getProgram();
-	
 
 	contents.programs.forEach(item => {
 		if (program.length === 0) {
@@ -115,12 +114,24 @@ const renderTitle = () => {
 const displayHeader = () => {
 	const header = document.querySelector('header');
 
-	const template = `${courseTitle()}
+	const program = getProgram();
+
+	let div = '';
+	if (program === '') {
+		div = `<div class="main__bg">`;
+	} else {
+		div = `<div class="${program}__bg">`;
+	}
+	const template = `${div}
+			<div class="course-nav">
+		<div class="home"><a href="/"><i class="fa fa-home"></i></a></div>
+		<div class="title">${courseTitle()}</div>
+	</div>
 			<div class="day">
 				<div class="day-item"><strong>${renderPreviousDay()}</strong></div>
 				<div class="day-item day-main-title">${renderTitle()}</div>
 				<div class="day-item"><strong>${renderNextDay()}</strong></div>
-			</div>`;
+			</div></div>`;
 	header.innerHTML = template;
 };
 
