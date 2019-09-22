@@ -28,7 +28,7 @@ const deleteDistFolder = async () => {
 };
 
 const useMin = () => {
-	return src(['./app/index.html', './app/series/fearless/index.html'])
+	return src(['./app/index.html'])
 		.pipe(
 			usemin({
 				css: [nano(), rev()],
