@@ -1,4 +1,8 @@
 const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+
+let HtmlWebPlug = new HtmlWebPackPlugin({});
+
 module.exports = {
 	entry: {
 		app: './app/assets/js/app.js',
@@ -8,5 +12,6 @@ module.exports = {
 		path: path.resolve(__dirname + '/app/dev/assets/', 'js'),
 		filename: '[name].js'
 	},
+	plugins: [],
 	mode: 'development'
 };

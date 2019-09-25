@@ -1,11 +1,9 @@
-import { getProgram, getPage } from '../lib';
+import { getUrlQuery} from '../lib';
 
 const loadData = () => {
-	//getLocalStorageSize();
-	const program = getProgram();
-
+	
 	if (localStorage.length !== 0) {
-		return JSON.parse(localStorage.getItem(program));
+		return JSON.parse(localStorage.getItem(getUrlQuery()[0]));
 	}
 	return undefined;
 };

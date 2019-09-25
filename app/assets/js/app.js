@@ -1,8 +1,12 @@
 import { displayHeader, injectPageTitle } from './modules/templates/header';
 import { displayFooter } from './modules/templates/footer';
+import { getContents } from './lib/displayManager';
+getContents();
 injectPageTitle();
 displayHeader();
-displayFooter();
+
+ 
+ displayFooter();
 
 import { saveAttitude, clearAttitude, loadAttitude } from './modules/attitude';
 import {

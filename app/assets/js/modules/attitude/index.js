@@ -1,22 +1,22 @@
 import {
-	getPage,
 	saveCheckBoxes,
 	loadCheckBoxes,
-	clearCheckBoxes
+	clearCheckBoxes, getUrlQuery
 } from '../../lib';
 
 const chkboxes = document.getElementsByClassName('mental-assessment');
 
 const saveAttitude = () => {
-	saveCheckBoxes(chkboxes, 'attitude', getPage());
+	debugger
+	saveCheckBoxes(chkboxes, 'attitude', getUrlQuery()[1]);
 };
 
 const clearAttitude = () => {
-	clearCheckBoxes(chkboxes, 'attitude', getPage());
+	clearCheckBoxes(chkboxes, 'attitude', getUrlQuery()[1]);
 };
 
 const loadAttitude = () => {
-	loadCheckBoxes(chkboxes, 'attitude', getPage());
+	loadCheckBoxes(chkboxes, 'attitude', getUrlQuery()[1]);
 };
 
 export { saveAttitude, clearAttitude, loadAttitude };

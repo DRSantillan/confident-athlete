@@ -1,4 +1,24 @@
 import { savePageData, loadData } from '../db';
+const getUrlQuery = () => {
+	const query = window.location.search;
+	let queryParams = new URLSearchParams(query);
+	let obj = [];
+	if (queryParams.has('course')) {
+		if (queryParams.has('day')) {
+			for (let key of queryParams.entries()) {
+				obj.push(key[1]);
+			}
+		} else {
+			for (let key of queryParams.entries()) {
+				obj.push(key[1]);
+			}
+		}
+	} else {
+		obj.push('main');
+	}
+	return obj;
+};
+
 
 const getDate = () => {
 	const today = new Date().toLocaleDateString();
@@ -8,7 +28,7 @@ const getDate = () => {
 const saveDDL = (input, area, type) => {
 	let pageData = loadData();
 
-	if(pageData === null){
+	if (pageData === null) {
 		pageData = undefined;
 	}
 
@@ -16,7 +36,7 @@ const saveDDL = (input, area, type) => {
 	for (let i = 0; i < input.length; i++) {
 		let answers = {};
 		answers.date = getDate();
-		answers.day = getPage();
+		answers.day = getUrlQuery()[1];
 		answers.id = input[i].id;
 		answers.value = input[i].value;
 		arr.push(answers);
@@ -43,32 +63,32 @@ const saveDDL = (input, area, type) => {
 			pageData[area] = arr;
 		}
 	}
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 };
 const clearDDL = (input, area, type) => {
 	let pageData = loadData();
 
 	if (type) {
 		pageData[area][type].forEach(item => {
-			if (item.day === getPage()) {
+			if (item.day === getUrlQuery()[1]) {
 				delete pageData[area][type];
 			}
 		});
 	} else {
 		pageData[area].forEach(item => {
-			if (item.day === getPage()) {
+			if (item.day === getUrlQuery()[1]) {
 				delete pageData[area];
 			}
 		});
 	}
 
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 	setInputsToDefault(input, 'Select One');
 };
 const loadDDL = (input, area, type) => {
 	let pageData = loadData();
 	let data;
-	if(pageData === null) {
+	if (pageData === null) {
 		pageData = undefined;
 	}
 
@@ -94,9 +114,9 @@ const loadDDL = (input, area, type) => {
 const saveTxtChecks = (input, area, type) => {
 	let pageData = loadData();
 	let arr = [];
-if (pageData === null) {
-	pageData = undefined;
-}
+	if (pageData === null) {
+		pageData = undefined;
+	}
 	for (let i = 0; i < input.length; i++) {
 		let answerObj = {};
 		answerObj.id = input[i].id;
@@ -126,7 +146,7 @@ if (pageData === null) {
 		pageData[area][type] = arr;
 	}
 
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 };
 const loadTxtChecks = (input, area, type) => {
 	let pageData = loadData();
@@ -158,7 +178,7 @@ const loadTxtChecks = (input, area, type) => {
 const clearTxtChecks = (input, area, type) => {
 	let pageData = loadData();
 	delete pageData[area][type];
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 	setInputsToDefault(input);
 	setCheckBoxesToDefault(input);
 };
@@ -167,37 +187,36 @@ const clearTextBoxes = (input, area, type) => {
 
 	if (type) {
 		pageData[area][type].forEach(item => {
-			if (item.day === getPage()) {
+			if (item.day === getUrlQuery()[1]) {
 				delete pageData[area][type];
 			}
 		});
 	} else {
 		pageData[area].forEach(item => {
-			if (item.day === getPage()) {
+			if (item.day === getUrlQuery()[1]) {
 				delete pageData[area];
 			}
 		});
 	}
 
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 	setInputsToDefault(input);
 };
 const loadTextBoxes = (input, area, type) => {
 	let pageData = loadData();
 	let data;
 
-	if (pageData === null  ) {
+	if (pageData === null) {
 		pageData = undefined;
-		
-	} 
+	}
 
 	if (
 		pageData === undefined ||
 		pageData[area] === undefined ||
 		pageData[area][type] === undefined
 	) {
-		return
-	} 
+		return;
+	}
 
 	if (type) {
 		data = pageData[area][type];
@@ -226,7 +245,7 @@ const saveTextBoxes = (input, area, type) => {
 	for (let i = 0; i < input.length; i++) {
 		let answers = {};
 		answers.date = getDate();
-		answers.day = getPage();
+		answers.day = getUrlQuery()[1];
 		answers.id = input[i].id;
 		answers.value = input[i].value;
 		arr.push(answers);
@@ -253,7 +272,7 @@ const saveTextBoxes = (input, area, type) => {
 			pageData[area] = arr;
 		}
 	}
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 };
 const saveTextBox = (input, area) => {
 	let pageData = loadData();
@@ -262,7 +281,7 @@ const saveTextBox = (input, area) => {
 		pageData = undefined;
 	}
 	let obj = {};
-	obj.day = getPage();
+	obj.day = getUrlQuery()[1];
 	obj.note = input.value;
 	//debugger;
 	if (pageData === undefined || pageData === null) {
@@ -274,7 +293,7 @@ const saveTextBox = (input, area) => {
 		pageData[area].push(obj);
 	} else {
 		pageData[area].forEach((item, index) => {
-			if (item.day === getPage()) {
+			if (item.day === getUrlQuery()[1]) {
 				pageData[area].splice(index, 1);
 			}
 		});
@@ -282,18 +301,18 @@ const saveTextBox = (input, area) => {
 	}
 
 	obj = {};
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 };
 const clearTextBox = (input, area) => {
 	let pageData = loadData();
 	pageData[area].forEach((item, index) => {
-		if (item.day === getPage()) {
+		if (item.day === getUrlQuery()[1]) {
 			pageData[area].splice(index, 1);
 		}
 	});
 	input.value = '';
 
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 };
 const loadTextBox = (input, area) => {
 	let pageData = loadData();
@@ -312,7 +331,7 @@ const loadTextBox = (input, area) => {
 		return;
 	}
 	pageData[area].forEach(item => {
-		if (item.day === getPage()) {
+		if (item.day === getUrlQuery()[1]) {
 			input.value = item.note;
 		}
 	});
@@ -321,11 +340,11 @@ const clearSliders = (input, area, type) => {
 	let pageData = loadData();
 
 	pageData[area][type].forEach(item => {
-		if (item.day.toString() === getPage().toString()) {
+		if (item.day.toString() === getUrlQuery()[1].toString()) {
 			delete pageData[area][type];
 		}
 	});
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 	setInputsToDefault(input);
 };
 const saveSliders = (input, area, type) => {
@@ -338,7 +357,7 @@ const saveSliders = (input, area, type) => {
 		let answers = {};
 
 		answers.date = getDate();
-		answers.day = getPage();
+		answers.day = getUrlQuery()[1];
 		answers.id = input[i].id;
 		answers.value = input[i].value;
 
@@ -356,14 +375,14 @@ const saveSliders = (input, area, type) => {
 		pageData[area][type] = answersArray;
 	}
 
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 };
 const loadSliders = (input, area, type) => {
 	let pageData = loadData();
 
-		if (pageData === null) {
-			pageData = undefined;
-		}
+	if (pageData === null) {
+		pageData = undefined;
+	}
 	if (
 		pageData === undefined ||
 		pageData[area] === undefined ||
@@ -388,7 +407,7 @@ const saveCheckBoxes = (input, area, type) => {
 		let answers = {};
 
 		answers.date = getDate();
-		answers.day = getPage();
+		answers.day = getUrlQuery()[1];
 		answers.id = input[i].id;
 		answers.value = input[i].checked;
 		answersArray.push(answers);
@@ -417,7 +436,7 @@ const saveCheckBoxes = (input, area, type) => {
 		}
 	}
 
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 };
 const clearCheckBoxes = (input, area, type) => {
 	let pageData = loadData();
@@ -428,7 +447,7 @@ const clearCheckBoxes = (input, area, type) => {
 		data = pageData[area];
 	}
 	data.forEach(item => {
-		if (item.day === getPage()) {
+		if (item.day === getUrlQuery()[1]) {
 			if (type) {
 				delete pageData[area][type];
 			} else {
@@ -436,7 +455,7 @@ const clearCheckBoxes = (input, area, type) => {
 			}
 		}
 	});
-	savePageData(pageData, getProgram());
+	savePageData(pageData, getUrlQuery()[0]);
 	setCheckBoxesToDefault(input);
 };
 const loadCheckBoxes = (input, area, type) => {
@@ -467,20 +486,22 @@ const loadCheckBoxes = (input, area, type) => {
 		}
 	});
 };
-const getPage = () => {
+/* const getPage = () => {
 	let currentDay = window.location.pathname;
-	const program = getProgram();
+	const program = getUrlQuery()[0];
 
 	if (currentDay.includes(program)) {
+		currentDay = currentDay.replace('/mas');
 		currentDay = currentDay.replace(`/series/${program}/`, '');
 		currentDay = currentDay.replace('day-', '');
 		currentDay = currentDay.replace('.html', '');
 	}
+
 	return currentDay;
 };
 const getProgram = () => {
 	let currentProgram = window.location.pathname;
-
+	currentProgram = currentProgram.replace(`/mas`, '');
 	currentProgram = currentProgram.replace(`/series/`, '');
 	currentProgram = currentProgram.replace('day-', '');
 	currentProgram = currentProgram.replace('.html', '');
@@ -491,7 +512,7 @@ const getProgram = () => {
 	currentProgram = currentProgram.replace(t, '');
 
 	return currentProgram;
-};
+}; */
 const setCheckBoxesToDefault = chkbox => {
 	for (let i = 0; i < chkbox.length; i++) {
 		chkbox[i].checked = false;
@@ -508,8 +529,9 @@ const setInputsToDefault = (input, select) => {
 };
 
 export {
-	getProgram,
-	getPage,
+	getUrlQuery,
+	//getProgram,
+	//getPage,
 	getDate,
 	setCheckBoxesToDefault,
 	setInputsToDefault,

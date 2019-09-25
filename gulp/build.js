@@ -3,6 +3,7 @@ import imagemin from 'gulp-imagemin';
 import del from 'del';
 import usemin from 'gulp-usemin';
 
+
 import nano from 'gulp-cssnano';
 import uglify from 'gulp-uglify';
 import rev from 'gulp-rev';
@@ -70,6 +71,7 @@ export default series(
 	deleteDistFolder,
 	optimizeImages,
 	copyFiles,
+	
 	useMin,
 	preview
 );

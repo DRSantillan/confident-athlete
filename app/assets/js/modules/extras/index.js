@@ -18,6 +18,7 @@ const clearCommitment = () => {
 	clearTextBoxes(inputContract, areas[0]);
 };
 const loadCommitment = () => {
+	debugger;
 	loadTextBoxes(inputContract, areas[0]);
 };
 
@@ -33,6 +34,7 @@ const clearSelfConcept = () => {
 };
 
 const loadSelfConcept = () => {
+	
 	loadCheckBoxes(chkboxes, areas[1]);
 };
 

@@ -1,17 +1,18 @@
 import { saveTextBox, clearTextBox, loadTextBox } from '../../lib/';
 
-const inputNotes = document.getElementById('day-note');
+
+const inputNotes = document.getElementsByClassName('day-notes');
 
 const saveNotes = () => {
-	saveTextBox(inputNotes, 'notes');
+	saveTextBox(inputNotes[0], 'notes');
 };
 
 const clearNotes = () => {
-	clearTextBox(inputNotes, 'notes');
+	clearTextBox(inputNotes[0], 'notes');
 };
 
 const loadNotes = () => {
-	loadTextBox(inputNotes, 'notes');
+	loadTextBox(inputNotes[0], 'notes');
 };
 
 export { saveNotes, clearNotes, loadNotes };

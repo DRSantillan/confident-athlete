@@ -1,18 +1,18 @@
-import { getPage, saveSliders, clearSliders, loadSliders } from '../../lib';
+import { saveSliders, clearSliders, loadSliders, getUrlQuery } from '../../lib';
 
 const area = 'scoreboard';
 
 /* Scoreboard */
 const inputScore = document.getElementsByClassName(area);
 const saveScoreBoard = () => {
-	saveSliders(inputScore, area, getPage());
+	saveSliders(inputScore, area, getUrlQuery()[1]);
 };
 const clearScoreBoard = () => {
-	clearSliders(inputScore, area, getPage());
+	clearSliders(inputScore, area, getUrlQuery()[1]);
 };
 
 const loadScoreBoard = () => {
-	loadSliders(inputScore, area, getPage());
+	loadSliders(inputScore, area, getUrlQuery()[1]);
 };
 
 export { saveScoreBoard, clearScoreBoard, loadScoreBoard };
