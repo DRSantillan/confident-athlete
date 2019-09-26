@@ -7,7 +7,6 @@ import {
 const chkboxes = document.getElementsByClassName('mental-assessment');
 
 const saveAttitude = () => {
-	debugger
 	saveCheckBoxes(chkboxes, 'attitude', getUrlQuery()[1]);
 };
 

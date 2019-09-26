@@ -1,11 +1,12 @@
 import { getUrlQuery } from '../../lib';
 import { contents } from '../../db/contents';
+
 let queryArr = getUrlQuery();
 const courseTitle = () => {
 	let temp;
 	contents.programs.forEach(item => {
 		if (queryArr[0] === 'main') {
-			temp = `<a href="/"><h1>The Mental Athlete Series</h1></a>`;
+			temp = `<a href="/mas/"><h1>The Mental Athlete Series</h1></a>`;
 		} else {
 			if (item.course === queryArr[0]) {
 				temp = `<a href="?course=${queryArr[0]}"><h1>${item.title}</h1></a>`;
@@ -127,7 +128,7 @@ const displayHeader = () => {
 	}
 	const template = `${div}
 			<div class="course-nav">
-		<div class="home"><a href="/"><i class="fa fa-home" title="Click here to go back to Courses...."></i></a></div>
+		<div class="home"><a href="/mas/"><i class="fa fa-home" title="Click here to go back to Courses...."></i></a></div>
 		<div class="title">${courseTitle()}</div>
 	</div>
 			<div class="day">

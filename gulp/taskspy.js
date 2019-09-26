@@ -18,44 +18,7 @@ const reload = done => {
 };
 
 const pages = [
-	'./app/index.html',
-	'./app/series/index.html',
-	'./app/series/fearless/index.html',
-	'./app/series/fearless/introduction.html',
-	'./app/series/fearless/day-1.html',
-	'./app/series/fearless/day-2.html',
-	'./app/series/fearless/day-3.html',
-	'./app/series/fearless/day-4.html',
-	'./app/series/fearless/day-5.html',
-	'./app/series/fearless/day-6.html',
-	'./app/series/fearless/day-7.html',
-	'./app/series/fearless/day-8.html',
-	'./app/series/fearless/day-9.html',
-	'./app/series/fearless/day-10.html',
-	'./app/series/fearless/day-11.html',
-	'./app/series/fearless/day-12.html',
-	'./app/series/fearless/day-13.html',
-	'./app/series/fearless/day-14.html',
-	'./app/series/fearless/new-beginning.html',
-	'./app/series/fearless/contract.html',
-	'./app/series/confidence/index.html',
-	'./app/series/confidence/introduction.html',
-	'./app/series/confidence/day-1.html',
-	'./app/series/confidence/day-2.html',
-	'./app/series/confidence/day-3.html',
-	'./app/series/confidence/day-4.html',
-	'./app/series/confidence/day-5.html',
-	'./app/series/confidence/day-6.html',
-	'./app/series/confidence/day-7.html',
-	'./app/series/confidence/day-8.html',
-	'./app/series/confidence/day-9.html',
-	'./app/series/confidence/day-10.html',
-	'./app/series/confidence/day-11.html',
-	'./app/series/confidence/day-12.html',
-	'./app/series/confidence/day-13.html',
-	'./app/series/confidence/day-14.html',
-	'./app/series/confidence/new-beginning.html',
-	'./app/series/confidence/contract.html'
+	'./app/index.html'
 ];
 
 const watchTasks = () => {

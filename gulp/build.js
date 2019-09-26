@@ -2,12 +2,9 @@ import { src, dest, series, parallel } from 'gulp';
 import imagemin from 'gulp-imagemin';
 import del from 'del';
 import usemin from 'gulp-usemin';
-
-
 import nano from 'gulp-cssnano';
 import uglify from 'gulp-uglify';
 import rev from 'gulp-rev';
-
 import browsersync from 'browser-sync';
 const browserSync = browsersync.create();
 
@@ -24,8 +21,7 @@ const optimizeImages = () => {
 };
 const deleteDistFolder = async () => {
 	const deletePath = await del('./dist');
-
-	console.log(deletePath);
+	//console.log(deletePath);
 };
 
 const useMin = () => {
@@ -42,18 +38,16 @@ const useMin = () => {
 const copyFiles = () => {
 	const paths = [
 		'./app/**/*',
+		'./app/assets/media/**',
+		'!./app/series/**',
 		'!./app/index.html',
 		'!./app/assets/css/**',
-		'!./app/assets/media/**/*',
-		//'!./app/assets/media/icons/**',
-		'!./app/assets/media/images/**',
-		//'!./app/assets/media/videos/**',
-
+		'!./app/assets/media/icons/**',
+		'!./app/assets/media/videos/**',
 		'!./app/assets/js/**',
 		'!./app/dev',
 		'!./app/dev/**'
 	];
-
 	return src(paths).pipe(dest('./dist'));
 };
 
@@ -71,7 +65,6 @@ export default series(
 	deleteDistFolder,
 	optimizeImages,
 	copyFiles,
-	
 	useMin,
 	preview
 );

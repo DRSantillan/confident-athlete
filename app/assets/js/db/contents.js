@@ -27,7 +27,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/IntroTrack.mp3`
+							content: `/mas/assets/media/mp3/fearless/intro.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -151,7 +151,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day1.mp3`
+							content: `/mas/assets/media/mp3/fearless/day1.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -351,29 +351,29 @@ const contents = {
 				</div>
 
 				<div class="container__row">1.
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q1scenario" placeholder="Scenario"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q1fof" placeholder="Fear Of Failure"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q1reaction" placeholder="Reaction"></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q1scenario" placeholder="Scenario..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q1fof" placeholder="Fear Of Failure..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q1reaction" placeholder="Reaction..."></div>
 				</div>
 				<div class="container__row">2.
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q2scenario" placeholder="Scenario"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q2fof" placeholder="Fear Of Failure"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q2reaction" placeholder="Reaction"></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q2scenario" placeholder="Scenario..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q2fof" placeholder="Fear Of Failure..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q2reaction" placeholder="Reaction..."></div>
 				</div>
 				<div class="container__row">3.
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q3scenario" placeholder="Scenario"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q3fof" placeholder="Fear Of Failure"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q3reaction" placeholder="Reaction"></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q3scenario" placeholder="Scenario..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q3fof" placeholder="Fear Of Failure...title"></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q3reaction" placeholder="Reaction..."></div>
 				</div>
 				<div class="container__row">4.
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q4scenario" placeholder="Scenario"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q4fof" placeholder="Fear Of Failure"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q4reaction" placeholder="Reaction"></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q4scenario" placeholder="Scenario..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q4fof" placeholder="Fear Of Failure..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q4reaction" placeholder="Reaction..."></div>
 				</div>
 				<div class="container__row">5.
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q5scenario" placeholder="Scenario"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q5fof" placeholder="Fear Of Failure"></div>
-					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q5reaction" placeholder="Reaction"></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q5scenario" placeholder="Scenario..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q5fof" placeholder="Fear Of Failure..."></div>
+					<div class="container__col"><input class="txt-input self-awareness" type="text" name="" id="q5reaction" placeholder="Reaction..."></div>
 				</div>
 <button class="btn" id="saveSelfAwareness">Save</button><button class="btn" id="clearSelfAwareness">Clear</button>
 			</div>`
@@ -387,7 +387,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day2.mp3`
+							content: `/mas/assets/media/mp3/fearless/day2.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -542,28 +542,28 @@ const contents = {
 			</div>
 
 			<div class="container__row">1.
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q1situation" placeholder="Situation"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q1fear" placeholder="Fear or Anxiety"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q1reaction" placeholder="Your Reaction"></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q1situation" placeholder="Situation..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q1fear" placeholder="Fear or Anxiety..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q1reaction" placeholder="Your Reaction......"></div>
 			</div>
 			<div class="container__row">2.
 			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q2situation" placeholder="Situation" ></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q2fear" placeholder="Fear or Anxiety"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q2reaction" placeholder="Your Reaction"></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q2fear" placeholder="Fear or Anxiety..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q2reaction" placeholder="Your Reaction..."></div>
 			</div>
 			<div class="container__row">3.
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q3situation" placeholder="Situation"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q3fear" placeholder="Fear or Anxiety"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q3reaction" placeholder="Your Reaction"></div></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q3situation" placeholder="Situation..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q3fear" placeholder="Fear or Anxiety..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q3reaction" placeholder="Your Reaction..."></div></div>
 			<div class="container__row">4.
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q4situation" placeholder="Situation"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q4fear" placeholder="Fear or Anxiety"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q4reaction" placeholder="Your Reaction"></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q4situation" placeholder="Situation..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q4fear" placeholder="Fear or Anxiety..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q4reaction" placeholder="Your Reaction..."></div>
 			</div>
 			<div class="container__row">5.
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q5situation" placeholder="Situation"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q5fear" placeholder="Fear or Anxiety"></div>
-			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q5reaction" placeholder="Your Reaction"></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q5situation" placeholder="Situation..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q5fear" placeholder="Fear or Anxiety..."></div>
+			<div class="container__col"><input class="txt-input trigger-situations" type="text" id="q5reaction" placeholder="Your Reaction..."></div>
 			</div>
 			<button class="btn" id="saveTrigSit">Save</button><button class="btn" id="clearTrigSit">Clear</button>
 			</div>
@@ -653,7 +653,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day3.mp3`
+							content: `/mas/assets/media/mp3/fearless/day3.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -853,7 +853,7 @@ const contents = {
 								class="txt-input non-functional-mindsets"
 								type="text"
 								id="q1"
-								placeholder="Quality that is non-functional"
+								placeholder="Quality that is non-functional..."
 							/>
 						</div>
 					</div>
@@ -864,7 +864,7 @@ const contents = {
 								class="txt-input non-functional-mindsets"
 								type="text"
 								id="q2"
-								placeholder="Quality that is non-functional"
+								placeholder="Quality that is non-functional..."
 							/>
 						</div>
 					</div>
@@ -875,7 +875,7 @@ const contents = {
 								class="txt-input non-functional-mindsets"
 								type="text"
 								id="q3"
-								placeholder="Quality that is non-functional"
+								placeholder="Quality that is non-functional..."
 							/>
 						</div>
 					</div>
@@ -886,7 +886,7 @@ const contents = {
 								class="txt-input non-functional-mindsets"
 								type="text"
 								id="q4"
-								placeholder="Quality that is non-functional"
+								placeholder="Quality that is non-functional..."
 							/>
 						</div>
 					</div>
@@ -897,7 +897,7 @@ const contents = {
 								class="txt-input non-functional-mindsets"
 								type="text"
 								id="q5"
-								placeholder="Quality that is non-functional"
+								placeholder="Quality that is non-functional..."
 							/>
 						</div>
 					</div>
@@ -981,7 +981,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q1nfm"
-								placeholder="Non-Functional Mindset"
+								placeholder="Non-Functional Mindset..."
 							/>
 						</div>
 						<div class="container__col">
@@ -989,7 +989,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q1pfc"
-								placeholder="Plans for Change"
+								placeholder="Plans for Change..."
 							/>
 						</div>
 					</div>
@@ -999,7 +999,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q2nfm"
-								placeholder="Non-Functional Mindset"
+								placeholder="Non-Functional Mindset..."
 							/>
 						</div>
 						<div class="container__col">
@@ -1007,7 +1007,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q2pfc"
-								placeholder="Plans for Change"
+								placeholder="Plans for Change..."
 							/>
 						</div>
 					</div>
@@ -1017,7 +1017,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q3nfm"
-								placeholder="Non-Functional Mindset"
+								placeholder="Non-Functional Mindset..."
 							/>
 						</div>
 						<div class="container__col">
@@ -1025,7 +1025,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q3pfc"
-								placeholder="Plans for Change"
+								placeholder="Plans for Change..."
 							/>
 						</div>
 					</div>
@@ -1035,7 +1035,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q4nfm"
-								placeholder="Non-Functional Mindset"
+								placeholder="Non-Functional Mindset..."
 							/>
 						</div>
 						<div class="container__col">
@@ -1043,7 +1043,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q4pfc"
-								placeholder="Plans for Change"
+								placeholder="Plans for Change..."
 							/>
 						</div>
 					</div>
@@ -1053,7 +1053,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q5nfm"
-								placeholder="Non-Functional Mindset"
+								placeholder="Non-Functional Mindset..."
 							/>
 						</div>
 						<div class="container__col">
@@ -1061,7 +1061,7 @@ const contents = {
 								class="txt-input top5-characteristics"
 								type="text"
 								id="q5pfc"
-								placeholder="Plans for Change"
+								placeholder="Plans for Change..."
 							/>
 						</div>
 					</div>
@@ -1078,7 +1078,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day4.mp3`
+							content: `/mas/assets/media/mp3/fearless/day4.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -1277,7 +1277,7 @@ const contents = {
 								class="txt-input ineffective-beliefs"
 								type="text"
 								id="q1ib"
-								placeholder="Ineffective belief"
+								placeholder="Ineffective belief..."
 							/>
 						</div>
 						<div class="container__col">
@@ -1285,7 +1285,7 @@ const contents = {
 								class="txt-input ineffective-beliefs"
 								type="text"
 								id="q1eop"
-								placeholder="Effect on Performance"
+								placeholder="Effect on Performance..."
 							/>
 						</div>
 					</div>
@@ -1309,7 +1309,7 @@ const contents = {
 								class="txt-input non-functional-beliefs"
 								type="text"
 								id="q1"
-								placeholder="Non-Functional Belief"
+								placeholder="Non-Functional Belief..."
 							/>
 						</div>
 					</div>
@@ -1319,7 +1319,7 @@ const contents = {
 								class="txt-input non-functional-beliefs"
 								type="text"
 								id="q2"
-								placeholder="Non-Functional Belief"
+								placeholder="Non-Functional Belief..."
 							/>
 						</div>
 					</div>
@@ -1329,7 +1329,7 @@ const contents = {
 								class="txt-input non-functional-beliefs"
 								type="text"
 								id="q3"
-								placeholder="Non-Functional Belief"
+								placeholder="Non-Functional Belief..."
 							/>
 						</div>
 					</div>
@@ -1339,7 +1339,7 @@ const contents = {
 								class="txt-input non-functional-beliefs"
 								type="text"
 								id="q4"
-								placeholder="Non-Functional Belief"
+								placeholder="Non-Functional Belief..."
 							/>
 						</div>
 					</div>
@@ -1349,7 +1349,7 @@ const contents = {
 								class="txt-input non-functional-beliefs"
 								type="text"
 								id="q5"
-								placeholder="Non-Functional Belief"
+								placeholder="Non-Functional Belief..."
 							/>
 						</div>
 					</div>
@@ -1893,7 +1893,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day5.mp3`
+							content: `/mas/assets/media/mp3/fearless/day5.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -2243,7 +2243,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day6.mp3`
+							content: `/mas/assets/media/mp3/fearless/day6.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -2479,7 +2479,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day7.mp3`
+							content: `/mas/assets/media/mp3/fearless/day7.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -2956,7 +2956,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day8.mp3`
+							content: `/mas/assets/media/mp3/fearless/day8.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -3388,7 +3388,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day9.mp3`
+							content: `/mas/assets/media/mp3/fearless/day9.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -3944,7 +3944,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day10.mp3`
+							content: `/mas/assets/media/mp3/fearless/day10.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -4396,7 +4396,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day11.mp3`
+							content: `/mas/assets/media/mp3/fearless/day11.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -4762,7 +4762,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day12.mp3`
+							content: `/mas/assets/media/mp3/fearless/day12.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -5304,7 +5304,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day13.mp3`
+							content: `/mas/assets/media/mp3/fearless/day13.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -5643,7 +5643,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/Day14.mp3`
+							content: `/mas/assets/media/mp3/fearless/day14.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -6092,7 +6092,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/1ExtroTrackNR.mp3`
+							content: `/mas/assets/media/mp3/fearless/outro.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -6942,7 +6942,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/fearless/bonus.mp3`
+							content: `/mas/assets/media/mp3/fearless/bonus.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -6950,7 +6950,7 @@ const contents = {
 							content: `<h3>Bonus - PDF</h3>
 				<p>
 					Download PDF to read off-line.
-					<a href="/assets/media/pdf/fearless/bonus.pdf">Download</a>
+					<a href="/mas/assets/media/pdf/fearless/bonus.pdf">Download</a>
 				</p>`
 						}
 					]
@@ -6970,7 +6970,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/intro.mp3`
+							content: `/mas/assets/media/mp3/focused/intro.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -7139,7 +7139,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day1.mp3`
+							content: `/mas/assets/media/mp3/focused/day1.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -7560,7 +7560,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day2.mp3`
+							content: `/mas/assets/media/mp3/focused/day2.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -8022,7 +8022,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day3.mp3`
+							content: `/mas/assets/media/mp3/focused/day3.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -8510,7 +8510,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day4.mp3`
+							content: `/mas/assets/media/mp3/focused/day4.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -8881,7 +8881,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day5.mp3`
+							content: `/mas/assets/media/mp3/focused/day5.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -9114,7 +9114,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day6.mp3`
+							content: `/mas/assets/media/mp3/focused/day6.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -9559,7 +9559,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day7.mp3`
+							content: `/mas/assets/media/mp3/focused/day7.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -10007,7 +10007,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day8.mp3`
+							content: `/mas/assets/media/mp3/focused/day8.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -10299,7 +10299,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day9.mp3`
+							content: `/mas/assets/media/mp3/focused/day9.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -10407,7 +10407,7 @@ const contents = {
 								class="txt-input entering-the-role"
 								type="text"
 								id="q1"
-								placeholder="..."
+								placeholder="Previous Life Events..."
 							/>
 						</div>
 					</div>
@@ -10623,7 +10623,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day10.mp3`
+							content: `/mas/assets/media/mp3/focused/day10.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -10956,7 +10956,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day11.mp3`
+							content: `/mas/assets/media/mp3/focused/day11.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -11263,7 +11263,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day12.mp3`
+							content: `/mas/assets/media/mp3/focused/day12.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -11618,7 +11618,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day13.mp3`
+							content: `/mas/assets/media/mp3/focused/day13.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -12117,7 +12117,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/Day14.mp3`
+							content: `/mas/assets/media/mp3/focused/day14.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -12200,13 +12200,13 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/outro.mp3`
+							content: `/mas/assets/media/mp3/focused/outro.mp3`
 						},
 						{
 							section: 'Warm-up',
 							id: 'warmup',
-							content: `<p>
-					Congratulations! You have completed The Focused Athlete. The new,
+							content: `<h2>Congratulations!</h2><p>
+					 You have completed The Focused Athlete. The new,
 					focused you, is now on your way to superior concentration. You should
 					be proud of yourself for taking action with your mental game to be the
 					most focused athlete you can be, committed to excellence in sports.
@@ -12304,7 +12304,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/focused/bonus.mp3`
+							content: `/mas/assets/media/mp3/focused/bonus.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -12312,7 +12312,7 @@ const contents = {
 							content: `<h3>Bonus - PDF</h3>
 				<p>
 					Download PDF to read off-line.
-					<a href="/assets/media/pdf/focused/bonus.pdf">Download</a>
+					<a href="/mas/assets/media/pdf/focused/bonus.pdf">Download</a>
 				</p>`
 						}
 					]
@@ -12332,7 +12332,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/intro.mp3`
+							content: `/mas/assets/media/mp3/confident/intro.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -12480,7 +12480,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day1.mp3`
+							content: `/mas/assets/media/mp3/confident/day1.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -13572,7 +13572,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day2.mp3`
+							content: `/mas/assets/media/mp3/confident/day2.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -13909,7 +13909,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day3.mp3`
+							content: `/mas/assets/media/mp3/confident/day3.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -13966,7 +13966,7 @@ const contents = {
 								class="txt-input confidence-resume"
 								type="text"
 								id="q1"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -13981,7 +13981,7 @@ const contents = {
 								class="txt-input confidence-resume"
 								type="text"
 								id="q2"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -13996,7 +13996,7 @@ const contents = {
 								class="txt-input confidence-resume"
 								type="text"
 								id="q3"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -14010,7 +14010,7 @@ const contents = {
 								class="txt-input confidence-resume"
 								type="text"
 								id="q4"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -14023,7 +14023,7 @@ const contents = {
 								class="txt-input confidence-resume"
 								type="text"
 								id="q5"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -14036,7 +14036,7 @@ const contents = {
 								class="txt-input confidence-resume"
 								type="text"
 								id="q6"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -14050,7 +14050,7 @@ const contents = {
 								class="txt-input confidence-resume"
 								type="text"
 								id="q7"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -14192,7 +14192,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day4.mp3`
+							content: `/mas/assets/media/mp3/confident/day4.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -14478,7 +14478,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day5.mp3`
+							content: `/mas/assets/media/mp3/confident/day5.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -14549,7 +14549,7 @@ const contents = {
 								class="txt-input pregame-routine"
 								type="text"
 								id="q1"
-								placeholder="..."
+								placeholder="Routine..."
 							/>
 						</div>
 					</div>
@@ -14560,7 +14560,7 @@ const contents = {
 								class="txt-input pregame-routine"
 								type="text"
 								id="q2"
-								placeholder="..."
+								placeholder="Reasons..."
 							/>
 						</div>
 					</div>
@@ -14571,7 +14571,7 @@ const contents = {
 								class="txt-input pregame-routine"
 								type="text"
 								id="q3"
-								placeholder="..."
+								placeholder="Doubts..."
 							/>
 						</div>
 					</div>
@@ -14582,7 +14582,7 @@ const contents = {
 								class="txt-input pregame-routine"
 								type="text"
 								id="q4"
-								placeholder="..."
+								placeholder="Game Plan..."
 							/>
 						</div>
 					</div>
@@ -14593,7 +14593,7 @@ const contents = {
 								class="txt-input pregame-routine"
 								type="text"
 								id="q5"
-								placeholder="..."
+								placeholder="Visualize..."
 							/>
 						</div>
 					</div>
@@ -14606,7 +14606,7 @@ const contents = {
 								class="txt-input pregame-routine"
 								type="text"
 								id="q6"
-								placeholder="..."
+								placeholder="Strategy..."
 							/>
 						</div>
 					</div>
@@ -14759,7 +14759,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day6.mp3`
+							content: `/mas/assets/media/mp3/confident/day6.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -15281,7 +15281,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day7.mp3`
+							content: `/mas/assets/media/mp3/confident/day7.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -15693,7 +15693,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day8.mp3`
+							content: `/mas/assets/media/mp3/confident/day8.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -15910,7 +15910,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day9.mp3`
+							content: `/mas/assets/media/mp3/confident/day9.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -16189,7 +16189,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day10.mp3`
+							content: `/mas/assets/media/mp3/confident/day10.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -16534,7 +16534,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day11.mp3`
+							content: `/mas/assets/media/mp3/confident/day11.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -16766,7 +16766,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day12.mp3`
+							content: `/mas/assets/media/mp3/confident/day12.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -17170,7 +17170,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day13.mp3`
+							content: `/mas/assets/media/mp3/confident/day13.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -17473,7 +17473,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/Day14.mp3`
+							content: `/mas/assets/media/mp3/confident/day14.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -17880,7 +17880,7 @@ const contents = {
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/outro.mp3`
+							content: `/mas/assets/media/mp3/confident/outro.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -17994,7 +17994,7 @@ or frustrated about my sport.</li>
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/confident/bonus.mp3`
+							content: `/mas/assets/media/mp3/confident/bonus.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -18476,7 +18476,7 @@ or frustrated about my sport.</li>
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/intro.mp3`
+							content: `/mas/assets/media/mp3/composed/intro.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -18652,7 +18652,7 @@ or frustrated about my sport.</li>
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day1.mp3`
+							content: `/mas/assets/media/mp3/composed/day1.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -18933,7 +18933,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day2.mp3`
+							content: `/mas/assets/media/mp3/composed/day2.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -19468,7 +19468,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day3.mp3`
+							content: `/mas/assets/media/mp3/composed/day3.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -19563,7 +19563,7 @@ composure
 								class="txt-input shortcoming-perfection"
 								type="text"
 								id="q1"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -19574,7 +19574,7 @@ composure
 								class="txt-input shortcoming-perfection"
 								type="text"
 								id="q2"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -19585,7 +19585,7 @@ composure
 								class="txt-input shortcoming-perfection"
 								type="text"
 								id="q3"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -19596,7 +19596,7 @@ composure
 								class="txt-input shortcoming-perfection"
 								type="text"
 								id="q4"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -19607,7 +19607,7 @@ composure
 								class="txt-input shortcoming-perfection"
 								type="text"
 								id="q5"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -19618,7 +19618,7 @@ composure
 								class="txt-input shortcoming-perfection"
 								type="text"
 								id="q6"
-								placeholder="Scenario"
+								placeholder="Scenario..."
 							/>
 						</div>
 					</div>
@@ -19917,7 +19917,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day4.mp3`
+							content: `/mas/assets/media/mp3/composed/day4.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -20010,7 +20010,7 @@ composure
 								type="text"
 								name=""
 								id="q1"
-								placeholder="..."
+								placeholder="Social Approval..."
 							/>
 						</div>
 					</div>
@@ -20022,7 +20022,7 @@ composure
 								type="text"
 								name=""
 								id="q2"
-								placeholder="..."
+								placeholder="Social Approval..."
 							/>
 						</div>
 					</div>
@@ -20034,7 +20034,7 @@ composure
 								type="text"
 								name=""
 								id="q3"
-								placeholder="..."
+								placeholder="Social Approval..."
 							/>
 						</div>
 					</div>
@@ -20280,7 +20280,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day5.mp3`
+							content: `/mas/assets/media/mp3/composed/day5.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -20795,7 +20795,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day6.mp3`
+							content: `/mas/assets/media/mp3/composed/day6.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -21198,7 +21198,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day7.mp3`
+							content: `/mas/assets/media/mp3/composed/day7.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -21516,7 +21516,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day8.mp3`
+							content: `/mas/assets/media/mp3/composed/day8.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -21870,7 +21870,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day9.mp3`
+							content: `/mas/assets/media/mp3/composed/day9.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -22206,7 +22206,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day10.mp3`
+							content: `/mas/assets/media/mp3/composed/day10.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -22657,7 +22657,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day11.mp3`
+							content: `/mas/assets/media/mp3/composed/day11.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -23110,7 +23110,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day12.mp3`
+							content: `/mas/assets/media/mp3/composed/day12.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -23706,7 +23706,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day13.mp3`
+							content: `/mas/assets/media/mp3/composed/day13.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -24063,7 +24063,7 @@ composure
 								type="text"
 								name=""
 								id="q5"
-								placeholder=""
+								placeholder="New Healthy Belief..."
 							/>
 						</div>
 					</div>
@@ -24221,7 +24221,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/Day14.mp3`
+							content: `/mas/assets/media/mp3/composed/day14.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -24534,7 +24534,7 @@ composure
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/outro.mp3`
+							content: `/mas/assets/media/mp3/composed/outro.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -24641,7 +24641,7 @@ basis.</li>
 						{
 							section: 'Audio',
 							id: 'audio',
-							content: `/assets/media/mp3/composed/bonus.mp3`
+							content: `/mas/assets/media/mp3/composed/bonus.mp3`
 						},
 						{
 							section: 'Warm-up',
@@ -24649,7 +24649,7 @@ basis.</li>
 							content: `<h3>Bonus - PDF</h3>
 				<p>
 					Download PDF to read off-line.
-					<a href="/assets/media/pdf/composed/bonus.pdf">Download</a>
+					<a href="/mas/assets/media/pdf/composed/bonus.pdf">Download</a>
 				</p>`
 						}
 					]

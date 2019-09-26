@@ -18,7 +18,7 @@ const clearCommitment = () => {
 	clearTextBoxes(inputContract, areas[0]);
 };
 const loadCommitment = () => {
-	debugger;
+	
 	loadTextBoxes(inputContract, areas[0]);
 };
 

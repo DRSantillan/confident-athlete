@@ -4,9 +4,7 @@ import { getContents } from './lib/displayManager';
 getContents();
 injectPageTitle();
 displayHeader();
-
- 
- displayFooter();
+displayFooter();
 
 import { saveAttitude, clearAttitude, loadAttitude } from './modules/attitude';
 import {
